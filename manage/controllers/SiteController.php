@@ -26,4 +26,12 @@ class SiteController extends Controller
     {
         exit('welcome manage!');
     }
+    public function actionTable()
+    {
+       return $this->render('table');
+    }
+    public function actionForm()
+    {
+       return $this->render('form');
+    }
 }

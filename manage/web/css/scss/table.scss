@@ -107,15 +107,22 @@ $gradeTwoBg: #fadfd8;
     $btnMargin: 5px;
     ._btn-list {
         @extend .g-f-clearfix;
-        min-width: ($btnWidth + $btnMargin * 2) * 2;
         max-width: ($btnWidth + $btnMargin * 2) * 2;
         margin: 0 auto;
         & > * {
-            @extend .g-btn-line;
             padding: 0 $btnPad !important;
             margin: 2px $btnMargin;
-            width: $btnWidth;
             float:left;
+            color: $primaryOrange;
+            cursor: pointer;
+            position: relative;
+            &:after{
+                content: '|';
+                position: absolute;
+                right: -$btnMargin;
+                top: 0;
+                color: #333;
+            }
         }
         & > .active {
             background: $primaryOrange;

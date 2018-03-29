@@ -2,12 +2,12 @@
 $bgColor: #f1f4f7;
 $topBgColor: #fff;
 
-$primaryOrange: #696969;
-$primaryOrangeDark: darken(#696969, 30%);
-$primaryBlue: darken(#696969, 10%);
-$primaryBlueDark: darken(#696969, 20%);
-$primaryPurple:#7680e5;
-$primaryPurpleDark:#727ce5;
+$primaryOrange: darken(#0ae, 10%);;
+$primaryOrangeDark: darken(#0ae, 20%);
+$primaryBlue: darken(#0ae, 10%);
+$primaryBlueDark: darken(#0ae, 20%);
+$primaryPurple:#0ae;
+$primaryPurpleDark:#0ae;
 $primaryRed:#db4631;
 $primarypick:#fff6f4;
 
@@ -17,7 +17,7 @@ $lightGray: #999;
 $gray:#e3e3e3;
 
 $tablebar:#f0f2f7;
-$tableHeadBg:lighten(#696969, 25%);
+$tableHeadBg:lighten(#0d2638, 70%);
 $tableBorder: #cdcdcd;
 $tableHover: #f8f8f8;
 $toggleboxBg:#f6f6f6;

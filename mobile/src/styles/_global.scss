@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+@import "_common.scss";
+
+/**
+ * reset
+ */
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 14px !important;
+}
+
+body {
+    overflow: hidden;
+    background-color: #eee;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /**
+     * 字体样式不模糊
+     */
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+
+    /**
+     * 可以复制粘帖
+     */
+    -webkit-user-select: text !important;
+    user-select: text !important;
+}
+
+/**
+ * g-reset
+ * 用户初始化元素的类
+ */
+body, .g-reset {
+    ol, ul, li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    img {
+        vertical-align: middle;
+        max-width: 100%;
+    }
+    .inline {
+        display: inline;
+    }
+    i, b, em, span {
+        font-weight: normal;
+        font-style: normal;
+    }
+    input, textarea {
+        outline: none;
+    } 
+    button {
+        outline-style: none;
+    }
+}
+
+#pages,
+[class*="scroll-wrap-content"] {
+    overflow: auto;
+    height: 100%;
+}
+
+[class*="scroll-container"] {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    overflow: auto;
+    &.__none {
+        -webkit-overflow-scrolling: auto;
+        overflow-scrolling: auto;
+    }
+}
+
+[class*="g-bg-"] {
+    color: white;
+}
+
+[class*="g-bg-white"] {
+    color: inherit;
+}
+
+[class*="g-bg-"] input {
+    color: black;
+}
+
+// global
+body {
+    background: #efeff4;
+}
+body, input {
+    color: $darkGray;
+    font: normal 0.28rem Helvetica, Arial, "Microsoft Yahei", sans-serif;
+}
+hr {
+    margin: 0;
+}
+img {
+    max-width: 100%;
+}
+
+#page {
+    // max-width: 10rem;
+    margin: 0 auto;
+    position: relative;
+}
+.iconfont {
+    font-size: .32rem;
+}
+
+.am-search-cancel {
+    font-size: inherit;
+}

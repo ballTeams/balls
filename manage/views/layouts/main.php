@@ -21,18 +21,12 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
     <link rel="stylesheet" href="/css/style.css?v=12"/>
-    <script src="/js/plugins/jquery/jquery-2.1.1.min.js"></script>
+    <script src="/js/plugins/jquery-2.1.1.min.js"></script>
     <script src="/js/plugins/doT/doT.js"></script>
     <script src="/js/plugins/underscore/underscore-min.js"></script>
     <script src="/js/plugins/layer/layer.js"></script>
     <script src="/js/plugins/laydate/laydate.js"></script>
-    <script src="/js/plugins/uploadifive/jquery.uploadifive.js"></script>
-    <script>
-        if (!window.applicationCache) {//是否支持html5
-            $.getScript('/js/plugins/uploadify/jquery.uploadify.min.js');
-        }
-    </script>
-    <script src="/js/common.js?v=12"></script>
+    <script src="/js/common.js?v=122"></script>
     <title></title>
     <style>
         .edui-editor{
@@ -45,47 +39,60 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-<div class="g-topbar"><?php if (\Yii::$app->controller->id == 'card') { ?>
-        会员卡管理
-    <?php } elseif (\Yii::$app->controller->id == 'member') { ?>
-        会员管理
-    <?php } elseif (\Yii::$app->controller->id == 'ticket') { ?>
-        优惠券管理
-    <?php } elseif (\Yii::$app->controller->id == 'integral') { ?>
-        余额积分管理
-    <?php } elseif (\Yii::$app->controller->id == 'order') { ?>
-        会员卡订单
-    <?php } elseif (\Yii::$app->controller->id == 'payment') { ?>
-        微信支付管理
-    <?php } elseif (\Yii::$app->controller->id == 'rule') { ?>
-        充值规则
-    <?php } elseif (\Yii::$app->controller->id == 'swipper') { ?>
-        轮播图
-    <?php } elseif (\Yii::$app->controller->id == 'package-ticket') { ?>
-        套票管理
-    <?php } elseif (\Yii::$app->controller->id == 'opera') { ?>
-        戏剧管理
-    <?php } elseif (\Yii::$app->controller->id == 'threater') { ?>
-        剧院管理
-    <?php } elseif (\Yii::$app->controller->id == 'ticket-order') { ?>
-        购票订单
-    <?php } elseif (\Yii::$app->controller->id == 'mine-ticket') { ?>
-        戏票列表
-    <?php } elseif (\Yii::$app->controller->id == 'cate') { ?>
-        积分商城
-    <?php } elseif (\Yii::$app->controller->id == 'integral-market') { ?>
-        分类
-    <?php } elseif (\Yii::$app->controller->id == 'setting') { ?>
-        loading图片设置
-    <?php } elseif (\Yii::$app->controller->id == 'user') { ?>
-        管理员设置
-    <?php } elseif (\Yii::$app->controller->id == 'stock') { ?>
-        场次库存
+<div class="g-topbar"><?php if (\Yii::$app->controller->id == 'ball1_1') { ?>
+        足球列表
+    <?php } elseif (\Yii::$app->controller->id == 'ball1_2') { ?>
+        足球详情
+    <?php } elseif (\Yii::$app->controller->id == 'ball2_1') { ?>
+        篮球列表
+    <?php } elseif (\Yii::$app->controller->id == 'ball2_2') { ?>
+        篮球详情
+    <?php } elseif (\Yii::$app->controller->id == 'ball3_1') { ?>
+        波胆记录
+    <?php } elseif (\Yii::$app->controller->id == 'ball4_1') { ?>
+        交易记录
+    <?php } elseif (\Yii::$app->controller->id == 'ball5_1') { ?>
+        足球赛事
+    <?php } elseif (\Yii::$app->controller->id == 'ball5_2') { ?>
+        篮球赛事
+    <?php } elseif (\Yii::$app->controller->id == 'ball6_1') { ?>
+        团队总数
+    <?php } elseif (\Yii::$app->controller->id == 'ball6_2') { ?>
+        直推总数
+    <?php } elseif (\Yii::$app->controller->id == 'ball6_3') { ?>
+        会员列表
+    <?php } elseif (\Yii::$app->controller->id == 'ball7_1') { ?>
+        基础信息
+    <?php } elseif (\Yii::$app->controller->id == 'ball7_2') { ?>
+        绑定的银行卡
+    <?php } elseif (\Yii::$app->controller->id == 'ball7_3') { ?>
+        交易密码
+    <?php } elseif (\Yii::$app->controller->id == 'ball7_4') { ?>
+        登录密码
+    <?php } elseif (\Yii::$app->controller->id == 'ball8_1') { ?>
+        平台规则
+    <?php } elseif (\Yii::$app->controller->id == 'ball9_1') { ?>
+        账变记录
+    <?php } elseif (\Yii::$app->controller->id == 'ball9_2') { ?>
+        财务记录
+    <?php } elseif (\Yii::$app->controller->id == 'ball9_3') { ?>
+        充值记录
+    <?php } elseif (\Yii::$app->controller->id == 'ball9_4') { ?>
+        体现记录
+    <?php } elseif (\Yii::$app->controller->id == 'ball10_1') { ?>
+        代理中心
+    <?php } elseif (\Yii::$app->controller->id == 'ball11_1') { ?>
+        网站列表
+    <?php } elseif (\Yii::$app->controller->id == 'ball12_1') { ?>
+        系统公告
+    <?php } elseif (\Yii::$app->controller->id == 'ball12_2') { ?>
+        赛事公告
+    <?php } elseif (\Yii::$app->controller->id == 'ball12_3') { ?>
+        新闻
     <?php } ?>
 </div>
 <div class="g-sidebar min">
     <span class="_toggle js-toggle-sidebar"><span class="iconfont icon-qiehuan"></span></span>
-
     <div class="_top">
         <div class="__avatar">
             <img src="/images/1.jpeg">
@@ -93,154 +100,233 @@ AppAsset::register($this);
         <div class="__user js-edit-admin">
             <span><?php echo Yii::$app->session->get('username') ?></span>
             <ul class="_dropdown-menu" style="display: none;">
-                <li><a class="js-change-pwd" href="javascript:;">修改密码</a></li>
                 <li><a class="js-main-exit" href="javascript:;">退出</a></li>
             </ul>
         </div>
     </div>
     <div class="g-scroll-list">
         <ul class="_nav-list js-sider-toggle">
-            <li <?php if (in_array(\Yii::$app->controller->id, ['rule', 'cate','user','setting', 'setting-user', 'swipper'])) { ?> class="active" <?php } ?>>
+            <li <?php if (in_array(\Yii::$app->controller->id,['ball1_1', 'ball1_2'])) { ?> class="active" <?php } ?>>
                 <a href="#">
-                    <span class="iconfont icon-xtsz"></span>系统设置
+                    <span class="iconfont icon-neirong"></span>足球赛事
                 </a>
-                <ul class="__nav-list" <?php if (in_array(\Yii::$app->controller->id, ['rule', 'cate', 'swipper'])) { ?> style="display: block;" <?php } ?>>
-                    <li <?php if (\Yii::$app->controller->id == 'rule'){ ?>class="active"<?php } ?>>
+                <ul class="__nav-list" <?php if (in_array(\Yii::$app->controller->id, ['ball1_1', 'ball1_2'])) { ?> style="display: block;" <?php } ?>>
+                    <li <?php if (\Yii::$app->controller->id == 'ball1_1'){ ?>class="active"<?php } ?>>
                         <a href="<?php echo \yii\helpers\Url::to(['rule/index']) ?>">
-                            <span class="iconfont icon-jifen"></span>充值规则
+                            <span></span>赛事列表
                         </a>
                     </li>
-                    <li <?php if (\Yii::$app->controller->id == 'setting'){ ?>class="active"<?php } ?>>
+                    <li <?php if (\Yii::$app->controller->id == 'ball1_2'){ ?>class="active"<?php } ?>>
                         <a href="<?php echo \yii\helpers\Url::to(['setting/index']) ?>">
-                            <span class="iconfont icon-jifen"></span>loading图片设置
+                            <span></span>赛事详情
                         </a>
                     </li>
-                    <li <?php if (\Yii::$app->controller->id == 'user'){ ?>class="active"<?php } ?>>
-                        <a href="<?php echo \yii\helpers\Url::to(['user/setting-user']) ?>">
-                            <span class="iconfont icon-jifen"></span>管理员设置
-                        </a>
-                    </li>
-                    <li <?php if (\Yii::$app->controller->id == 'cate'){ ?>class="active"<?php } ?>>
-                        <a href="<?php echo \yii\helpers\Url::to(['cate/index']) ?>">
-                            <span class="iconfont icon-fenleiguanli"></span>分类管理
-                        </a>
-                    </li>
-                    
-                    
-                    <li <?php if (\Yii::$app->controller->id == 'swipper'){ ?>class="active"<?php } ?>>
-                        <a href="<?php echo \yii\helpers\Url::to(['swipper/index']) ?>">
-                            <span class="iconfont icon-lunboguanli"></span>轮播图
-                        </a>
-                    </li>
-                   
                 </ul>
             </li>
-            <li <?php if (in_array(\Yii::$app->controller->id, ['member', 'integral', 'card'])) { ?> class="active" <?php } ?>>
+            <li <?php if (in_array(\Yii::$app->controller->id,['ball2_1', 'ball2_2'])) { ?> class="active" <?php } ?>>
                 <a href="#">
-                    <span class="iconfont icon-neirong"></span>会员管理
+                    <span class="iconfont icon-neirong"></span>篮球赛事
                 </a>
-                <ul class="__nav-list" <?php if (in_array(\Yii::$app->controller->id, ['member', 'integral', 'card'])) { ?> style="display: block;" <?php } ?>>
-                    <li <?php if (\Yii::$app->controller->id == 'member'){ ?>class="active"<?php } ?>>
-                        <a href="<?php echo \yii\helpers\Url::to(['member/index']) ?>">
-                            <span class="iconfont icon-huiyuan"></span>会员管理
+                <ul class="__nav-list" <?php if (in_array(\Yii::$app->controller->id, ['ball2_1', 'ball2_2'])) { ?> style="display: block;" <?php } ?>>
+                    <li <?php if (\Yii::$app->controller->id == 'ball2_1'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['rule/index']) ?>">
+                            <span></span>赛事列表
                         </a>
                     </li>
-                    <li <?php if (\Yii::$app->controller->id == 'integral'){ ?>class="active"<?php } ?>>
-                        <a href="<?php echo \yii\helpers\Url::to(['integral/index']) ?>">
-                            <span class="iconfont icon-lipin"></span>余额积分管理
-                        </a>
-                    </li>
-                    <li <?php if (\Yii::$app->controller->id == 'card'){ ?>class="active"<?php } ?>>
-                        <a href="<?php echo \yii\helpers\Url::to(['card/index']) ?>">
-                            <span class="iconfont icon-huangguan"></span>会员卡管理
+                    <li <?php if (\Yii::$app->controller->id == 'ball2_2'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['setting/index']) ?>">
+                            <span></span>赛事详情
                         </a>
                     </li>
                 </ul>
             </li>
-            <li <?php if (in_array(\Yii::$app->controller->id, ['ticket', 'integral-market', 'package-ticket'])) { ?> class="active" <?php } ?>>
+            <li <?php if (in_array(\Yii::$app->controller->id, ['ball3_1'])) { ?> class="active" <?php } ?>>
                 <a href="#">
-                    <span class="iconfont icon-neirong"></span>优惠管理
+                    <span class="iconfont icon-neirong"></span>波胆记录
                 </a>
                 <ul class="__nav-list"
-                    <?php if (in_array(\Yii::$app->controller->id, ['ticket', 'integral-market', 'package-ticket'])) { ?> style="display: block;" <?php } ?>
+                    <?php if (in_array(\Yii::$app->controller->id, ['ball3_1'])) { ?> style="display: block;" <?php } ?>
                 >
-                    <li <?php if (\Yii::$app->controller->id == 'ticket'){ ?>class="active"<?php } ?>>
+                    <li <?php if (\Yii::$app->controller->id == 'ball3_1'){ ?>class="active"<?php } ?>>
                         <a href="<?php echo \yii\helpers\Url::to(['ticket/index']) ?>">
-                            <span class="iconfont icon-youhuiquan1"></span>优惠券列表
-                        </a>
-                    </li>
-                    <li <?php if (\Yii::$app->controller->id == 'integral-market'){ ?>class="active"<?php } ?>>
-                        <a href="<?php echo \yii\helpers\Url::to(['integral-market/index']) ?>">
-                            <span class="iconfont icon-youhuiquan1"></span>积分商城
-                        </a>
-                    </li>
-                    <li <?php if (\Yii::$app->controller->id == 'package-ticket'){ ?>class="active"<?php } ?>>
-                        <a href="<?php echo \yii\helpers\Url::to(['package-ticket/package-list']) ?>">
-                            <span class="iconfont icon-taopiao"></span>套票
+                            <span></span>波胆总计
                         </a>
                     </li>
                 </ul>
             </li>
-            <li <?php if (in_array(\Yii::$app->controller->id, ['opera', 'threater'])) { ?> class="active" <?php } ?>>
+            <li <?php if (in_array(\Yii::$app->controller->id, ['ball4_1'])) { ?> class="active" <?php } ?>>
                 <a href="#">
-                    <span class="iconfont icon-neirong"></span>剧场管理
+                    <span class="iconfont icon-neirong"></span>交易记录
                 </a>
                 <ul class="__nav-list"
-                    <?php if (in_array(\Yii::$app->controller->id, ['opera', 'threater'])) { ?> style="display: block;" <?php } ?>
+                    <?php if (in_array(\Yii::$app->controller->id, ['ball4_1'])) { ?> style="display: block;" <?php } ?>
                 >
-                    <li <?php if (\Yii::$app->controller->id == 'opera'){ ?>class="active"<?php } ?>>
+                    <li <?php if (\Yii::$app->controller->id == 'ball4_1'){ ?>class="active"<?php } ?>>
                         <a href="<?php echo \yii\helpers\Url::to(['opera/list']) ?>">
-                            <span class="iconfont icon-xujuguanli"></span>戏剧管理
-                        </a>
-                    </li>
-                    <li <?php if (\Yii::$app->controller->id == 'threater'){ ?>class="active"<?php } ?>>
-                        <a href="<?php echo \yii\helpers\Url::to(['threater/list']) ?>">
-                            <span class="iconfont icon-juchangguanli"></span>剧院管理
+                            <span></span>交易总额
                         </a>
                     </li>
                 </ul>
             </li>
-            <li <?php if (in_array(\Yii::$app->controller->id,['order', 'payment', 'ticket-order','stock', 'mine-ticket','recharge'])) { ?> class="active" <?php } ?>>
+            <li <?php if (in_array(\Yii::$app->controller->id,['ball5_1', 'ball5_2'])) { ?> class="active" <?php } ?>>
                 <a href="#">
-                    <span class="iconfont icon-dingdan"></span>订单管理
+                    <span class="iconfont icon-neirong"></span>赛事结果
                 </a>
                 <ul class="__nav-list"
-                    <?php if (in_array(\Yii::$app->controller->id, ['order', 'payment', 'ticket-order','stock', 'mine-ticket','recharge'])) { ?> style="display: block;" <?php } ?>>
-                    <li <?php if (\Yii::$app->controller->id == 'order'){ ?>class="active"<?php } ?>>
+                    <?php if (in_array(\Yii::$app->controller->id, ['ball5_1', 'ball5_2'])) { ?> style="display: block;" <?php } ?>>
+                    <li <?php if (\Yii::$app->controller->id == 'ball5_1'){ ?>class="active"<?php } ?>>
                         <a href="<?php echo \yii\helpers\Url::to(['order/index']) ?>">
-                            <span class="iconfont icon-qia"></span>会员卡订单
+                            <span></span>足球赛事
                         </a>
                     </li>
-                    <li <?php if (\Yii::$app->controller->id == 'ticket-order'){ ?>class="active"<?php } ?>>
+                    <li <?php if (\Yii::$app->controller->id == 'ball5_2'){ ?>class="active"<?php } ?>>
                         <a href="<?php echo \yii\helpers\Url::to(['ticket-order/index']) ?>">
-                            <span class="iconfont icon-qia"></span>购票订单
+                            <span></span>篮球赛事
                         </a>
                     </li>
-                    <li <?php if (\Yii::$app->controller->id == 'mine-ticket'){ ?>class="active"<?php } ?>>
-                        <a href="<?php echo \yii\helpers\Url::to(['mine-ticket/index']) ?>">
-                            <span class="iconfont icon-qia"></span>戏票列表
-                        </a>
-                    </li>
-                    <li <?php if (\Yii::$app->controller->id == 'stock'){ ?>class="active"<?php } ?>>
-                        <a href="<?php echo \yii\helpers\Url::to(['stock/index']) ?>">
-                            <span class="iconfont icon-qia"></span>场次库存
-                        </a>
-                    </li>
-                    <li <?php if (\Yii::$app->controller->id == 'payment'){ ?>class="active"<?php } ?>>
-                        <a href="<?php echo \yii\helpers\Url::to(['payment/index']) ?>">
-                            <span class="iconfont icon-zhifu"></span>微信支付记录
-                        </a>
-                    </li>
-
-                    <li <?php if (\Yii::$app->controller->id == 'recharge'){ ?>class="active"<?php } ?>>
-                        <a href="<?php echo \yii\helpers\Url::to(['recharge/index']) ?>">
-                            <span class="iconfont icon-zhifu"></span>充值记录
-                        </a>
-                    </li>
-
                 </ul>
             </li>
-
+            <li <?php if (in_array(\Yii::$app->controller->id,['ball6_1', 'ball6_2', 'ball6_3'])) { ?> class="active" <?php } ?>>
+                <a href="#">
+                    <span class="iconfont icon-neirong"></span>会员列表
+                </a>
+                <ul class="__nav-list"
+                    <?php if (in_array(\Yii::$app->controller->id, ['ball6_1', 'ball6_2', 'ball6_3'])) { ?> style="display: block;" <?php } ?>>
+                    <li <?php if (\Yii::$app->controller->id == 'ball6_1'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['order/index']) ?>">
+                            <span></span>团队总数
+                        </a>
+                    </li>
+                    <li <?php if (\Yii::$app->controller->id == 'ball6_2'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['ticket-order/index']) ?>">
+                            <span></span>直推总数
+                        </a>
+                    </li>
+                    <li <?php if (\Yii::$app->controller->id == 'ball6_3'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['ticket-order/index']) ?>">
+                            <span></span>会员列表
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li <?php if (in_array(\Yii::$app->controller->id,['ball7_1', 'ball7_2', 'ball7_3', 'ball7_4'])) { ?> class="active" <?php } ?>>
+                <a href="#">
+                    <span class="iconfont icon-neirong"></span>个人中心
+                </a>
+                <ul class="__nav-list"
+                    <?php if (in_array(\Yii::$app->controller->id, ['ball7_1', 'ball7_2', 'ball7_3', 'ball7_4'])) { ?> style="display: block;" <?php } ?>>
+                    <li <?php if (\Yii::$app->controller->id == 'ball7_1'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['order/index']) ?>">
+                            <span></span>基础信息
+                        </a>
+                    </li>
+                    <li <?php if (\Yii::$app->controller->id == 'ball7_2'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['ticket-order/index']) ?>">
+                            <span></span>绑定的银行卡
+                        </a>
+                    </li>
+                    <li <?php if (\Yii::$app->controller->id == 'ball7_3'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['ticket-order/index']) ?>">
+                            <span></span>交易密码
+                        </a>
+                    </li>
+                    <li <?php if (\Yii::$app->controller->id == 'ball7_4'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['ticket-order/index']) ?>">
+                            <span></span>登录密码
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li <?php if (in_array(\Yii::$app->controller->id,['ball8_1'])) { ?> class="active" <?php } ?>>
+                <a href="#">
+                    <span class="iconfont icon-neirong"></span>平台规则
+                </a>
+                <ul class="__nav-list"
+                    <?php if (in_array(\Yii::$app->controller->id, ['ball8_1'])) { ?> style="display: block;" <?php } ?>>
+                    <li <?php if (\Yii::$app->controller->id == 'ball8_1'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['order/index']) ?>">
+                            <span></span>平台规则
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li <?php if (in_array(\Yii::$app->controller->id,['ball9_1', 'ball9_2', 'ball9_3', 'ball9_4'])) { ?> class="active" <?php } ?>>
+                <a href="#">
+                    <span class="iconfont icon-neirong"></span>财务中心
+                </a>
+                <ul class="__nav-list"
+                    <?php if (in_array(\Yii::$app->controller->id, ['ball9_1', 'ball9_2', 'ball9_3', 'ball9_4'])) { ?> style="display: block;" <?php } ?>>
+                    <li <?php if (\Yii::$app->controller->id == 'ball9_1'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['order/index']) ?>">
+                            <span></span>账变记录
+                        </a>
+                    </li>
+                    <li <?php if (\Yii::$app->controller->id == 'ball9_2'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['order/index']) ?>">
+                            <span></span>财务记录
+                        </a>
+                    </li>
+                     <li <?php if (\Yii::$app->controller->id == 'ball9_3'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['order/index']) ?>">
+                            <span></span>充值记录
+                        </a>
+                    </li>
+                    <li <?php if (\Yii::$app->controller->id == 'ball9_4'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['order/index']) ?>">
+                            <span></span>体现记录
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li <?php if (in_array(\Yii::$app->controller->id,['ball10_1'])) { ?> class="active" <?php } ?>>
+                <a href="#">
+                    <span class="iconfont icon-neirong"></span>代理中心
+                </a>
+                <ul class="__nav-list"
+                    <?php if (in_array(\Yii::$app->controller->id, ['ball10_1'])) { ?> style="display: block;" <?php } ?>>
+                    <li <?php if (\Yii::$app->controller->id == 'ball10_1'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['order/index']) ?>">
+                            <span></span>新增会员
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li <?php if (in_array(\Yii::$app->controller->id,['ball11_1'])) { ?> class="active" <?php } ?>>
+                <a href="#">
+                    <span class="iconfont icon-neirong"></span>相关网站
+                </a>
+                <ul class="__nav-list"
+                    <?php if (in_array(\Yii::$app->controller->id, ['ball11_1'])) { ?> style="display: block;" <?php } ?>>
+                    <li <?php if (\Yii::$app->controller->id == 'ball11_1'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['order/index']) ?>">
+                            <span></span>相关网站
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li <?php if (in_array(\Yii::$app->controller->id,['ball12_1', 'ball12_2', 'ball12_3'])) { ?> class="active" <?php } ?>>
+                <a href="#">
+                    <span class="iconfont icon-neirong"></span>公告
+                </a>
+                <ul class="__nav-list"
+                    <?php if (in_array(\Yii::$app->controller->id, ['ball12_1', 'ball12_2', 'ball12_3'])) { ?> style="display: block;" <?php } ?>>
+                    <li <?php if (\Yii::$app->controller->id == 'ball12_1'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['order/index']) ?>">
+                            <span></span>系统公告
+                        </a>
+                    </li>
+                    <li <?php if (\Yii::$app->controller->id == 'ball12_2'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['order/index']) ?>">
+                            <span></span>赛事公告
+                        </a>
+                    </li>
+                    <li <?php if (\Yii::$app->controller->id == 'ball12_3'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['order/index']) ?>">
+                            <span></span>新闻
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>
