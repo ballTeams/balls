@@ -1,3 +1,23 @@
 
 mobile/node_modules
 manage/runtime
+
+.idea/balls.iml
+
+.idea/modules.xml
+
+.idea/workspace.xml
+
+.idea/vcs.xml
+
+manage/runtime/debug/index.data
+
+manage/runtime/debug/index.data
+
+manage/runtime/debug/index.data
+
+manage/runtime/logs/app.log
+
+manage/views/site/table.php
+
+manage/runtime/debug/index.data
