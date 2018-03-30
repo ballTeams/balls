@@ -9,6 +9,7 @@ use manage\services\FootBallService;
 class FootBallController extends BaseController
 {
     public function actionIndex(){
-        FootBallService::service()->index();
+        $data=FootBallService::service()->index();
+        return $this->render('index',['data'=>$data]);
     }
 }

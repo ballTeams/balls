@@ -1,1 +1,1 @@
-<?php echo 2;die;
+<?php echo "this is site index";

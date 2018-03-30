@@ -22,10 +22,10 @@ class BaseController extends Controller
      */
     public function init()
     {
-         if(!Yii::$app->session->get('username')){
+        /* if(!Yii::$app->session->get('username')){
              header('location:'.Yii::$app->urlManager->createUrl('/login/index'));
              exit;
-         }
+         }*/
     }
 
 }

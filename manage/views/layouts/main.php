@@ -110,9 +110,9 @@ AppAsset::register($this);
                 <a href="#">
                     <span class="iconfont icon-neirong"></span>足球赛事
                 </a>
-                <ul class="__nav-list" <?php if (in_array(\Yii::$app->controller->id, ['ball1_1', 'ball1_2'])) { ?> style="display: block;" <?php } ?>>
-                    <li <?php if (\Yii::$app->controller->id == 'ball1_1'){ ?>class="active"<?php } ?>>
-                        <a href="<?php echo \yii\helpers\Url::to(['rule/index']) ?>">
+                <ul class="__nav-list" <?php if (in_array(\Yii::$app->controller->id, ['foot-ball', 'ball1_2'])) { ?> style="display: block;" <?php } ?>>
+                    <li <?php if (\Yii::$app->controller->id == 'foot-ball'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['foot-ball/index']) ?>">
                             <span></span>赛事列表
                         </a>
                     </li>

@@ -9,10 +9,16 @@
 namespace manage\services;
 
 
+use common\models\BallMatch;
+
 class FootBallService extends BaseService
 {
     public function index(){
-
+        $data=BallMatch::find()->asArray()->all();
+        foreach ($data as &$v){
+            $v['match_time']=date('Y-m-d H:i:s',$v['match_time']);
+        }
+        return $data;
     }
 }
 

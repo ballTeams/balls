@@ -24,7 +24,7 @@ class SiteController extends Controller
     }
     public function actionIndex()
     {
-        exit('welcome manage!');
+        return $this->render('index');
     }
     public function actionTable()
     {
