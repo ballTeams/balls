@@ -32,7 +32,6 @@ module.exports = {
             'redux',
             'redux-thunk',
             'superagent',
-            'weixin-js-sdk',
             'wya-sass'
         ]
     },

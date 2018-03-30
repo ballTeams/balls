@@ -9,6 +9,12 @@
                         <input type="text" placeholder="请输入" name="name" value=""/>
                     </div>
                 </div>
+                <div class="__line">
+                    <label>时间:</label>
+                    <div>
+                        <input class="js-main-time" type="text" placeholder="请输入" name="time" value=""/>
+                    </div>
+                </div>
                 <div class="__line text">
                     <label>等级:</label>
                     <div>

@@ -5,10 +5,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 /* eslint-disable */
 
-// antd-mobile 1.0 Icon
-const svgDirs = [
-    require.resolve('antd-mobile').replace(/warn\.js$/, '')
-];
 
 module.exports = {
     devtool: 'cheap-module-eval-source-map',

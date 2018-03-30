@@ -1,120 +1,66 @@
 module.exports = {
-    "parserOptions":
-    {
-        "ecmaVersion": 6,
-        "ecmaFeatures":
-        {
-            "jsx": true
-        }
-    },
-    "env":
-    {
+    "env": {
         "browser": true,
-        "node": true,
-        "es6": true,
-        "mocha": true
+        "commonjs": true,
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
     },
     "plugins": [
         "react"
     ],
-    "parser": "babel-eslint",
-    "rules":
-    {
-        // tab缩进
-        "indent": ["warn", "tab",
-        {
-            "SwitchCase": 1
-        }],
-        "quotes": 0,
-        "no-console": 0,
-        "no-debugger": 1,
-        "no-var": 1,
-        "import/named": 0,
-        "semi": [
-            1,
-            "always"
-        ],
-        "no-trailing-spaces": 0,
-        "eol-last": 0,
-        "no-underscore-dangle": 0,
-        "no-alert": 0,
-        "no-lone-blocks": 0,
-        // 关键字周围强制使用空格
-        "keyword-spacing": [
+    "rules": {
+        "indent": [
             "error",
+            4,
             {
-                "before": true,
-                "after": true
+                "SwitchCase": 1
             }
         ],
-        // 大括号中强制使用空格
-        "object-curly-spacing": [
+        "semi": [
             "warn",
             "always"
         ],
-        // 单行代码块前后要加空格
-        "block-spacing": [
+        "quotes": [
             "warn",
-            "always"
-        ],
-        // 逗号后面加空格
-        "comma-spacing": [
-            "warn",
+            "single",
             {
-                "before": false,
-                "after": true
+                "avoidEscape": true,
+                "allowTemplateLiterals": true
             }
         ],
-        // 分号后面加空格
-        "semi-spacing": [
+        "jsx-quotes": [
+            "warn",
+            "prefer-double"
+        ],
+        "default-case": "error",
+        "comma-spacing": "warn",
+        "no-unused-vars": [
             "warn",
             {
-                "before": false,
-                "after": true
+                "args": "none",
+                "varsIgnorePattern": "NextApp"
             }
         ],
-        // 在注释前有空白
-        "spaced-comment": [
-            "warn",
-            "always"
-        ],
-        // 箭头函数前后要有空格
-        "arrow-spacing": [
-            "warn",
-            {
-                "before": true,
-                "after": true
-            }
-        ],
-        // 对象字面量的属性中键和值之间使用一致的间距
-        "key-spacing": [
-            "warn",
-            {
-                "beforeColon": false,
-                "afterColon": true
-            }
-        ],
-        // 要求操作符周围有空格
-        "space-infix-ops": [
-            "warn",
-            {
-                "int32Hint": false
-            }
-        ],
-        "jsx-quotes": 1,
-        "react/display-name": [
-            1,
-            {
-                "ignoreTranspilerName": false
-            }
-        ],
-        "react/forbid-prop-types": [
-            1,
-            {
-                "forbid": [
-                    "any"
-                ]
-            }
-        ]
+        "eqeqeq": "warn",
+        "no-extra-bind": "warn",
+        "no-var": "warn",
+        "no-console": "off",
+    },
+    "setting": {
+        "react": {
+            "createClass": "createClass",
+            "pragma": "React",
+            "version": "15.0"
+        }
     }
 };

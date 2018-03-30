@@ -110,14 +110,16 @@
      *
      */
     $(document).on('click', '.js-main-del', function(){
+        var url = $(this).data('url');
+        var id = $(this).data('id');
         layer.confirm(
             '确认要删除吗？',
             function (index) {
                 $.ajax({
-                    url: $(this).data('url'),
+                    url: url,
                     type: "get",
                     data:{
-                        id: $(this).data('id')
+                        id: id
                     },
                     dataType:'json',
                     success: function (res) {
@@ -162,5 +164,7 @@
                 layer.msg("网络不稳定，请稍后重试...", {icon:5, time:1000});
             }
         })
+    }).on('click', '.js-main-time', function(){
+
     })
 })(jQuery, document, window);
