@@ -37,7 +37,7 @@ class FootBallController extends BaseController
      * @return string
      */
     public function actionDel(){
-        $ball_match_id=\Yii::$app->request->get('ball_match_id');
+        $ball_match_id=\Yii::$app->request->get('id');
         return FootBallService::service()->del($ball_match_id);
     }
 }

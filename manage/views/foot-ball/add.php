@@ -6,7 +6,7 @@
                 <div class="__line">
                     <label>小标题:</label>
                     <div>
-                        <input type="text" placeholder="请输入" name="titel"
+                        <input type="text" placeholder="请输入" name="title"
                                value="<?php echo isset($data['title'])?$data['title']:"";?>"/>
                     </div>
                 </div>
@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="g-btns g-w-5">
-            <button type="button" data-url="/save" class="g-btn-blue js-main-save">保存</button>
+            <button type="button" data-url="add" class="g-btn-blue js-main-save">保存</button>
         </div>
     </form>
 </div>

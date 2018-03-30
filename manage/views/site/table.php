@@ -31,7 +31,7 @@
                     <td>
                     	<div class="_btn-list">
                     		<span data-url="/url" data-id="1" class="js-main-del">删除</span>
-	                        <a href="">编辑</span>
+	                        <a href="">编辑</a>
 	                        <a href="">添加</a>
                     	</div>
                         

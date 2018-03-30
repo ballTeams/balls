@@ -30,7 +30,7 @@
                     <td><?php echo $v['match_time']?></td>
                     <td>
                         <div class="_btn-list" data-id="<?php echo $v['ball_match_id']?>">
-                            <a href="">删除</a>
+                            <span data-url="/foot-ball/del" data-id="<?php echo $v['ball_match_id']?>" class="js-main-del">删除</span>
                             <a href="add?ball_match_id=<?php echo $v['ball_match_id']?>">编辑</a>
                         </div>
                     </td>
@@ -40,4 +40,3 @@
         </table>
     </div>
 </div>
-<script type="text/javascript" src="/js/app/member/index.js"></script>

@@ -31,6 +31,7 @@ class FootBallService extends BaseService
                 $ball_match->title = $data['title'];
                 $ball_match->content = $data['content'];
                 $ball_match->match_time = isset($data['match_time']) ? strtotime($data['match_time']) : time();
+                $ball_match->create_time = time();
                 if(!$ball_match->validate()){
                     throw new \Exception(Json::encode($ball_match->getErrors()));
                 }
@@ -40,6 +41,7 @@ class FootBallService extends BaseService
                 $ball_match->title = $data['title'];
                 $ball_match->content = $data['content'];
                 $ball_match->match_time = isset($data['match_time']) ? strtotime($data['match_time']) : time();
+                $ball_match->create_time = time();
                 if(!$ball_match->validate()){
                     throw new \Exception(Json::encode($ball_match->getErrors()));
                 }
