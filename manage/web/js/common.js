@@ -164,7 +164,34 @@
                 layer.msg("网络不稳定，请稍后重试...", {icon:5, time:1000});
             }
         })
-    }).on('click', '.js-main-time', function(){
-
-    })
+    });
+    //年选择器
+    laydate.render({ 
+      elem: '.year',
+      type: 'year'
+    });
+     
+    //年月选择器
+    laydate.render({ 
+      elem: '.month',
+      type: 'month'
+    });
+     
+    //日期选择器
+    laydate.render({ 
+      elem: '.data',
+      type: 'date' //默认，可不填
+    });
+     
+    //时间选择器
+    laydate.render({ 
+      elem: '.time',
+      type: 'time'
+    });
+     
+    //日期时间选择器
+    laydate.render({ 
+      elem: '.datetime',
+      type: 'datetime'
+    });
 })(jQuery, document, window);

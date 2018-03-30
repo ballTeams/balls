@@ -10,9 +10,21 @@
                     </div>
                 </div>
                 <div class="__line">
+                    <label>日期时间:</label>
+                    <div>
+                        <input class="datetime" type="text" readonly placeholder="请选择时间" name="time" value=""  />
+                    </div>
+                </div>
+                <div class="__line">
+                    <label>日期:</label>
+                    <div>
+                        <input class="data" type="text" readonly placeholder="请选择时间" name="time" value=""  />
+                    </div>
+                </div>
+                <div class="__line">
                     <label>时间:</label>
                     <div>
-                        <input class="js-main-time" type="text" placeholder="请输入" name="time" value=""/>
+                        <input class="time" type="text" readonly placeholder="请选择时间" name="time" value=""  />
                     </div>
                 </div>
                 <div class="__line text">
