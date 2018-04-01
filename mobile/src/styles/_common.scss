@@ -307,6 +307,12 @@ hr.line {
     color: $mainBlue;
 }
 
+//list
+._item{
+    background: rgba(0,0,0,.3);
+    border-bottom: 1px solid #fff;
+    border-raduis: 5px;
+}
 // 弹窗
 .popup {
     padding: 0 .5rem;

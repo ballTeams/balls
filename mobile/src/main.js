@@ -2,6 +2,7 @@ import React from 'react';
 import { render }  from 'react-dom';
 import Root from './routes/Root';
 import './styles/_global.scss';
+import './styles/index.css';
 
 // 渲染根节点并加载全局样式
 const renderApp = () => {

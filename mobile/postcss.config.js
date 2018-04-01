@@ -1,4 +1,4 @@
-const pxtorem = require('postcss-pxtorem');
+// const pxtorem = require('postcss-pxtorem');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {

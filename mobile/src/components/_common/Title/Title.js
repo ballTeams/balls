@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
-import { } from 'antd-mobile';
-class DemoList extends Component {
+class Title extends Component {
 
     constructor (props){
         super(props);
@@ -9,16 +7,19 @@ class DemoList extends Component {
     }
 
     componentWillMount () {
-
+        const { title } = this.props;
+        document.title = title;
     }
 
     render () {
+        const { children = '' } = this.props;
         return (
             <div>
-                
+                {children}
             </div>
         );
     }
 }
-export default DemoList;
+
+export default Title;
 

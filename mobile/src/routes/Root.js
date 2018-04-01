@@ -11,7 +11,7 @@ import { AppContainer } from 'react-hot-loader';
 import store from '../store/createStore';
 import routes from './routes';
 import initReactFastclick from 'react-fastclick';
-
+import TopBar from '../components/_common/TopBar/TopBar';
 // 为React组件的onClick移动端触摸添加fastClick
 initReactFastclick();
 

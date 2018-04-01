@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import { } from 'antd-mobile';
-class DemoList extends Component {
+import { Link } from 'react-router';
+class Form extends Component {
 
     constructor (props){
         super(props);
-        this.state = {};
+        this.state = { };
     }
 
     componentWillMount () {
@@ -13,12 +13,16 @@ class DemoList extends Component {
     }
 
     render () {
+        const arr = [
+            
+        ];
         return (
-            <div>
-                
+            <div className="g-tc">
+                赛事结果
             </div>
         );
     }
 }
-export default DemoList;
+
+export default Form;
 

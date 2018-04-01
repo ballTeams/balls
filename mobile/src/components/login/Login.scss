@@ -1,0 +1,31 @@
+.v-login {
+	._input{
+		border-bottom: 1px solid #fff;
+		input{
+			width: 100%;
+			line-height: 44px;
+			font-size: 16px;
+			background: rgba(0,0,0,0);
+			padding-left: 10px;
+			box-sizing: border-box;
+			color: #fff;
+		}
+		&._yzm{
+			input{
+				width: 70%;
+			}
+			._yzm-img{
+				width: 30%;
+				background: #fff;
+				height: 34px;
+				display: block;
+			}
+		}
+	}
+	._btn-blue{
+		line-height: 44px;
+		color: #fff;
+		background: #4e9ff1;
+		text-align: center;
+	}
+}
