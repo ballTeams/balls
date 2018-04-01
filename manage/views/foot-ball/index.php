@@ -32,6 +32,7 @@
                         <div class="_btn-list" data-id="<?php echo $v['ball_match_id']?>">
                             <span data-url="/foot-ball/del" data-id="<?php echo $v['ball_match_id']?>" class="js-main-del">删除</span>
                             <a href="add?ball_match_id=<?php echo $v['ball_match_id']?>">编辑</a>
+                            <a href="match-info?ball_match_id=<?php echo $v['ball_match_id']?>">比分设置</a>
                         </div>
                     </td>
                 </tr>
