@@ -11,8 +11,6 @@ namespace manage\services;
 
 use common\models\BallMatch;
 use common\models\MatchInfo;
-use common\models\MatchResult;
-use common\models\Message;
 use yii\helpers\Json;
 
 class FootBallService extends BaseService
@@ -58,15 +56,24 @@ class FootBallService extends BaseService
     }
 
 
-    public function del($message_id)
+    public function del($ball_match_id)
     {
         try {
-            Message::deleteAll(['message_id'=>$message_id]);
+            BallMatch::deleteAll(['ball_match_id'=>$ball_match_id]);
         }catch (\Exception $e){
             return Json::encode(['status'=>0,'msg'=>$e->getMessage()]);
         }
         return Json::encode(['status'=>1,'msg'=>'删除成功']);
     }
+
+
+    public function matchInfo($ball_match_id)
+    {
+        $data=MatchInfo::find()->where(['ball_match_id'=>$ball_match_id])->asArray()->all();
+        return $data;
+
+    }
+
 }
 
 

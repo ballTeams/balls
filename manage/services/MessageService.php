@@ -19,12 +19,9 @@ class MessageService extends BaseService
 {
 
     public function index(){
-        $data=Message::find()
-            ->select('*')
-            ->asArray()
-            ->all();
+        $data=BallMatch::find()->asArray()->all();
         foreach ($data as &$v){
-            $v['create_time']=date('Y-m-d H:i:s',$v['create_time']);
+            $v['match_time']=date('Y-m-d H:i:s',$v['match_time']);
         }
         return $data;
     }
@@ -32,21 +29,26 @@ class MessageService extends BaseService
 
     public function add($data){
         try {
-            if(isset($data['message_id'])&&$data['message_id']){
-                $result=Message::findOne($data['message_id']);
-                $result->attributes=$data;
-                if(!$result->validate()){
-                    throw new \Exception(Json::encode($result->getErrors()));
+            if(isset($data['ball_match_id'])&&$data['ball_match_id']){
+                $ball_match = BallMatch::findOne($data['ball_match_id']);
+                $ball_match->title = $data['title'];
+                $ball_match->content = $data['content'];
+                $ball_match->match_time = isset($data['match_time']) ? strtotime($data['match_time']) : time();
+                $ball_match->create_time = time();
+                if(!$ball_match->validate()){
+                    throw new \Exception(Json::encode($ball_match->getErrors()));
                 }
-                $result->save();
+                $ball_match->save();
             }else{
-                $result=new Message();
-                $result->create_time=time();
-                $result->attributes=$data;
-                if(!$result->validate()){
-                    throw new \Exception(Json::encode($result->getErrors()));
+                $ball_match = new BallMatch();
+                $ball_match->title = $data['title'];
+                $ball_match->content = $data['content'];
+                $ball_match->match_time = isset($data['match_time']) ? strtotime($data['match_time']) : time();
+                $ball_match->create_time = time();
+                if(!$ball_match->validate()){
+                    throw new \Exception(Json::encode($ball_match->getErrors()));
                 }
-                $result->insert();
+                $ball_match->insert();
             }
 
         }catch (\Exception $e){
@@ -59,20 +61,14 @@ class MessageService extends BaseService
     public function del($message_id)
     {
         try {
-            BallMatch::deleteAll(['message_id'=>$message_id]);
+            Message::deleteAll(['message_id'=>$message_id]);
         }catch (\Exception $e){
             return Json::encode(['status'=>0,'msg'=>$e->getMessage()]);
         }
         return Json::encode(['status'=>1,'msg'=>'删除成功']);
     }
-
-    public function matchInfo($ball_match_id)
-    {
-        $data=MatchInfo::find()->where(['ball_match_id'=>$ball_match_id])->asArray()->all();
-        return $data;
-
-    }
 }
+
 
 
 
