@@ -55,5 +55,12 @@ module.exports = {
         "no-extra-bind": "warn",
         "no-var": "warn",
         "no-console": "off",
+    },
+    "setting": {
+        "react": {
+            "createClass": "createClass",
+            "pragma": "React",
+            "version": "15.0"
+        }
     }
 };

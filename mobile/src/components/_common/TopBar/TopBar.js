@@ -27,7 +27,7 @@ class TopBar extends Component {
                 child:[
                     {
                         title: '赛事列表',
-                        url: '/game/list'
+                        url: '/game'
                     },
                     {
                         title: '交易明细',
@@ -53,7 +53,7 @@ class TopBar extends Component {
                 child:[
                     {
                         title: '代理列表',
-                        url: '/agent/list'
+                        url: '/agent'
                     },
                     {
                         title: '新增代理',
@@ -61,7 +61,7 @@ class TopBar extends Component {
                     },
                     {
                         title: '我的佣金',
-                        url: '/commis'
+                        url: '/commission'
                     },
                 ],
                 url: '/'
@@ -83,7 +83,7 @@ class TopBar extends Component {
                     },
                     {
                         title: '交易记录',
-                        url: '/finance/list'
+                        url: '/finance'
                     },
                 ],
                 url: '/'

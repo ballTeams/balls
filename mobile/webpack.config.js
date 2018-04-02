@@ -23,7 +23,9 @@ module.exports = {
             components: path.resolve(__dirname, 'src/components'),
             styles: path.resolve(__dirname, 'src/styles'),
             images: path.resolve(__dirname, 'src/images'),
-            utils: path.resolve(__dirname, 'src/utils')
+            utils: path.resolve(__dirname, 'src/utils'),
+            api: path.resolve(__dirname, 'src/api'),
+            actions: path.resolve(__dirname, 'src/actions'),
         }
     },
     module: {
@@ -82,7 +84,7 @@ module.exports = {
         proxy: {
             "/api": {
                 target: "http://localhost",
-                pathRewrite: {"^/api" : ""}
+                pathRewrite: {"^/api" : "http://wap.balls.com"}
             }
         }
     }

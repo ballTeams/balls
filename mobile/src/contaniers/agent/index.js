@@ -6,6 +6,8 @@ import api from '../../api/agent';
 import TopBar from '../../components/_common/TopBar/TopBar';
 import Title from '../../components/_common/Title/Title';
 
+import AgentAdd from '../../components/agent/AgentAdd';
+import AgentMain from '../../components/agent/AgentMain';
 class App extends Component {
     constructor(props) {
         super(props);
@@ -17,7 +19,7 @@ class App extends Component {
                 return (
                     <Title title={`添加代理`}>
                         <TopBar>
-                            <div>添加代理</div>
+                            <AgentAdd />
                         </TopBar>
                     </Title>
                 );
@@ -25,7 +27,7 @@ class App extends Component {
                 return (
                     <Title title={`代理列表`}>
                         <TopBar>
-                            <div>代理列表</div>
+                            <AgentMain />
                         </TopBar>
                     </Title>
                 );

@@ -59,7 +59,9 @@ $iconOrange:#cca04a;
     background-color: $mainGreen;
 }
 
-
+.g-bg-main{
+    background: rgba(0, 0, 0, .3);
+}
 // 公用按钮
 %btn {
     border: none;
@@ -312,6 +314,7 @@ hr.line {
     background: rgba(0,0,0,.3);
     border-bottom: 1px solid #fff;
     border-raduis: 5px;
+    color: #fff;
 }
 // 弹窗
 .popup {

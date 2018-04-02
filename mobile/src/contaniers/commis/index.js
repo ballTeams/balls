@@ -15,7 +15,13 @@ class App extends Component {
         return (
             <Title title={`佣金`}>
                 <TopBar>
-                    <div>佣金</div>
+                    <div className="g-pd-20">
+                        <div className="g-bg-main g-pd-10">
+                            <div>分享佣金： 0</div>
+                            <div>代理佣金： 0</div>
+                            <div>待发放代理佣金： 0</div>
+                        </div>
+                    </div>
                 </TopBar>
             </Title>
         );

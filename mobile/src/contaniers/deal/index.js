@@ -14,8 +14,8 @@ class App extends Component {
         const { actions } = this.props;
         return (
             <Title title={`交易明细`}>
-                <TopBar>
-                    <div>交易明细</div>
+                <TopBar> 
+                    <div className="_item g-lh-60 g-pd-lr-20">波胆总额： 0</div>
                 </TopBar>
             </Title>
         );

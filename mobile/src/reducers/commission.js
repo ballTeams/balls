@@ -4,7 +4,7 @@ const initState = {
    
 };
 
-const commis = (state = initState, action) => {
+const commission = (state = initState, action) => {
     switch (action.type) {
         
         default:
@@ -12,4 +12,4 @@ const commis = (state = initState, action) => {
     }
 };
 
-export default commis;
+export default commission;

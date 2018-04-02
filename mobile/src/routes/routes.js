@@ -1,5 +1,5 @@
 // import { IndexRoute, Route } from 'react-router';
-
+// import { redirectToIndex } from './auth';
 // 页面模块引入
 import Demo from '../contaniers/demo'; // 
 import Login from '../contaniers/login'; // 登录
@@ -9,7 +9,7 @@ import Rule from '../contaniers/rule'; // 平台规则
 import Deal from '../contaniers/deal'; // 交易明细
 import Correct from '../contaniers/correct'; // 波胆记录
 import Agent from '../contaniers/agent'; // 代理
-// import Commis from '../contaniers/commis'; // 佣金
+import Commission from '../contaniers/commis'; // 佣金
 import Notice from '../contaniers/notice'; // 公告
 import Finance from '../contaniers/finance'; // 财务
 import Web from '../contaniers/web'; // 相关网站
@@ -26,7 +26,7 @@ const routes = [
             require.ensure([], function(require) {
                 callback(null, Demo);
             });
-        }
+        },
     },
     {
         path: '/login',
@@ -45,7 +45,7 @@ const routes = [
         }
     },
     {
-        path: '/game/?(:page)',
+        path: '/game(/:page)',
         getComponents(nextState, callback) {
             require.ensure([], function(require) {
                 callback(null, Game);
@@ -77,21 +77,21 @@ const routes = [
         }
     },
     {
-        path: '/agent/(:page)',
+        path: '/agent(/:page)',
         getComponents(nextState, callback) {
             require.ensure([], function(require) {
                 callback(null, Agent);
             });
         }
     },
-    // {
-    //     path: '/commis',
-    //     getComponents(nextState, callback) {
-    //         require.ensure([], function(require) {
-    //             callback(null, Commis);
-    //         });
-    //     }
-    // },
+    {
+        path: '/commission',
+        getComponents(nextState, callback) {
+            require.ensure([], function(require) {
+                callback(null, Commission);
+            });
+        }
+    },
     {
         path: '/notice',
         getComponents(nextState, callback) {
@@ -101,7 +101,7 @@ const routes = [
         }
     },
     {
-        path: '/finance/(:page)',
+        path: '/finance(/:page)',
         getComponents(nextState, callback) {
             require.ensure([], function(require) {
                 callback(null, Finance);

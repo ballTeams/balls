@@ -37,11 +37,11 @@ class Form extends Component {
             },
             {
                 title: '代理列表',
-                url: '/agent/list'
+                url: '/agent'
             },
             {
                 title: '我的佣金',
-                url: '/commis'
+                url: '/commission'
             },
             {
                 title: '平台规则',

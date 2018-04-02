@@ -29,3 +29,4 @@ manage/runtime/debug/index.data
 manage/runtime/logs/app.log
 
 manage/views/site/table.php
+wap/runtime

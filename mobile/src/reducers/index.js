@@ -8,7 +8,7 @@ import rule from './rule'; // 平台规则
 import deal from './deal'; // 交易明细
 import correct from './correct'; // 波胆记录
 import agent from './agent'; // 代理
-// import commis from './commis'; // 佣金
+import commission from './commission'; // 佣金
 import notice from './notice'; // 公告
 import finance from './finance'; // 财务
 import web from './web'; // 相关网站
@@ -25,7 +25,7 @@ const rootReducer = combineReducers({
     deal,
     correct,
     agent,
-    // commis,
+    commission,
     notice,
     finance,
     web,
