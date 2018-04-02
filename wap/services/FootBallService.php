@@ -22,9 +22,6 @@ class FootBallService extends BaseService
         }
         return Json::encode(['status'=>1,'msg'=>'success','data'=>$data]);
     }
-
-
-
 }
 
 
