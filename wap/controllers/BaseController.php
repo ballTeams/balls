@@ -24,7 +24,9 @@ class BaseController extends Controller
     {
         parent::init();
         Yii::$app->user->enableSession = false;
-        header('Access-Control-Allow-Origin:*');
+        $host=$_SERVER['SERVER_NAME'];
+        header("Access-Control-Allow-Origin:{$host}");
+        header('Access-Control-Allow-Credentials:true');
     }
 
     /*   public function behaviors()
