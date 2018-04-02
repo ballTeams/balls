@@ -1,7 +1,7 @@
 
 mobile/node_modules
 manage/runtime
-
+wap/runtime
 .idea/balls.iml
 
 .idea/modules.xml
@@ -10,23 +10,3 @@ manage/runtime
 
 .idea/vcs.xml
 
-manage/runtime/debug/index.data
-
-manage/runtime/debug/index.data
-
-manage/runtime/debug/index.data
-
-manage/runtime/logs/app.log
-
-manage/views/site/table.php
-
-manage/runtime/debug/index.data
-
-manage/runtime/debug/index.data
-
-manage/runtime/debug/index.data
-
-manage/runtime/logs/app.log
-
-manage/views/site/table.php
-wap/runtime

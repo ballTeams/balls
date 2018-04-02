@@ -1,36 +1,34 @@
 import request from 'superagent';
-const ajax = (obj = {
-	url: '/', 
-	method: 'GET',
-	data: {},
-	success: (res) => {
-		
-	}, 
-	error: (res) => {
-		console.log(res);
-	} 
-}) => {
-	if(method == 'POST') {
-		  request.post(obj.url)
-		    .send({ ...obj.data })
+const ajax = (obj, actions) => {
+	const {
+		url, 
+		method = 'GET',
+		data,
+		success, 
+		error,
+		type 
+	} = obj;
+	if (method == 'POST') {
+		  request.post(url)
+		    .send({ ...data })
 		    .then((res) => {
-		    	console.log(res);
-				return dispatch({
-					'API': {
-						apiName: apiName,
-						params: params,
-						opts: opts
-					},
-					type: types.API_REQUEST
-				});
+				success && success(JSON.parse(res.text));
 		    })
-		    .catch(error);
+		    .catch((res) => {
+		    	console.log(res);
+		    	error && error(res);
+		    });
 	} else if (method == 'GET'){
-		request.get(api.url)
-			.query({ ...obj.data })
-			.then(success)
-			.catch(error);
+		request.get(url)
+			.query({ ...data })
+			.then((res) => {
+		    	success && success(JSON.parse(res.text));
+		    })
+			.catch((res) => {
+		    	console.log(res);
+		    	error && error(res);
+		    });
 	}
 	
 }
-export ajax;
+export default ajax;

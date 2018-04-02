@@ -13,20 +13,10 @@ use yii\web\Controller;
  */
 class BaseController extends Controller
 {
-    public $modelClass = 'common\models\user';
-    public $post = null;
-    public $get = null;
-    public $user = null;
-    public $userId = null;
-    public $enableCsrfValidation = false;
-
     public function init()
     {
         parent::init();
-        Yii::$app->user->enableSession = false;
-        $host=$_SERVER['SERVER_NAME'];
-        header("Access-Control-Allow-Origin:{$host}");
-        header('Access-Control-Allow-Credentials:true');
+      
     }
 
     /*   public function behaviors()

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as AppActions from '../../actions/login';
-import api from '../../api/login';
+import * as AppActions from '../../actions/game';
+import api from '../../api/game';
 import TopBar from '../../components/_common/TopBar/TopBar';
 import Title from '../../components/_common/Title/Title';
 
@@ -13,7 +13,7 @@ class App extends Component {
         super(props);
     }
     render() {
-        const { actions, location } = this.props;
+        const { actions, location, game } = this.props;
         switch(location.pathname) {
             case '/game/result': 
                 return (
@@ -27,7 +27,7 @@ class App extends Component {
                 return (
                     <Title title={`赛事列表`}>
                         <TopBar>
-                            <GameMain actions={actions} api={api} />
+                            <GameMain list={game.list} actions={actions} api={api} />
                         </TopBar>
                     </Title>
                 );
@@ -37,7 +37,7 @@ class App extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-    home: state.home
+    game: state.game
 });
 const mapDispatchToProps = (dispatch, ownProps) => ({
     actions: bindActionCreators(AppActions, dispatch)

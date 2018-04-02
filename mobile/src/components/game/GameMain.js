@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import Item from '../_common/Item/Item';
 import request from 'superagent';
 import api from 'api/game';
+import ajax from 'utils/ajax';
 class Form extends Component {
 
     constructor (props){
@@ -12,27 +13,38 @@ class Form extends Component {
     }
 
     componentWillMount () {
-        console.log(1);
-        request.get(api.GAME_MAIN_GET)
-            .withCredentials()
-            .then(function(res) {
-                console.log(res, 123);
-              // res.body, res.headers, res.status
-            })
-            .catch(function(err) {
-              // err.message, err.response
-            });
+        const { actions } = this.props;
+        ajax({
+            url: api.GAME_MAIN_GET,
+            data: {},
+            method: 'GET',
+            type: 'GAME_MAIN_GET',
+            success: (res) => {
+                actions.gameMain(res.data);
+            }, 
+            error: (res) => {
+
+            }
+        }, actions);
     }
 
     render () {
-        const arr = [1, 2, 3];
+        const { list } = this.props;
         return (
             <div>
                 {
-                    arr.map((item, index) => {
+                    list.map((item, index) => {
+                        const {
+                            match_time,
+                            content,
+                            title
+                        } = item;
                         return (
                             <Item 
                                 key={`${index}`}
+                                content={content}
+                                time={match_time}
+                                title={title}
                             />
                         );
                     })

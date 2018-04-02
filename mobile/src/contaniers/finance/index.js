@@ -6,6 +6,10 @@ import api from '../../api/finance';
 import TopBar from '../../components/_common/TopBar/TopBar';
 import Title from '../../components/_common/Title/Title';
 
+import FinanceAdd from 'components/finance/FinanceAdd';
+import FinanceOut from 'components/finance/FinanceOut';
+import FinanceChange from 'components/finance/FinanceChange'
+import FinanceMain from 'components/finance/FinanceMain'
 class App extends Component {
     constructor(props) {
         super(props);
@@ -17,7 +21,7 @@ class App extends Component {
                 return (
                     <Title title={`充值`}>
                         <TopBar>
-                            <div>充值</div>
+                            <FinanceAdd />
                         </TopBar>
                     </Title>
                 );
@@ -25,7 +29,7 @@ class App extends Component {
                 return (
                     <Title title={`提现`}>
                         <TopBar>
-                            <div>提现</div>
+                            <FinanceOut />
                         </TopBar>
                     </Title>
                 );
@@ -33,7 +37,7 @@ class App extends Component {
                 return (
                     <Title title={`转账`}>
                         <TopBar>
-                            <div>转账</div>
+                            <FinanceChange />
                         </TopBar>
                     </Title>
                 );
@@ -41,7 +45,7 @@ class App extends Component {
                 return (
                     <Title title={`交易记录`}>
                         <TopBar>
-                            <div>交易记录</div>
+                            <FinanceMain />
                         </TopBar>
                     </Title>
                 );

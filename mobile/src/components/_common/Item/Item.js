@@ -7,14 +7,17 @@ class Item extends Component {
     }
 
     render () {
-        const { name = '赛事名称', time = '赛事时间', onClick } = this.props;
+        const { title = '', content = '赛事名称', time = '赛事时间', onClick } = this.props;
         return (
             <div 
                 className="_item g-flex-ac g-pd-lr-20 g-pd-tb-10" 
                 onClick={onClick && onClick}
             >
                 <div className="g-col g-tl">
-                    <p>{name}</p>
+                    <p>
+                        <span className="g-pd-r-10">[{title}]</span>
+                        {content}
+                    </p>
                     <p>{time}</p>
                 </div>
                 <div>></div>
