@@ -118,35 +118,6 @@ AppAsset::register($this);
                     </li>
                 </ul>
             </li>
-
-            <li <?php if (in_array(\Yii::$app->controller->id, ['ball3_1'])) { ?> class="active" <?php } ?>>
-                <a href="#">
-                    <span class="iconfont icon-neirong"></span>波胆记录
-                </a>
-                <ul class="__nav-list"
-                    <?php if (in_array(\Yii::$app->controller->id, ['ball3_1'])) { ?> style="display: block;" <?php } ?>
-                >
-                    <li <?php if (\Yii::$app->controller->id == 'ball3_1'){ ?>class="active"<?php } ?>>
-                        <a href="<?php echo \yii\helpers\Url::to(['ticket/index']) ?>">
-                            <span></span>波胆总计
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li <?php if (in_array(\Yii::$app->controller->id, ['ball4_1'])) { ?> class="active" <?php } ?>>
-                <a href="#">
-                    <span class="iconfont icon-neirong"></span>交易记录
-                </a>
-                <ul class="__nav-list"
-                    <?php if (in_array(\Yii::$app->controller->id, ['ball4_1'])) { ?> style="display: block;" <?php } ?>
-                >
-                    <li <?php if (\Yii::$app->controller->id == 'ball4_1'){ ?>class="active"<?php } ?>>
-                        <a href="<?php echo \yii\helpers\Url::to(['opera/list']) ?>">
-                            <span></span>交易总额
-                        </a>
-                    </li>
-                </ul>
-            </li>
             <li <?php if (in_array(\Yii::$app->controller->id,['ball5_1', 'ball5_2'])) { ?> class="active" <?php } ?>>
                 <a href="#">
                     <span class="iconfont icon-neirong"></span>赛事结果
@@ -184,6 +155,34 @@ AppAsset::register($this);
                     <li <?php if (\Yii::$app->controller->id == 'message'){ ?>class="active"<?php } ?>>
                         <a href="<?php echo \yii\helpers\Url::to(['message/index']) ?>">
                             <span></span>系统公告
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li <?php if (in_array(\Yii::$app->controller->id, ['ball3_1'])) { ?> class="active" <?php } ?>>
+                <a href="#">
+                    <span class="iconfont icon-neirong"></span>波胆记录
+                </a>
+                <ul class="__nav-list"
+                    <?php if (in_array(\Yii::$app->controller->id, ['ball3_1'])) { ?> style="display: block;" <?php } ?>
+                >
+                    <li <?php if (\Yii::$app->controller->id == 'ball3_1'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['ticket/index']) ?>">
+                            <span></span>波胆总计
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li <?php if (in_array(\Yii::$app->controller->id, ['ball4_1'])) { ?> class="active" <?php } ?>>
+                <a href="#">
+                    <span class="iconfont icon-neirong"></span>交易记录
+                </a>
+                <ul class="__nav-list"
+                    <?php if (in_array(\Yii::$app->controller->id, ['ball4_1'])) { ?> style="display: block;" <?php } ?>
+                >
+                    <li <?php if (\Yii::$app->controller->id == 'ball4_1'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['opera/list']) ?>">
+                            <span></span>交易总额
                         </a>
                     </li>
                 </ul>

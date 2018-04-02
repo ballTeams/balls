@@ -19,9 +19,9 @@ class MessageService extends BaseService
 {
 
     public function index(){
-        $data=BallMatch::find()->asArray()->all();
+        $data=Message::find()->asArray()->all();
         foreach ($data as &$v){
-            $v['match_time']=date('Y-m-d H:i:s',$v['match_time']);
+            $v['create_time']=date('Y-m-d H:i:s',$v['create_time']);
         }
         return $data;
     }
@@ -29,21 +29,15 @@ class MessageService extends BaseService
 
     public function add($data){
         try {
-            if(isset($data['ball_match_id'])&&$data['ball_match_id']){
-                $ball_match = BallMatch::findOne($data['ball_match_id']);
-                $ball_match->title = $data['title'];
-                $ball_match->content = $data['content'];
-                $ball_match->match_time = isset($data['match_time']) ? strtotime($data['match_time']) : time();
-                $ball_match->create_time = time();
+            if(isset($data['message_id'])&&$data['message_id']){
+                $ball_match = Message::findOne($data['message_id']);
+                $ball_match->attributes=$data;
                 if(!$ball_match->validate()){
                     throw new \Exception(Json::encode($ball_match->getErrors()));
                 }
                 $ball_match->save();
             }else{
-                $ball_match = new BallMatch();
-                $ball_match->title = $data['title'];
-                $ball_match->content = $data['content'];
-                $ball_match->match_time = isset($data['match_time']) ? strtotime($data['match_time']) : time();
+                $ball_match = new Message();
                 $ball_match->create_time = time();
                 if(!$ball_match->validate()){
                     throw new \Exception(Json::encode($ball_match->getErrors()));
