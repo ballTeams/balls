@@ -6563,3 +6563,2343 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1522652663.5637
     'REQUEST_TIME' => 1522652663
 ]
+2018-04-02 15:07:30 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "setting/index".' in /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('setting/index', Array)
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#2 {main}
+2018-04-02 15:07:30 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:313
+2018-04-02 15:07:30 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:07:30 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/setting/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '55408'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/foot-ball/index'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522652850.4418
+    'REQUEST_TIME' => 1522652850
+]
+2018-04-02 15:07:40 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:313
+    in /vagrant/ws/balls/manage/controllers/MatchResultController.php:20
+2018-04-02 15:07:40 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:07:39 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/match-result/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '55408'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/setting/index'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522652859.9113
+    'REQUEST_TIME' => 1522652859
+]
+2018-04-02 15:07:45 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "ticket-order/index".' in /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('ticket-order/in...', Array)
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#2 {main}
+2018-04-02 15:07:45 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:313
+2018-04-02 15:07:45 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:07:45 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/ticket-order/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '55408'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/match-result/index'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522652865.5269
+    'REQUEST_TIME' => 1522652865
+]
+2018-04-02 15:08:03 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "ticket-order/index".' in /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('ticket-order/in...', Array)
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#2 {main}
+2018-04-02 15:08:03 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:308
+2018-04-02 15:08:03 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:08:03 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/ticket-order/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '55408'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/match-result/index'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522652883.0344
+    'REQUEST_TIME' => 1522652883
+]
+2018-04-02 15:09:05 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "ticket-order/index".' in /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('ticket-order/in...', Array)
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#2 {main}
+2018-04-02 15:09:05 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:233
+2018-04-02 15:09:05 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:09:05 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/ticket-order/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '56255'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/match-result/index'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522652945.06
+    'REQUEST_TIME' => 1522652945
+]
+2018-04-02 15:18:42 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:18:42 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:18:41 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/gii'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '61164'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522653521.502
+    'REQUEST_TIME' => 1522653521
+]
+2018-04-02 15:18:43 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:18:43 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:18:43 [192.168.10.1][-][-][info][application] $_GET = [
+    'id' => 'model'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/gii/model'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '61164'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/gii'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522653523.2187
+    'REQUEST_TIME' => 1522653523
+]
+2018-04-02 15:18:52 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:18:52 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:18:51 [192.168.10.1][-][-][info][application] $_GET = [
+    'id' => 'model'
+]
+
+$_POST = [
+    '_csrf-manage' => 'ahXb1pwqx_OXjyrf2t6YZbQPs2Gk-0iC0_y4cJMX75InJ-qv1V-xkPLqdZiqnMdR80D-WJ2_JuyAio1I4C6g0Q=='
+    'Generator' => [
+        'tableName' => 'rule'
+        'modelClass' => 'Rule'
+        'ns' => 'common\\models'
+        'baseClass' => 'yii\\db\\ActiveRecord'
+        'db' => 'db'
+        'useTablePrefix' => '0'
+        'generateRelations' => 'all'
+        'generateRelationsFromCurrentSchema' => '1'
+        'generateLabelsFromComments' => '0'
+        'generateQuery' => '0'
+        'queryNs' => 'common\\models'
+        'queryBaseClass' => 'yii\\db\\ActiveQuery'
+        'enableI18N' => '0'
+        'messageCategory' => 'app'
+        'useSchemaName' => '1'
+        'template' => 'default'
+    ]
+    'preview' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'POST'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '776'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/gii/model'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '61164'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_CONTENT_LENGTH' => '776'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_ORIGIN' => 'http://manage.balls.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/gii/model'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522653531.6161
+    'REQUEST_TIME' => 1522653531
+]
+2018-04-02 15:18:55 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:18:55 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:18:54 [192.168.10.1][-][-][info][application] $_GET = [
+    'id' => 'model'
+]
+
+$_POST = [
+    '_csrf-manage' => 'kuTshgkXGdi4Bx_hMU0A4ptbdXEfbL0ca2HqbN2PCbTf1t3_QGJvu91iQKZBD1_W3BQ4SCYo03I4F99UrrZG9w=='
+    'Generator' => [
+        'tableName' => 'rule'
+        'modelClass' => 'Rule'
+        'ns' => 'common\\models'
+        'baseClass' => 'yii\\db\\ActiveRecord'
+        'db' => 'db'
+        'useTablePrefix' => '0'
+        'generateRelations' => 'all'
+        'generateRelationsFromCurrentSchema' => '1'
+        'generateLabelsFromComments' => '0'
+        'generateQuery' => '0'
+        'queryNs' => 'common\\models'
+        'queryBaseClass' => 'yii\\db\\ActiveQuery'
+        'enableI18N' => '0'
+        'messageCategory' => 'app'
+        'useSchemaName' => '1'
+        'template' => 'default'
+    ]
+    'answers' => [
+        '9a5a15c51f283567e2e193c2d4b487de' => '1'
+    ]
+    'generate' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'POST'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '825'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/gii/model'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '61164'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_CONTENT_LENGTH' => '825'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_ORIGIN' => 'http://manage.balls.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/gii/model'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522653534.9406
+    'REQUEST_TIME' => 1522653534
+]
+2018-04-02 15:23:49 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:195
+    in /vagrant/ws/balls/manage/controllers/SiteController.php:27
+2018-04-02 15:23:49 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:23:49 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '63725'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522653829.1089
+    'REQUEST_TIME' => 1522653829
+]
+2018-04-02 15:23:54 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:195
+    in /vagrant/ws/balls/manage/controllers/RuleController.php:20
+2018-04-02 15:23:54 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:23:53 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '63725'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522653833.6773
+    'REQUEST_TIME' => 1522653833
+]
+2018-04-02 15:25:31 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:195
+    in /vagrant/ws/balls/manage/controllers/RuleController.php:20
+2018-04-02 15:25:31 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:25:30 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '64644'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522653930.4309
+    'REQUEST_TIME' => 1522653930
+]
+2018-04-02 15:29:10 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:195
+    in /vagrant/ws/balls/manage/controllers/RuleController.php:24
+2018-04-02 15:29:10 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:29:09 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '49969'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654149.2813
+    'REQUEST_TIME' => 1522654149
+]
+2018-04-02 15:29:18 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:195
+    in /vagrant/ws/balls/manage/controllers/RuleController.php:24
+2018-04-02 15:29:18 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:29:17 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '49969'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654157.6863
+    'REQUEST_TIME' => 1522654157
+]
+2018-04-02 15:29:39 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: rule_id' in /vagrant/ws/balls/manage/services/RuleService.php:27
+Stack trace:
+#0 /vagrant/ws/balls/manage/services/RuleService.php(27): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/vagrant/ws/bal...', 27, Array)
+#1 /vagrant/ws/balls/manage/controllers/RuleController.php(21): manage\services\RuleService->add(Array)
+#2 [internal function]: manage\controllers\RuleController->actionIndex()
+#3 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('index', Array)
+#6 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('rule/index', Array)
+#7 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#9 {main}
+2018-04-02 15:29:39 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:29:39 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][info][application] $_GET = []
+
+$_POST = [
+    'message_id' => ''
+    'content' => '1.所有足球投资之赛果认定以本平台所订定之规则为准，不接受其他体育网站或其他实时比分所公布的赛果，敬请代理注意!
+2.交易皆以法定时间〈上下半场各须满45分钟及含伤停补时〉的比赛结果为准〈未满九十分钟者皆不予计算。
+3.某些青少年其正规比赛时间(含伤停补时)为80、70分钟不等，若无腰斩或气候等突发因素影响导致比赛未满正规时间，本 平台仍视为有效注单。
+所有足球若联盟已标明于何处举行赛事，则该联盟赛事队伍无论标明主场或客场，其实际并无主客场区别，若无受天气或其他突发因素影响赛事进行，则所有投资单均视为有效注单。
+4.所有足球投资之赛事，若受天气或其他突发因素影响赛事进行，如腰斩、保留比赛…等，所有投资一律退回不予计算，以全场波胆 上半场波胆 总进球数，如已进行至规范时间内是否计算一律以本平台公告为主。
+5.如遇特殊状况，导致赛事无法完成，所有投资单是否有效，本平台会以公告方式进行通知裁定结果。
+在指定球赛中，反对球赛的最终正确比分。所有足球波胆交易皆以法定时间(上下半场各须满45分钟及伤停补时)的比赛结果为准(未满九十分钟者皆不予计算)；加时及十二码决胜之比赛，或之后由任何体育纪律委员会重新裁决而更改之赛'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'POST'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'CONTENT_LENGTH' => '4368'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '49969'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_CONTENT_LENGTH' => '4368'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_ORIGIN' => 'http://manage.balls.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/rule/index'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654179.3035
+    'REQUEST_TIME' => 1522654179
+]
+2018-04-02 15:29:45 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: rule_id' in /vagrant/ws/balls/manage/services/RuleService.php:27
+Stack trace:
+#0 /vagrant/ws/balls/manage/services/RuleService.php(27): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/vagrant/ws/bal...', 27, Array)
+#1 /vagrant/ws/balls/manage/controllers/RuleController.php(21): manage\services\RuleService->add(Array)
+#2 [internal function]: manage\controllers\RuleController->actionIndex()
+#3 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('index', Array)
+#6 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('rule/index', Array)
+#7 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#9 {main}
+2018-04-02 15:29:45 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:29:45 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][info][application] $_GET = []
+
+$_POST = [
+    'message_id' => ''
+    'content' => '1.所有足球投资之赛果认定以本平台所订定之规则为准，不接受其他体育网站或其他实时比分所公布的赛果，敬请代理注意!
+2.交易皆以法定时间〈上下半场各须满45分钟及含伤停补时〉的比赛结果为准〈未满九十分钟者皆不予计算。
+3.某些青少年其正规比赛时间(含伤停补时)为80、70分钟不等，若无腰斩或气候等突发因素影响导致比赛未满正规时间，本 平台仍视为有效注单。
+所有足球若联盟已标明于何处举行赛事，则该联盟赛事队伍无论标明主场或客场，其实际并无主客场区别，若无受天气或其他突发因素影响赛事进行，则所有投资单均视为有效注单。
+4.所有足球投资之赛事，若受天气或其他突发因素影响赛事进行，如腰斩、保留比赛…等，所有投资一律退回不予计算，以全场波胆 上半场波胆 总进球数，如已进行至规范时间内是否计算一律以本平台公告为主。
+5.如遇特殊状况，导致赛事无法完成，所有投资单是否有效，本平台会以公告方式进行通知裁定结果。
+在指定球赛中，反对球赛的最终正确比分。所有足球波胆交易皆以法定时间(上下半场各须满45分钟及伤停补时)的比赛结果为准(未满九十分钟者皆不予计算)；加时及十二码决胜之比赛，或之后由任何体育纪律委员会重新裁决而更改之赛'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'POST'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'CONTENT_LENGTH' => '4368'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '49969'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_CONTENT_LENGTH' => '4368'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_ORIGIN' => 'http://manage.balls.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/rule/index'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654185.3372
+    'REQUEST_TIME' => 1522654185
+]
+2018-04-02 15:30:16 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: rule_id' in /vagrant/ws/balls/manage/services/RuleService.php:27
+Stack trace:
+#0 /vagrant/ws/balls/manage/services/RuleService.php(27): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/vagrant/ws/bal...', 27, Array)
+#1 /vagrant/ws/balls/manage/controllers/RuleController.php(21): manage\services\RuleService->add(Array)
+#2 [internal function]: manage\controllers\RuleController->actionIndex()
+#3 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('index', Array)
+#6 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('rule/index', Array)
+#7 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#9 {main}
+2018-04-02 15:30:16 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:30:16 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][info][application] $_GET = []
+
+$_POST = [
+    'message_id' => ''
+    'content' => '1.所有足球投资之赛果认定以本平台所订定之规则为准，不接受其他体育网站或其他实时比分所公布的赛果，敬请代理注意!
+2.交易皆以法定时间〈上下半场各须满45分钟及含伤停补时〉的比赛结果为准〈未满九十分钟者皆不予计算。
+3.某些青少年其正规比赛时间(含伤停补时)为80、70分钟不等，若无腰斩或气候等突发因素影响导致比赛未满正规时间，本 平台仍视为有效注单。
+所有足球若联盟已标明于何处举行赛事，则该联盟赛事队伍无论标明主场或客场，其实际并无主客场区别，若无受天气或其他突发因素影响赛事进行，则所有投资单均视为有效注单。
+4.所有足球投资之赛事，若受天气或其他突发因素影响赛事进行，如腰斩、保留比赛…等，所有投资一律退回不予计算，以全场波胆 上半场波胆 总进球数，如已进行至规范时间内是否计算一律以本平台公告为主。
+5.如遇特殊状况，导致赛事无法完成，所有投资单是否有效，本平台会以公告方式进行通知裁定结果。
+在指定球赛中，反对球赛的最终正确比分。所有足球波胆交易皆以法定时间(上下半场各须满45分钟及伤停补时)的比赛结果为准(未满九十分钟者皆不予计算)；加时及十二码决胜之比赛，或之后由任何体育纪律委员会重新裁决而更改之赛'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'POST'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'CONTENT_LENGTH' => '4368'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '49969'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_CONTENT_LENGTH' => '4368'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_ORIGIN' => 'http://manage.balls.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/rule/index'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654215.9855
+    'REQUEST_TIME' => 1522654215
+]
+2018-04-02 15:30:18 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:195
+    in /vagrant/ws/balls/manage/controllers/RuleController.php:24
+2018-04-02 15:30:18 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:30:18 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '49969'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654218.3732
+    'REQUEST_TIME' => 1522654218
+]
+2018-04-02 15:30:19 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/plugins/underscore/underscore-min.map".' in /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('js/plugins/unde...', Array)
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#2 {main}
+2018-04-02 15:30:19 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:195
+2018-04-02 15:30:19 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:30:19 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/js/plugins/underscore/underscore-min.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '49969'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654219.1444
+    'REQUEST_TIME' => 1522654219
+]
+2018-04-02 15:30:21 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:30:21 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'rule_id' => '1'
+    'content' => '所有足球投资之赛果认定以本平台所订定之规则为准，不接受其他体育网站或其他实时比分所公布的赛果，敬请代理注意!
+交易皆以法定时间〈上下半场各须满45分钟及含伤停补时〉的比赛结果为准〈未满九十分钟者皆不予计算。
+某些青少年其正规比赛时间(含伤停补时)为80、70分钟不等，若无腰斩或气候等突发因素影响导致比赛未满正规时间，本 平台仍视为有效注单。
+所有足球若联盟已标明于何处举行赛事，则该联盟赛事队伍无论标明主场或客场，其实际并无主客场区别，若无受天气或其他突发因素影响赛事进行，则所有投资单均视为有效注单。
+所有足球投资之赛事，若受天气或其他突发因素影响赛事进行，如腰斩、保留比赛…等，所有投资一律退回不予计算，以全场波胆 上半场波胆 总进球数，如已进行至规范时间内是否计算一律以本平台公告为主。
+如遇特殊状况，导致赛事无法完成，所有投资单是否有效，本平台会以公告方式进行通知裁定结果。
+在指定球赛中，反对球赛的最终正确比分。所有足球波胆交易皆以法定时间(上下半场各须满45分钟及伤停补时)的比赛结果为准(未满九十分钟者皆不予计算)；加时及十二码决胜之比赛，或之后由任何体育纪律委员会重新裁决而更改之赛'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'POST'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'CONTENT_LENGTH' => '4356'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '49969'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_CONTENT_LENGTH' => '4356'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_ORIGIN' => 'http://manage.balls.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/rule/index'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654221.3195
+    'REQUEST_TIME' => 1522654221
+]
+2018-04-02 15:30:25 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/plugins/underscore/underscore-min.map".' in /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('js/plugins/unde...', Array)
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#2 {main}
+2018-04-02 15:30:25 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:195
+2018-04-02 15:30:25 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:30:25 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/js/plugins/underscore/underscore-min.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '49969'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654225.4986
+    'REQUEST_TIME' => 1522654225
+]
+2018-04-02 15:30:28 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:30:27 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'rule_id' => '1'
+    'content' => '所有足球投资之赛果认定以本平台所订定之规则为准，不接受其他体育网站或其他实时比分所公布的赛果，敬请代理注意!
+交易皆以法定时间〈上下半场各须满45分钟及含伤停补时〉的比赛结果为准〈未满九十分钟者皆不予计算。
+某些青少年其正规比赛时间(含伤停补时)为80、70分钟不等，若无腰斩或气候等突发因素影响导致比赛未满正规时间，本 平台仍视为有效注单。
+所有足球若联盟已标明于何处举行赛事，则该联盟赛事队伍无论标明主场或客场，其实际并无主客场区别，若无受天气或其他突发因素影响赛事进行，则所有投资单均视为有效注单。
+所有足球投资之赛事，若受天气或其他突发因素影响赛事进行，如腰斩、保留比赛…等，所有投资一律退回不予计算，以全场波胆 上半场波胆 总进球数，如已进行至规范时间内是否计算一律以本平台公告为主。
+如遇特殊状况，导致赛事无法完成，所有投资单是否有效，本平台会以公告方式进行通知裁定结果。
+在指定球赛中，反对球赛的最终正确比分。所有足球波胆交易皆以法定时间(上下半场各须满45分钟及伤停补时)的比赛结果为准(未满九十分钟者皆不予计算)；加时及十二码决胜之比赛，或之后由任何体育纪律委员会重新裁决而更改之赛'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'POST'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'CONTENT_LENGTH' => '4356'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '49969'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_CONTENT_LENGTH' => '4356'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_ORIGIN' => 'http://manage.balls.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/rule/index'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654227.6467
+    'REQUEST_TIME' => 1522654227
+]
+2018-04-02 15:30:46 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:30:46 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'rule_id' => '1'
+    'content' => '1.所有足球投资之赛果认定以本平台所订定之规则为准，不接受其他体育网站或其他实时比分所公布的赛果，敬请代理注意!
+交易皆以法定时间〈上下半场各须满45分钟及含伤停补时〉的比赛结果为准〈未满九十分钟者皆不予计算。
+某些青少年其正规比赛时间(含伤停补时)为80、70分钟不等，若无腰斩或气候等突发因素影响导致比赛未满正规时间，本 平台仍视为有效注单。
+所有足球若联盟已标明于何处举行赛事，则该联盟赛事队伍无论标明主场或客场，其实际并无主客场区别，若无受天气或其他突发因素影响赛事进行，则所有投资单均视为有效注单。
+所有足球投资之赛事，若受天气或其他突发因素影响赛事进行，如腰斩、保留比赛…等，所有投资一律退回不予计算，以全场波胆 上半场波胆 总进球数，如已进行至规范时间内是否计算一律以本平台公告为主。
+如遇特殊状况，导致赛事无法完成，所有投资单是否有效，本平台会以公告方式进行通知裁定结果。
+在指定球赛中，反对球赛的最终正确比分。所有足球波胆交易皆以法定时间(上下半场各须满45分钟及伤停补时)的比赛结果为准(未满九十分钟者皆不予计算)；加时及十二码决胜之比赛，或之后由任何体育纪律委员会重新裁决而更改之赛'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'POST'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'CONTENT_LENGTH' => '4358'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '49969'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_CONTENT_LENGTH' => '4358'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_ORIGIN' => 'http://manage.balls.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/rule/index'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654246.3313
+    'REQUEST_TIME' => 1522654246
+]
+2018-04-02 15:31:19 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:195
+    in /vagrant/ws/balls/manage/controllers/RuleController.php:24
+2018-04-02 15:31:19 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:31:19 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '49969'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654279.0258
+    'REQUEST_TIME' => 1522654279
+]
+2018-04-02 15:31:47 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:31:47 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'rule_id' => '1'
+    'content' => '1.所有足球投资之赛果认定以本平台所订定之规则为准，不接受其他体育网站或其他实时比分所公布的赛果，敬请代理注意!
+2.交易皆以法定时间〈上下半场各须满45分钟及含伤停补时〉的比赛结果为准〈未满九十分钟者皆不予计算。
+3.某些青少年其正规比赛时间(含伤停补时)为80、70分钟不等，若无腰斩或气候等突发因素影响导致比赛未满正规时间，本 平台仍视为有效注单。
+4.所有足球若联盟已标明于何处举行赛事，则该联盟赛事队伍无论标明主场或客场，其实际并无主客场区别，若无受天气或其他突发因素影响赛事进行，则所有投资单均视为有效注单。
+5.所有足球投资之赛事，若受天气或其他突发因素影响赛事进行，如腰斩、保留比赛…等，所有投资一律退回不予计算，以全场波胆 上半场波胆 总进球数，如已进行至规范时间内是否计算一律以本平台公告为主。
+6.如遇特殊状况，导致赛事无法完成，所有投资单是否有效，本平台会以公告方式进行通知裁定结果。
+在指定球赛中，反对球赛的最终正确比分。所有足球波胆交易皆以法定时间(上下半场各须满45分钟及伤停补时)的比赛结果为准(未满九十分钟者皆不予计算)；加时及十二码决胜之比赛，或之后由任何体育纪律委员会重新裁决而更改之赛'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'POST'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'CONTENT_LENGTH' => '4368'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '49969'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_CONTENT_LENGTH' => '4368'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_ORIGIN' => 'http://manage.balls.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/rule/index'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654307.3466
+    'REQUEST_TIME' => 1522654307
+]
+2018-04-02 15:32:22 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/plugins/underscore/underscore-min.map".' in /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('js/plugins/unde...', Array)
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#2 {main}
+2018-04-02 15:32:22 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:195
+2018-04-02 15:32:22 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:32:22 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/js/plugins/underscore/underscore-min.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '49969'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654342.0262
+    'REQUEST_TIME' => 1522654342
+]
+2018-04-02 15:32:24 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:195
+    in /vagrant/ws/balls/manage/controllers/RuleController.php:25
+2018-04-02 15:32:24 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:32:24 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '49969'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654344.281
+    'REQUEST_TIME' => 1522654344
+]
+2018-04-02 15:32:25 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/plugins/underscore/underscore-min.map".' in /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('js/plugins/unde...', Array)
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#2 {main}
+2018-04-02 15:32:25 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:195
+2018-04-02 15:32:25 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:32:25 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/js/plugins/underscore/underscore-min.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '49969'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654345.0569
+    'REQUEST_TIME' => 1522654345
+]
+2018-04-02 15:33:29 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:33:28 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'rule_id' => '1'
+    'content' => '所有足球投资之赛果认定以本平台所订定之规则为准，不接受其他体育网站或其他实时比分所公布的赛果，敬请代理注意!
+交易皆以法定时间〈上下半场各须满45分钟及含伤停补时〉的比赛结果为准〈未满九十分钟者皆不予计算。
+某些青少年其正规比赛时间(含伤停补时)为80、70分钟不等，若无腰斩或气候等突发因素影响导致比赛未满正规时间，本 平台仍视为有效注单。
+所有足球若联盟已标明于何处举行赛事，则该联盟赛事队伍无论标明主场或客场，其实际并无主客场区别，若无受天气或其他突发因素影响赛事进行，则所有投资单均视为有效注单。
+所有足球投资之赛事，若受天气或其他突发因素影响赛事进行，如腰斩、保留比赛…等，所有投资一律退回不予计算，以全场波胆 上半场波胆 总进球数，如已进行至规范时间内是否计算一律以本平台公告为主。
+如遇特殊状况，导致赛事无法完成，所有投资单是否有效，本平台会以公告方式进行通知裁定结果。
+在指定球赛中，反对球赛的最终正确比分。所有足球波胆交易皆以法定时间(上下半场各须满45分钟及伤停补时)的比赛结果为准(未满九十分钟者皆不予计算)；加时及十二码决胜之比赛，或之后由任何体育纪律委员会重新裁决而更改之赛'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'POST'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'CONTENT_LENGTH' => '4356'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '52412'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_CONTENT_LENGTH' => '4356'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_ORIGIN' => 'http://manage.balls.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/rule/index'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654408.0305
+    'REQUEST_TIME' => 1522654408
+]
+2018-04-02 15:34:00 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:33:59 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'rule_id' => '1'
+    'content' => '所有足球投资之赛果认定以本平台所订定之规则为准，不接受其他体育网站或其他实时比分所公布的赛果，敬请代理注意!
+交易皆以法定时间〈上下半场各须满45分钟及含伤停补时〉的比赛结果为准〈未满九十分钟者皆不予计算。
+某些青少年其正规比赛时间(含伤停补时)为80、70分钟不等，若无腰斩或气候等突发因素影响导致比赛未满正规时间，本 平台仍视为有效注单。
+所有足球若联盟已标明于何处举行赛事，则该联盟赛事队伍无论标明主场或客场，其实际并无主客场区别，若无受天气或其他突发因素影响赛事进行，则所有投资单均视为有效注单。
+所有足球投资之赛事，若受天气或其他突发因素影响赛事进行，如腰斩、保留比赛…等，所有投资一律退回不予计算，以全场波胆 上半场波胆 总进球数，如已进行至规范时间内是否计算一律以本平台公告为主。
+如遇特殊状况，导致赛事无法完成，所有投资单是否有效，本平台会以公告方式进行通知裁定结果。
+在指定球赛中，反对球赛的最终正确比分。所有足球波胆交易皆以法定时间(上下半场各须满45分钟及伤停补时)的比赛结果为准(未满九十分钟者皆不予计算)；加时及十二码决胜之比赛，或之后由任何体育纪律委员会重新裁决而更改之赛'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'POST'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'CONTENT_LENGTH' => '4356'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '52412'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_CONTENT_LENGTH' => '4356'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_ORIGIN' => 'http://manage.balls.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/rule/index'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654439.6303
+    'REQUEST_TIME' => 1522654439
+]
+2018-04-02 15:34:00 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:33:59 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'rule_id' => '1'
+    'content' => '所有足球投资之赛果认定以本平台所订定之规则为准，不接受其他体育网站或其他实时比分所公布的赛果，敬请代理注意!
+交易皆以法定时间〈上下半场各须满45分钟及含伤停补时〉的比赛结果为准〈未满九十分钟者皆不予计算。
+某些青少年其正规比赛时间(含伤停补时)为80、70分钟不等，若无腰斩或气候等突发因素影响导致比赛未满正规时间，本 平台仍视为有效注单。
+所有足球若联盟已标明于何处举行赛事，则该联盟赛事队伍无论标明主场或客场，其实际并无主客场区别，若无受天气或其他突发因素影响赛事进行，则所有投资单均视为有效注单。
+所有足球投资之赛事，若受天气或其他突发因素影响赛事进行，如腰斩、保留比赛…等，所有投资一律退回不予计算，以全场波胆 上半场波胆 总进球数，如已进行至规范时间内是否计算一律以本平台公告为主。
+如遇特殊状况，导致赛事无法完成，所有投资单是否有效，本平台会以公告方式进行通知裁定结果。
+在指定球赛中，反对球赛的最终正确比分。所有足球波胆交易皆以法定时间(上下半场各须满45分钟及伤停补时)的比赛结果为准(未满九十分钟者皆不予计算)；加时及十二码决胜之比赛，或之后由任何体育纪律委员会重新裁决而更改之赛'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'POST'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'CONTENT_LENGTH' => '4356'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '52731'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_CONTENT_LENGTH' => '4356'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_ORIGIN' => 'http://manage.balls.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/rule/index'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654439.8487
+    'REQUEST_TIME' => 1522654439
+]
+2018-04-02 15:34:01 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:195
+    in /vagrant/ws/balls/manage/controllers/SiteController.php:27
+2018-04-02 15:34:01 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:34:01 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '52731'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654441.0558
+    'REQUEST_TIME' => 1522654441
+]
+2018-04-02 15:34:02 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/plugins/underscore/underscore-min.map".' in /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('js/plugins/unde...', Array)
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#2 {main}
+2018-04-02 15:34:02 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:195
+2018-04-02 15:34:02 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:34:01 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/js/plugins/underscore/underscore-min.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '52731'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654441.6393
+    'REQUEST_TIME' => 1522654441
+]
+2018-04-02 15:34:13 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:195
+    in /vagrant/ws/balls/manage/controllers/RuleController.php:24
+2018-04-02 15:34:13 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:34:12 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/rule/index'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '52731'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://manage.balls.com/'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654452.8097
+    'REQUEST_TIME' => 1522654452
+]
+2018-04-02 15:34:13 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/plugins/underscore/underscore-min.map".' in /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('js/plugins/unde...', Array)
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /vagrant/ws/balls/manage/web/index.php(21): yii\base\Application->run()
+#2 {main}
+2018-04-02 15:34:14 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+    in /vagrant/ws/balls/manage/views/layouts/main.php:195
+2018-04-02 15:34:14 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-02 15:34:13 [192.168.10.1][-][grfu2fhftv2ktt63j962p3g4b3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-manage' => 'grfu2fhftv2ktt63j962p3g4b3'
+    '_csrf-manage' => 'b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a:2:{i:0;s:12:\"_csrf-manage\";i:1;s:32:\"M21yIuvcee_GpB_4GOM99DnnSv58s9OC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/manage/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/manage/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/js/plugins/underscore/underscore-min.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/manage/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '52731'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'manage.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'manage.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-manage=grfu2fhftv2ktt63j962p3g4b3; _csrf-manage=b9ca1ea26d382bed36fc04878252432109d8d2bbce9175b0c746a745915f0ee4a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_csrf-manage%22%3Bi%3A1%3Bs%3A32%3A%22M21yIuvcee_GpB_4GOM99DnnSv58s9OC%22%3B%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522654453.4035
+    'REQUEST_TIME' => 1522654453
+]
