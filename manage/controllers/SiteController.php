@@ -34,4 +34,8 @@ class SiteController extends Controller
     {
        return $this->render('form');
     }
+    public function actionTable2()
+    {
+       return $this->render('table2');
+    }
 }
