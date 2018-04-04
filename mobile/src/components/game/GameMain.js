@@ -26,7 +26,10 @@ class Form extends Component {
             }
         });
     }
-
+    handleClick = (id) => {
+        console.log(this.props);
+        this.props.router.push(`/game/detail?id=${id}`);
+    }
     render () {
         const { list } = this.props;
         return (
@@ -36,7 +39,8 @@ class Form extends Component {
                         const {
                             match_time,
                             content,
-                            title
+                            title,
+                            ball_match_id
                         } = item;
                         return (
                             <Item 
@@ -44,6 +48,7 @@ class Form extends Component {
                                 content={content}
                                 time={match_time}
                                 title={title}
+                                onClick={() => this.handleClick(ball_match_id)}
                             />
                         );
                     })

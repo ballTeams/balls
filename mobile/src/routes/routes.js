@@ -45,7 +45,7 @@ const routes = [
         }
     },
     {
-        path: '/game(/:page)',
+        path: '/game(/:page)(?:page)',
         getComponents(nextState, callback) {
             require.ensure([], function(require) {
                 callback(null, Game);

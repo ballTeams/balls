@@ -6,6 +6,9 @@ const initState = {
         1: [],
         2: [],
         3: []
+   },
+   detail: {
+
    }
 };
 
@@ -15,6 +18,7 @@ const game = (state = initState, action) => {
         	return {
         		...state,
         		list: [
+                    ...state.list,
         			...action.data
         		]
         		
@@ -23,10 +27,22 @@ const game = (state = initState, action) => {
 
             return {
                 ...state,
-                [action.status]: [
-                    ...action.data
-                ]
+                result: {
+                    ...state.result,
+                    [action.status]: [
+                        ...action.data
+                    ]
+                }
+                
             };
+        case 'GAME_DETAIL_GET': 
+            return {
+                ...state,
+                detail: {
+                    ...state.detail,
+                    ...action.data
+                }
+            }
         default:
             return initState;
     }

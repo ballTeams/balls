@@ -167,9 +167,9 @@ class TopBar extends Component {
                         Notice: 2212312
                     </NoticeBar>
                     <div style={{
-                        backgroundRepeatY: 'no-repeat',
-                        backgroundRepeatX: 'repeat',
+                        backgroundRepeat: 'repeat-y',
                         backgroundImage: `url(${XZBG})`,
+                        backgroundSize: 'cover',
                         minHeight: window.innerHeight - 79
                     }}>
                         {children}
