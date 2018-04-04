@@ -29,8 +29,10 @@ class FootBallController extends BaseController
 
     public function actionBuy()
     {
-        $data=\Yii::$app->request->post();
-        return FootBallService::service()->buy($data);
+        if(\Yii::$app->request->isPost){
+            $data=\Yii::$app->request->post();
+            return FootBallService::service()->buy($data);
+        }
     }
 
 
