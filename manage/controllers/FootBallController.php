@@ -59,6 +59,6 @@ class FootBallController extends BaseController
     public function actionMatchInfoAdd()
     {
         $data=\Yii::$app->request->post();
-        FootBallService::service()->infoAdd($data);
+        return FootBallService::service()->infoAdd($data);
     }
 }

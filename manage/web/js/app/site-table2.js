@@ -40,7 +40,7 @@
 			}
 			console.log(obj);
 			$.ajax({
-	            url:'/z',
+	            url:'/foot-ball/match-info-add',
 	            type:'post',
 	            data:obj,
 	            dataType:'json',
