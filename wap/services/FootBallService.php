@@ -82,7 +82,7 @@ class FootBallService extends BaseService
     {
         $user_id=1;
         $data=Order::find()
-            ->select('buy_result,order_id,status,ball_match_id')
+            ->select('buy_result,order_id,status,ball_match_id,buy_money')
             ->where(['user_id'=>$user_id])->asArray()->all();
         foreach ($data as &$v){
             $match=BallMatch::findOne($v['ball_match_id']);
@@ -96,6 +96,10 @@ class FootBallService extends BaseService
             }
 
         }
+        $item['total']=(int)Order::find()
+            ->select('sum(buy_money)')
+            ->where(['user_id'=>$user_id])->scalar();
+        $item['result']=0;
         $item['list']=$data;
         return Json::encode(['status'=>1,'msg'=>'success','data'=>$item]);
     }
