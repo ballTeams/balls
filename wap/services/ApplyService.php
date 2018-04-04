@@ -11,6 +11,7 @@ namespace wap\services;
 
 use common\models\Apply;
 use common\models\BallMatch;
+use common\models\BankInfo;
 use common\models\Message;
 use common\models\User;
 use yii\helpers\Json;
@@ -43,6 +44,22 @@ class ApplyService extends BaseService
             return Json::encode(['status'=>0,'msg'=>$e->getMessage()]);
         }
         return Json::encode(['status'=>1,'msg'=>'success']);
+
+    }
+
+    public function info()
+    {
+        $user_id=1;
+        $data=Apply::find()->where(['user_id'=>$user_id])->asArray()->one();
+        if($data){
+            $data['create_time']=date('Y-m-d H:i:s',$data['create_time']);
+            $item['apply_info']=$data;
+            $bank=BankInfo::find()->asArray()->one();
+            $item['bank_info']=$bank;
+            return Json::encode(['status'=>1,'msg'=>'success','data'=>$item]);
+        }else{
+            return Json::encode(['status'=>0,'msg'=>'无充值申请']);
+        }
 
     }
 }

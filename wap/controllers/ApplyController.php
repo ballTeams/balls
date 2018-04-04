@@ -27,4 +27,8 @@ class ApplyController extends BaseController
         }
     }
 
+    public function actionInfo(){
+        return ApplyService::service()->info();
+    }
+
 }
