@@ -96,7 +96,8 @@ class FootBallService extends BaseService
             }
 
         }
-        return Json::encode(['status'=>1,'msg'=>'success','data'=>$data]);
+        $item['list']=$data;
+        return Json::encode(['status'=>1,'msg'=>'success','data'=>$item]);
     }
 }
 
