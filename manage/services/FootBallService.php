@@ -70,6 +70,9 @@ class FootBallService extends BaseService
     public function matchInfo($ball_match_id)
     {
         $data=MatchInfo::find()->where(['ball_match_id'=>$ball_match_id])->asArray()->all();
+        foreach ($data as &$v){
+            $v['content']=Json::decode($v['content']);
+        }
         return $data;
 
     }
