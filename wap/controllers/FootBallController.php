@@ -10,8 +10,13 @@ class FootBallController extends BaseController
 {
     public function actionIndex()
     {
-    	header("Access-Control-Allow-Origin:*");
         return FootBallService::service()->index();
+    }
+
+    public function actionMatchInfo()
+    {
+        $ball_match_id=\Yii::$app->request->get('ball_match_id',1);
+        return FootBallService::service()->matchInfo($ball_match_id);
     }
 
 }

@@ -15,6 +15,7 @@ class BaseController extends Controller
 {
     public function init()
     {
+        header("Access-Control-Allow-Origin:*");
         parent::init();
       
     }
