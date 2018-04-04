@@ -1,6 +1,7 @@
 <?php
 namespace wap\controllers;
 use wap\services\FootBallService;
+use yii\helpers\Json;
 
 
 /**
@@ -32,6 +33,8 @@ class FootBallController extends BaseController
         if(\Yii::$app->request->isPost){
             $data=\Yii::$app->request->post();
             return FootBallService::service()->buy($data);
+        }else{
+            return Json::encode(['status'=>1,'msg'=>'success']);
         }
     }
 
