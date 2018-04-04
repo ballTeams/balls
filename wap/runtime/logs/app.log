@@ -4164,3 +4164,903 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1522838299.3784
     'REQUEST_TIME' => 1522838299
 ]
+2018-04-04 18:40:14 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:40:13 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/wap/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/wap/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/foot-ball/match-info'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/wap/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '60026'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'wap.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wap.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522838413.6849
+    'REQUEST_TIME' => 1522838413
+]
+2018-04-04 18:42:02 [192.168.10.1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'ball_match_id' in where clause is ambiguous' in /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php:1258
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(1258): PDOStatement->execute()
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(1148): yii\db\Command->internalExecute('<span class="st...')
+#2 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#3 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#5 /vagrant/ws/balls/wap/services/FootBallService.php(32): yii\db\ActiveQuery->all()
+#6 /vagrant/ws/balls/wap/controllers/FootBallController.php(19): wap\services\FootBallService->matchInfo('<span class="nu...')
+#7 [internal function]: wap\controllers\FootBallController->actionMatchInfo()
+#8 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#9 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams('[]')
+#10 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('<span class="st...', '[]')
+#11 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('<span class="st...', '[]')
+#12 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /vagrant/ws/balls/wap/web/index.php(17): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'ball_match_id' in where clause is ambiguous
+The SQL being executed was: SELECT * FROM `match_info` LEFT JOIN `ball_match` ON ball_match.ball_match_id=match_info.ball_match_id WHERE `ball_match_id`=1' in /vagrant/ws/balls/vendor/yiisoft/yii2/db/Schema.php:664
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(1263): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(1148): yii\db\Command->internalExecute('<span class="st...')
+#2 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#3 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#5 /vagrant/ws/balls/wap/services/FootBallService.php(32): yii\db\ActiveQuery->all()
+#6 /vagrant/ws/balls/wap/controllers/FootBallController.php(19): wap\services\FootBallService->matchInfo('<span class="nu...')
+#7 [internal function]: wap\controllers\FootBallController->actionMatchInfo()
+#8 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#9 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams('[]')
+#10 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('<span class="st...', '[]')
+#11 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('<span class="st...', '[]')
+#12 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /vagrant/ws/balls/wap/web/index.php(17): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1052
+    [2] => Column 'ball_match_id' in where clause is ambiguous
+)
+
+2018-04-04 18:42:02 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:42:02 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:41:52 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/wap/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/wap/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/foot-ball/match-info'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/wap/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '60266'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'wap.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wap.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522838512.3409
+    'REQUEST_TIME' => 1522838512
+]
+2018-04-04 18:42:09 [192.168.10.1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'ball_match_id' in where clause is ambiguous' in /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php:1258
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(1258): PDOStatement->execute()
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(1148): yii\db\Command->internalExecute('<span class="st...')
+#2 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#3 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#5 /vagrant/ws/balls/wap/services/FootBallService.php(32): yii\db\ActiveQuery->all()
+#6 /vagrant/ws/balls/wap/controllers/FootBallController.php(19): wap\services\FootBallService->matchInfo('<span class="nu...')
+#7 [internal function]: wap\controllers\FootBallController->actionMatchInfo()
+#8 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#9 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams('[]')
+#10 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('<span class="st...', '[]')
+#11 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('<span class="st...', '[]')
+#12 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /vagrant/ws/balls/wap/web/index.php(17): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'ball_match_id' in where clause is ambiguous
+The SQL being executed was: SELECT * FROM `match_info` LEFT JOIN `ball_match` ON ball_match.ball_match_id=match_info.ball_match_id WHERE `ball_match_id`=1' in /vagrant/ws/balls/vendor/yiisoft/yii2/db/Schema.php:664
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(1263): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(1148): yii\db\Command->internalExecute('<span class="st...')
+#2 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#3 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#5 /vagrant/ws/balls/wap/services/FootBallService.php(32): yii\db\ActiveQuery->all()
+#6 /vagrant/ws/balls/wap/controllers/FootBallController.php(19): wap\services\FootBallService->matchInfo('<span class="nu...')
+#7 [internal function]: wap\controllers\FootBallController->actionMatchInfo()
+#8 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#9 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams('[]')
+#10 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('<span class="st...', '[]')
+#11 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('<span class="st...', '[]')
+#12 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /vagrant/ws/balls/wap/web/index.php(17): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1052
+    [2] => Column 'ball_match_id' in where clause is ambiguous
+)
+
+2018-04-04 18:42:09 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:42:09 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:42:07 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/wap/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/wap/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/foot-ball/match-info'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/wap/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '60266'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'wap.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wap.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522838527.008
+    'REQUEST_TIME' => 1522838527
+]
+2018-04-04 18:42:22 [192.168.10.1][-][-][error][yii\base\InvalidArgumentException] exception 'yii\base\InvalidArgumentException' with message 'Syntax error.' in /vagrant/ws/balls/vendor/yiisoft/yii2/helpers/BaseJson.php:133
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/helpers/BaseJson.php(107): yii\helpers\BaseJson::handleJsonError(4)
+#1 /vagrant/ws/balls/wap/services/FootBallService.php(37): yii\helpers\BaseJson::decode('\xE6\x9F\x90\xE5\xB0\x8F\xE5\x9B\xBDVS\xE6\x9F\x90\xE5...')
+#2 /vagrant/ws/balls/wap/controllers/FootBallController.php(19): wap\services\FootBallService->matchInfo(1)
+#3 [internal function]: wap\controllers\FootBallController->actionMatchInfo()
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('match-info', Array)
+#7 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('foot-ball/match...', Array)
+#8 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /vagrant/ws/balls/wap/web/index.php(17): yii\base\Application->run()
+#10 {main}
+2018-04-04 18:42:22 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:42:22 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:42:21 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/wap/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/wap/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/foot-ball/match-info'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/wap/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '60266'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'wap.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wap.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522838541.5199
+    'REQUEST_TIME' => 1522838541
+]
+2018-04-04 18:43:05 [192.168.10.1][-][-][error][yii\base\InvalidArgumentException] exception 'yii\base\InvalidArgumentException' with message 'Syntax error.' in /vagrant/ws/balls/vendor/yiisoft/yii2/helpers/BaseJson.php:133
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/helpers/BaseJson.php(107): yii\helpers\BaseJson::handleJsonError(4)
+#1 /vagrant/ws/balls/wap/services/FootBallService.php(37): yii\helpers\BaseJson::decode('\xE6\x9F\x90\xE5\xB0\x8F\xE5\x9B\xBDVS\xE6\x9F\x90\xE5...')
+#2 /vagrant/ws/balls/wap/controllers/FootBallController.php(19): wap\services\FootBallService->matchInfo(1)
+#3 [internal function]: wap\controllers\FootBallController->actionMatchInfo()
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('match-info', Array)
+#7 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('foot-ball/match...', Array)
+#8 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /vagrant/ws/balls/wap/web/index.php(17): yii\base\Application->run()
+#10 {main}
+2018-04-04 18:43:05 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:43:05 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:42:56 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/wap/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/wap/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/foot-ball/match-info'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/wap/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '60266'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'wap.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wap.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522838576.8453
+    'REQUEST_TIME' => 1522838576
+]
+2018-04-04 18:43:25 [192.168.10.1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'ball_match_id' in where clause is ambiguous' in /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php:1258
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(1258): PDOStatement->execute()
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(1148): yii\db\Command->internalExecute('<span class="st...')
+#2 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#3 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#5 /vagrant/ws/balls/wap/services/FootBallService.php(32): yii\db\ActiveQuery->all()
+#6 /vagrant/ws/balls/wap/controllers/FootBallController.php(19): wap\services\FootBallService->matchInfo('<span class="nu...')
+#7 [internal function]: wap\controllers\FootBallController->actionMatchInfo()
+#8 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#9 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams('[]')
+#10 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('<span class="st...', '[]')
+#11 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('<span class="st...', '[]')
+#12 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /vagrant/ws/balls/wap/web/index.php(17): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'ball_match_id' in where clause is ambiguous
+The SQL being executed was: SELECT * FROM `match_info` LEFT JOIN `ball_match` ON ball_match.ball_match_id=match_info.ball_match_id WHERE `ball_match_id`=1' in /vagrant/ws/balls/vendor/yiisoft/yii2/db/Schema.php:664
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(1263): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(1148): yii\db\Command->internalExecute('<span class="st...')
+#2 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#3 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#5 /vagrant/ws/balls/wap/services/FootBallService.php(32): yii\db\ActiveQuery->all()
+#6 /vagrant/ws/balls/wap/controllers/FootBallController.php(19): wap\services\FootBallService->matchInfo('<span class="nu...')
+#7 [internal function]: wap\controllers\FootBallController->actionMatchInfo()
+#8 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#9 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams('[]')
+#10 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('<span class="st...', '[]')
+#11 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('<span class="st...', '[]')
+#12 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /vagrant/ws/balls/wap/web/index.php(17): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1052
+    [2] => Column 'ball_match_id' in where clause is ambiguous
+)
+
+2018-04-04 18:43:25 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:43:25 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:43:18 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/wap/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/wap/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/foot-ball/match-info'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/wap/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '60266'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'wap.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wap.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522838598.1784
+    'REQUEST_TIME' => 1522838598
+]
+2018-04-04 18:43:44 [192.168.10.1][-][-][error][yii\base\InvalidArgumentException] exception 'yii\base\InvalidArgumentException' with message 'Syntax error.' in /vagrant/ws/balls/vendor/yiisoft/yii2/helpers/BaseJson.php:133
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/helpers/BaseJson.php(107): yii\helpers\BaseJson::handleJsonError(4)
+#1 /vagrant/ws/balls/wap/services/FootBallService.php(37): yii\helpers\BaseJson::decode('\xE6\x9F\x90\xE5\xB0\x8F\xE5\x9B\xBDVS\xE6\x9F\x90\xE5...')
+#2 /vagrant/ws/balls/wap/controllers/FootBallController.php(19): wap\services\FootBallService->matchInfo(1)
+#3 [internal function]: wap\controllers\FootBallController->actionMatchInfo()
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('match-info', Array)
+#7 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('foot-ball/match...', Array)
+#8 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /vagrant/ws/balls/wap/web/index.php(17): yii\base\Application->run()
+#10 {main}
+2018-04-04 18:43:44 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:43:44 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:43:40 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/wap/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/wap/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/foot-ball/match-info'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/wap/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '60266'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'wap.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wap.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522838620.0821
+    'REQUEST_TIME' => 1522838620
+]
+2018-04-04 18:44:01 [192.168.10.1][-][-][error][yii\base\InvalidArgumentException] exception 'yii\base\InvalidArgumentException' with message 'Syntax error.' in /vagrant/ws/balls/vendor/yiisoft/yii2/helpers/BaseJson.php:133
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/helpers/BaseJson.php(107): yii\helpers\BaseJson::handleJsonError(4)
+#1 /vagrant/ws/balls/wap/services/FootBallService.php(37): yii\helpers\BaseJson::decode('\xE6\x9F\x90\xE5\xB0\x8F\xE5\x9B\xBDVS\xE6\x9F\x90\xE5...')
+#2 /vagrant/ws/balls/wap/controllers/FootBallController.php(19): wap\services\FootBallService->matchInfo(1)
+#3 [internal function]: wap\controllers\FootBallController->actionMatchInfo()
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('match-info', Array)
+#7 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('foot-ball/match...', Array)
+#8 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /vagrant/ws/balls/wap/web/index.php(17): yii\base\Application->run()
+#10 {main}
+2018-04-04 18:44:01 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:44:01 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:43:57 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/wap/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/wap/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/foot-ball/match-info'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/wap/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '60266'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'wap.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wap.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522838637.692
+    'REQUEST_TIME' => 1522838637
+]
+2018-04-04 18:45:09 [192.168.10.1][-][-][error][yii\base\InvalidArgumentException] exception 'yii\base\InvalidArgumentException' with message 'Syntax error.' in /vagrant/ws/balls/vendor/yiisoft/yii2/helpers/BaseJson.php:133
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/helpers/BaseJson.php(107): yii\helpers\BaseJson::handleJsonError(4)
+#1 /vagrant/ws/balls/wap/services/FootBallService.php(35): yii\helpers\BaseJson::decode('\xE6\x9F\x90\xE5\xB0\x8F\xE5\x9B\xBDVS\xE6\x9F\x90\xE5...')
+#2 /vagrant/ws/balls/wap/controllers/FootBallController.php(19): wap\services\FootBallService->matchInfo(1)
+#3 [internal function]: wap\controllers\FootBallController->actionMatchInfo()
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('match-info', Array)
+#7 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('foot-ball/match...', Array)
+#8 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /vagrant/ws/balls/wap/web/index.php(17): yii\base\Application->run()
+#10 {main}
+2018-04-04 18:45:09 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:45:09 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:45:08 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/wap/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/wap/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/foot-ball/match-info'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/wap/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '60266'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'wap.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wap.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522838708.8392
+    'REQUEST_TIME' => 1522838708
+]
+2018-04-04 18:46:01 [192.168.10.1][-][-][error][yii\base\InvalidArgumentException] exception 'yii\base\InvalidArgumentException' with message 'Syntax error.' in /vagrant/ws/balls/vendor/yiisoft/yii2/helpers/BaseJson.php:133
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/helpers/BaseJson.php(107): yii\helpers\BaseJson::handleJsonError(4)
+#1 /vagrant/ws/balls/wap/services/FootBallService.php(34): yii\helpers\BaseJson::decode('\xE6\x9F\x90\xE5\xB0\x8F\xE5\x9B\xBDVS\xE6\x9F\x90\xE5...')
+#2 /vagrant/ws/balls/wap/controllers/FootBallController.php(19): wap\services\FootBallService->matchInfo(1)
+#3 [internal function]: wap\controllers\FootBallController->actionMatchInfo()
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('match-info', Array)
+#7 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('foot-ball/match...', Array)
+#8 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /vagrant/ws/balls/wap/web/index.php(17): yii\base\Application->run()
+#10 {main}
+2018-04-04 18:46:02 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:46:02 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:46:01 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/wap/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/wap/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/foot-ball/match-info'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/wap/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '60841'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'wap.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wap.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522838761.3947
+    'REQUEST_TIME' => 1522838761
+]
+2018-04-04 18:47:26 [192.168.10.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ball_match.conent' in 'field list'' in /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php:1258
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(1258): PDOStatement->execute()
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(1148): yii\db\Command->internalExecute('<span class="st...')
+#2 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#3 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#5 /vagrant/ws/balls/wap/services/FootBallService.php(32): yii\db\ActiveQuery->all()
+#6 /vagrant/ws/balls/wap/controllers/FootBallController.php(19): wap\services\FootBallService->matchInfo('<span class="nu...')
+#7 [internal function]: wap\controllers\FootBallController->actionMatchInfo()
+#8 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#9 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams('[]')
+#10 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('<span class="st...', '[]')
+#11 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('<span class="st...', '[]')
+#12 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /vagrant/ws/balls/wap/web/index.php(17): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ball_match.conent' in 'field list'
+The SQL being executed was: SELECT `ball_match`.`title`, `ball_match`.`conent`, `match_info`.* FROM `match_info` LEFT JOIN `ball_match` ON ball_match.ball_match_id=match_info.ball_match_id WHERE `match_info`.`ball_match_id`=1' in /vagrant/ws/balls/vendor/yiisoft/yii2/db/Schema.php:664
+Stack trace:
+#0 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(1263): yii\db\Schema->convertException(Object(PDOException), 'SELECT `ball_ma...')
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(1148): yii\db\Command->internalExecute('<span class="st...')
+#2 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#3 /vagrant/ws/balls/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#5 /vagrant/ws/balls/wap/services/FootBallService.php(32): yii\db\ActiveQuery->all()
+#6 /vagrant/ws/balls/wap/controllers/FootBallController.php(19): wap\services\FootBallService->matchInfo('<span class="nu...')
+#7 [internal function]: wap\controllers\FootBallController->actionMatchInfo()
+#8 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#9 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams('[]')
+#10 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('<span class="st...', '[]')
+#11 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('<span class="st...', '[]')
+#12 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /vagrant/ws/balls/wap/web/index.php(17): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'ball_match.conent' in 'field list'
+)
+
+2018-04-04 18:47:26 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:47:26 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:47:25 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/wap/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/wap/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/foot-ball/match-info'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/wap/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '61028'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'wap.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wap.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522838845.7276
+    'REQUEST_TIME' => 1522838845
+]
+2018-04-04 18:50:19 [192.168.10.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Illegal string offset 'content'' in /vagrant/ws/balls/wap/services/FootBallService.php:35
+Stack trace:
+#0 /vagrant/ws/balls/wap/services/FootBallService.php(35): yii\base\ErrorHandler->handleError(2, 'Illegal string ...', '/vagrant/ws/bal...', 35, Array)
+#1 /vagrant/ws/balls/wap/controllers/FootBallController.php(19): wap\services\FootBallService->matchInfo(1)
+#2 [internal function]: wap\controllers\FootBallController->actionMatchInfo()
+#3 /vagrant/ws/balls/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('match-info', Array)
+#6 /vagrant/ws/balls/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('foot-ball/match...', Array)
+#7 /vagrant/ws/balls/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /vagrant/ws/balls/wap/web/index.php(17): yii\base\Application->run()
+#9 {main}
+2018-04-04 18:50:19 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:50:17 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/wap/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/wap/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/foot-ball/match-info'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/wap/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '61267'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'wap.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wap.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522839017.59
+    'REQUEST_TIME' => 1522839017
+]
+2018-04-04 18:51:27 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-04 18:51:22 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/wap/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/wap/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/foot-ball/match-info'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/wap/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '61559'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'wap.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wap.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1522839082.411
+    'REQUEST_TIME' => 1522839082
+]

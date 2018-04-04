@@ -26,15 +26,19 @@ class FootBallService extends BaseService
 
     public function matchInfo($ball_match_id)
     {
-        $data=MatchInfo::find()->where(['ball_match_id'=>$ball_match_id])->asArray()->all();
-        foreach ($data as $k=>$v){
+        $list=MatchInfo::find()
+            ->where(['ball_match_id'=>$ball_match_id])->asArray()->all();
+        foreach ($list as $k=>$v){
             if(!$v['content']){
-                unset($data[$k]);
+                unset($list[$k]);
             }else{
-                $data[$k]['content']=Json::decode($v['content']);
+                $list[$k]['content']=Json::decode($v['content']);
             }
 
         }
+        $match=BallMatch::findOne($ball_match_id);
+        $data['match_name']='['.$match->title.']'.$match->content;
+        $data['list']=$list;
         return Json::encode(['status'=>1,'msg'=>'success','data'=>$data]);
 
     }
