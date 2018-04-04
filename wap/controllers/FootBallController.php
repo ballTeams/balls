@@ -27,5 +27,11 @@ class FootBallController extends BaseController
         return FootBallService::service()->matchInfo($ball_match_id);
     }
 
+    public function actionBuy()
+    {
+        $data=\Yii::$app->request->post();
+        return FootBallService::service()->buy($data);
+    }
+
 
 }
