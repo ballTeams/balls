@@ -39,6 +39,7 @@ class FootBallService extends BaseService
         $match=BallMatch::findOne($ball_match_id);
         $data['match_name']='['.$match->title.']'.$match->content;
         $data['list']=$list;
+        $data['money_arr']=[1000,5000,10000,15000,20000];
         return Json::encode(['status'=>1,'msg'=>'success','data'=>$data]);
 
     }
