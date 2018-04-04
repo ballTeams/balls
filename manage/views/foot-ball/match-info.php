@@ -1,6 +1,7 @@
 <div class="_page">
     <div class="g-f-clearfix">
         <input value="<?php echo Yii::$app->request->get('ball_match_id')?>" type="hidden" name="ball_match_id" />
+
         <div class="g-table-main">
             <h2>全场波胆</h2>
             <table class="js-table">
