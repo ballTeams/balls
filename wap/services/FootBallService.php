@@ -77,6 +77,27 @@ class FootBallService extends BaseService
         }
         return Json::encode(['status'=>1,'msg'=>'success']);
     }
+
+    public function record()
+    {
+        $user_id=1;
+        $data=Order::find()
+            ->select('buy_result,order_id,status,ball_match_id')
+            ->where(['user_id'=>$user_id])->asArray()->all();
+        foreach ($data as &$v){
+            $match=BallMatch::findOne($v['ball_match_id']);
+            $v['match_name']='['.$match->title.']'.$match->content;
+            if($v['status']==0){
+                $v['status_text']="等待结果";
+            }elseif ($v['status']==1){
+                $v['status_text']="亏";
+            }else{
+                $v['status_text']="盈";
+            }
+
+        }
+        return Json::encode(['status'=>1,'msg'=>'success','data'=>$data]);
+    }
 }
 
 

@@ -38,5 +38,9 @@ class FootBallController extends BaseController
         }
     }
 
+    public function actionRecord(){
+        return FootBallService::service()->record();
+    }
+
 
 }

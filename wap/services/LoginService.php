@@ -35,9 +35,10 @@ class LoginService extends BaseService
             \Yii::$app->session->set('user_id', $user['user_id']);
             setcookie('user', Json::encode($user), 0, '/');
         }catch (\Exception $e){
-            return Json::encode(['status'=>1,'msg'=>'登录成功']);
+            return Json::encode(['status'=>0,'msg'=>$e->getMessage()]);
+
         }
-        return Json::encode(['status'=>0,'msg'=>'登录失败']);
+        return Json::encode(['status'=>1,'msg'=>'登录成功']);
     }
 }
 
