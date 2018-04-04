@@ -31,7 +31,7 @@
 			console.log(obj);
 			return;
 			$.ajax({
-	            url:'/',
+	            url:'/z',
 	            type:'post',
 	            data:obj,
 	            dataType:'json',

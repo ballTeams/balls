@@ -1,41 +1,90 @@
 <div class="_page">
-    <form class="g-form-search">
-        <div class="_search-box">
-            <input type="text" placeholder="请输入绑定手机号,昵称进行搜索" name="text" value="<?php echo Yii::$app->request->get('text')?>"/>
-            <button class="js-search" type="submit">搜索</button>
-            <div class="__btns">
-                <a href="match-info-add">+新增</a>
-            </div>
-        </div>
-    </form>
-    <div class="g-table-main">
-        <table>
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>波胆类别</th>
-                <th>比分</th>
-                <th>收益率</th>
-                <th>操作</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php
-
-            foreach ($data as $k=>$v){?>
-                <tr>
-                    <td><?php echo $v['ball_match_id']?></td>
-                    <td><?php echo $v['type_name']?></td>
-                    <td><?php echo $v['content']?></td>
-                    <td><?php echo $v['charge']?>%</td>
-                    <td>
-                        <div class="_btn-list" data-id="<?php echo $v['ball_match_id']?>">
-                            <a href="match-info-add?ball_match_id=<?php echo $v['ball_match_id']?>">编辑</a>
-                        </div>
-                    </td>
+    <div class="g-f-clearfix">
+        <input value="<?php echo Yii::$app->request->get('ball_match_id')?>" type="hidden" name="ball_match_id" />
+        <div class="g-table-main">
+            <h2>全场波胆</h2>
+            <table class="js-table">
+                <thead>
+                <tr class="thead">
+                    <th>选项</th>
+                    <th>收益%</th>
+                    <th>可交易量</th>
+                    <th>操作</th>
                 </tr>
-            <?php }?>
-            </tbody>
-        </table>
-    </div>
+                </thead>
+                <tbody class="js-tbody">
+                    <tr>
+                        <td><input class="g-input size6" type="text" name="one" /></td>
+                        <td><input class="g-input size6" type="text" name="two" /></td>
+                        <td><input class="g-input size6" type="text" name="three" /></td>
+                        <td>
+                        	<span class="js-del g-color-blue">删除</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="js-add g-color-blue">+添加</div>
+        </div>
+        <div class="g-table-main"  style="box-sizing: border-box;">
+            <h2>上半场波胆</h2>
+            <table class="js-table">
+                <thead>
+                <tr class="thead">
+                    <th>选项</th>
+                    <th>收益%</th>
+                    <th>可交易量</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody class="js-tbody">
+                    <tr>
+                        <td><input class="g-input size6" type="text" name="one" /></td>
+                        <td><input class="g-input size6" type="text" name="two" /></td>
+                        <td><input class="g-input size6" type="text" name="three" /></td>
+                        <td>
+                            <span class="js-del g-color-blue">删除</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="js-add g-color-blue">+添加</div>
+        </div>
+        <div class="g-table-main" style="box-sizing: border-box;">
+            <h2>下半场波胆</h2>
+            <table class="js-table">
+                <thead>
+                <tr class="thead">
+                    <th>选项</th>
+                    <th>收益%</th>
+                    <th>可交易量</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody class="js-tbody">
+                    <tr>
+                        <td><input class="g-input size6" type="text" name="one" /></td>
+                        <td><input class="g-input size6" type="text" name="two" /></td>
+                        <td><input class="g-input size6" type="text" name="three" /></td>
+                        <td>
+                            <span class="js-del g-color-blue">删除</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="js-add g-color-blue">+添加</div>
+        </div>
+    </div>  
+    <div class="js-save g-btn-blue" >保存</div>
 </div>
+
+<script type="text/j-template" id="table_tpl">
+    <tr>
+        <td><input class="g-input size6" type="text" name="one" /></td>
+        <td><input class="g-input size6" type="text" name="two" /></td>
+        <td><input class="g-input size6" type="text" name="three" /></td>
+        <td>
+            <span class="js-del g-color-blue">删除</span>
+        </td>
+    </tr>
+</script>
+<script type="text/javascript" src="/js/app/site-table2.js"></script>

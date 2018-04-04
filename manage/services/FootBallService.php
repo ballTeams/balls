@@ -74,6 +74,22 @@ class FootBallService extends BaseService
 
     }
 
+    public function infoAdd($data)
+    {
+        $arr[0]="全场波胆";
+        $arr[1]="上半场波胆";
+        $arr[2]="下半场波胆";
+        foreach ($data as $k=>$v){
+            $info=new MatchInfo();
+            $info->type_name=$arr[$k];
+            $info->content=Json::encode($v);
+            $info->charge=10;
+            $info->ball_match_id=isset($data['ball_match_id'])?$data['ball_match_id']:1;
+            $info->insert();
+        }
+        return Json::encode(['status'=>1,'msg'=>'保存成功']);
+    }
+
 }
 
 
