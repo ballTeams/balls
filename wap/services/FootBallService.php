@@ -69,6 +69,7 @@ class FootBallService extends BaseService
             if (!$order->validate()) {
                 throw new \Exception(Json::encode($order->getErrors()));
             }
+            $order->insert();
             $transaction->commit();
         }catch (\Exception $e){
             $transaction->rollBack();
