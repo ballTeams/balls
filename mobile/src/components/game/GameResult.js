@@ -10,9 +10,22 @@ class Form extends Component {
     }
 
     componentWillMount () {
-
+        this.loadData(1);
     }
+    loadData = () => {
+        const { actions } = this.props;
+        ajax({
+            url: api.GAME_RESULT_GET,
+            data: {status: 1},
+            method: 'GET',
+            success: (res) => {
+                actions.gameResult(res.data, status);
+            }, 
+            error: (res) => {
 
+            }
+        });
+    }
     render () {
         const tabs = [
             {title: '今天'},

@@ -18,14 +18,13 @@ class Form extends Component {
             url: api.GAME_MAIN_GET,
             data: {},
             method: 'GET',
-            type: 'GAME_MAIN_GET',
             success: (res) => {
                 actions.gameMain(res.data);
             }, 
             error: (res) => {
 
             }
-        }, actions);
+        });
     }
 
     render () {

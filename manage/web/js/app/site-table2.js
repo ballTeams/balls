@@ -15,21 +15,30 @@
 		})
 		$(document).on('click', '.js-save', function(){
 			var obj = {
-				0: [],
-				1: [],
-				2: []
+				0: {
+					charge: $('.g-table-main').eq(0).find('input[name=charge]').val(),
+					list: []
+				},
+				1: {
+					charge: $('.g-table-main').eq(1).find('input[name=charge]').val(),
+					list: []
+				},
+				2: {
+					charge: $('.g-table-main').eq(2).find('input[name=charge]').val(),
+					list: []
+				},
+				ball_match_id: $('input[name=ball_match_id]').val()
 			};
 			for(var i = 0; i < $('.js-table').length; i++){
 				$('.js-table').eq(i).find('tr:not(.thead)').map(function(index, item){
-					obj[i].push({
-						one: $(item).find('input[name=one]').val(),
-						two: $(item).find('input[name=two]').val(),
-						three: $(item).find('input[name=three]').val(),
+					obj[i].list.push({
+						name: $(item).find('input[name=one]').val(),
+						money: $(item).find('input[name=two]').val(),
+						num: $(item).find('input[name=three]').val(),
 					})
 				})
 			}
 			console.log(obj);
-			return;
 			$.ajax({
 	            url:'/z',
 	            type:'post',

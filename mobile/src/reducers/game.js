@@ -1,13 +1,17 @@
 
 
 const initState = {
-   list: []
+   list: [],
+   result: {
+        1: [],
+        2: [],
+        3: []
+   }
 };
 
 const game = (state = initState, action) => {
     switch (action.type) {
         case 'GAME_MAIN_GET': 
-        	console.log(action, 123);
         	return {
         		...state,
         		list: [
@@ -15,6 +19,14 @@ const game = (state = initState, action) => {
         		]
         		
         	};
+        case 'GAME_RESULT_GET': 
+
+            return {
+                ...state,
+                [action.status]: [
+                    ...action.data
+                ]
+            };
         default:
             return initState;
     }

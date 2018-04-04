@@ -15,7 +15,6 @@ const ajax = (obj, actions) => {
 				success && success(JSON.parse(res.text));
 		    })
 		    .catch((res) => {
-		    	console.log(res);
 		    	error && error(res);
 		    });
 	} else if (method == 'GET'){
@@ -25,7 +24,6 @@ const ajax = (obj, actions) => {
 		    	success && success(JSON.parse(res.text));
 		    })
 			.catch((res) => {
-		    	console.log(res);
 		    	error && error(res);
 		    });
 	}

@@ -3,7 +3,7 @@
         <input value="<?php echo Yii::$app->request->get('ball_match_id')?>" type="hidden" name="ball_match_id" />
 
         <div class="g-table-main">
-            <h2>全场波胆</h2>
+            <h2 class="l-pb-10">全场波胆  <span class="l-pl-30 g-fs-16">手续费：</span><input name="charge" class="g-input size6" type="text" /></h2>
             <table class="js-table">
                 <thead>
                 <tr class="thead">
@@ -27,7 +27,7 @@
             <div class="js-add g-color-blue">+添加</div>
         </div>
         <div class="g-table-main"  style="box-sizing: border-box;">
-            <h2>上半场波胆</h2>
+            <h2 class="l-pb-10">上半场波胆  <span class="l-pl-30 g-fs-16">手续费：</span><input name="charge" class="g-input size6" type="text" /></h2>
             <table class="js-table">
                 <thead>
                 <tr class="thead">
@@ -51,7 +51,7 @@
             <div class="js-add g-color-blue">+添加</div>
         </div>
         <div class="g-table-main" style="box-sizing: border-box;">
-            <h2>下半场波胆</h2>
+            <h2 class="l-pb-10">下半场波胆  <span class="l-pl-30 g-fs-16">手续费：</span><input name="charge" class="g-input size6" type="text" /></h2>
             <table class="js-table">
                 <thead>
                 <tr class="thead">
@@ -88,4 +88,4 @@
         </td>
     </tr>
 </script>
-<script type="text/javascript" src="/js/app/site-table2.js"></script>
+<script type="text/javascript" src="/js/app/site-table2.js?v=12"></script>

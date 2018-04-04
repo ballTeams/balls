@@ -1,6 +1,7 @@
+import APIROOT from './root';
 const api = {
 
 };
 
-export default api;
+export default APIROOT(api);
 
