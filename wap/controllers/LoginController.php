@@ -19,4 +19,10 @@ class LoginController extends BaseController
         return LoginService::service()->index($data);
     }
 
+    public function actionOut()
+    {
+        \Yii::$app->session->destroy();
+        setcookie('user', '');
+    }
+
 }
