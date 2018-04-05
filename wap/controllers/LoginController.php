@@ -2,6 +2,7 @@
 namespace wap\controllers;
 use wap\services\FootBallService;
 use wap\services\LoginService;
+use yii\helpers\Json;
 
 
 /**
@@ -23,6 +24,7 @@ class LoginController extends BaseController
     {
         \Yii::$app->session->destroy();
         setcookie('user', '');
+        return Json::encode(['status'=>0,'msg'=>'退出成功']);
     }
 
 }
