@@ -113,6 +113,12 @@ class ApplyService extends BaseService
                 $v['status_text']="交易成功";
             }
         }
+        $item['total_money']=(int)Apply::find()
+            ->select('sum(apply_amount)')
+            ->where(['user_id'=>$user_id])
+            ->andWhere(['type'=>2])
+            ->asArray()
+            ->scalar();
         $item['list']=$data;
         return Json::encode(['status'=>0,'msg'=>'success','data'=>$item]);
     }
