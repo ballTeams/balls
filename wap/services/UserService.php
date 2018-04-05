@@ -74,12 +74,15 @@ class UserService extends BaseService
     public function accountList()
     {
         $data= UserAccount::find()->asArray()->all();
+        $arr=[];
         if($data){
-            foreach ($data as &$v){
+            foreach ($data as $k=>$v){
                 $v['account']=Json::decode($v['account']);
+                $arr[$v['type']]=$v;
+
             }
         }
-        return Json::encode(['status'=>1,'msg'=>'success','data'=>$data]);
+        return Json::encode(['status'=>1,'msg'=>'success','data'=>$arr]);
     }
 
     public function addAccount($data)

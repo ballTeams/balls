@@ -11,6 +11,7 @@ namespace manage\services;
 
 use common\models\BallMatch;
 use common\models\MatchInfo;
+use common\models\MatchResult;
 use common\models\Order;
 use yii\helpers\Json;
 
@@ -105,7 +106,11 @@ class FootBallService extends BaseService
 
     public function openResult($ball_match_id)
     {
+        $result=MatchResult::find()->where(['ball_match_id'=>$ball_match_id])->asArray()->one();
         $order=Order::find()->where(['ball_match_id'=>$ball_match_id])->asArray()->all();
+        foreach ($order as $k=>$v){
+
+        }
     }
 
 }
