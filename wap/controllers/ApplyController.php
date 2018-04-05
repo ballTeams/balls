@@ -31,9 +31,10 @@ class ApplyController extends BaseController
     {
         if(\Yii::$app->request->isPost){
             $data=\Yii::$app->request->post();
+            $data['type']=2;
             return ApplyService::service()->add($data);
         }else{
-            return ApplyService::service()->info();
+            return ApplyService::service()->userInfo();
         }
     }
     public function actionInfo(){

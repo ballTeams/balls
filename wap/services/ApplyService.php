@@ -62,6 +62,23 @@ class ApplyService extends BaseService
         }
 
     }
+
+    public function userInfo()
+    {
+        $user_id=1;
+        $data=Apply::find()->where(['user_id'=>$user_id])->andWhere(['type'=>2])->asArray()->one();
+        if($data){
+            $item=User::find()
+                ->select('user_id,bank_number,bank_name,bank_person_name')
+                ->where(['user_id'=>$user_id])
+                ->asArray()
+                ->one();
+            return Json::encode(['status'=>1,'msg'=>'success','data'=>$item]);
+        }else{
+            return Json::encode(['status'=>0,'msg'=>'无提现申请']);
+        }
+
+    }
 }
 
 
