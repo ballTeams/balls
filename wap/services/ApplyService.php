@@ -14,6 +14,7 @@ use common\models\BallMatch;
 use common\models\BankInfo;
 use common\models\Message;
 use common\models\User;
+use common\models\UserAccount;
 use yii\helpers\Json;
 
 class ApplyService extends BaseService
@@ -36,6 +37,12 @@ class ApplyService extends BaseService
             $model->status = 0;
             $model->type = isset($data['type'])?$data['type']:1;
             $model->is_cancel = 0;
+            if(isset($data['type'])&&$data['type']==2){
+                if(isset($data['user_account_id'])||!$data['user_account_id']){
+                    throw new \Exception('收款方式未选择');
+                }
+                $model->user_account_id= $data['user_account_id'];
+            }
             if(!$model->validate()){
                 throw new \Exception(Json::encode($model->getErrors()));
             }
@@ -68,11 +75,10 @@ class ApplyService extends BaseService
         $user_id=1;
         $data=Apply::find()->where(['user_id'=>$user_id])->andWhere(['type'=>2])->asArray()->one();
         if($data){
-            $item=User::find()
-                ->select('user_id,bank_number,bank_name,bank_person_name')
-                ->where(['user_id'=>$user_id])
-                ->asArray()
-                ->one();
+            $data['create_time']=date('Y-m-d H:i:s',$data['create_time']);
+            $item['apply_info']=$data;
+            $bank=UserAccount::find()->select('account')->where(['user_account_id'=>$data['user_account_id']])->asArray()->one();
+            $item['bank_info']=$bank;
             return Json::encode(['status'=>1,'msg'=>'success','data'=>$item]);
         }else{
             return Json::encode(['status'=>0,'msg'=>'无提现申请']);
