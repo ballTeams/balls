@@ -43,4 +43,9 @@ class MatchResultController extends BaseController
         $MatchResultService=\Yii::$app->request->get('id');
         return FootBallService::service()->del($MatchResultService);
     }
+
+    public function actionOpenResult(){
+        $ball_match_id=\Yii::$app->request->get('ball_match_id');
+        return FootBallService::service()->openResult($ball_match_id);
+    }
 }

@@ -11,6 +11,7 @@ namespace manage\services;
 
 use common\models\BallMatch;
 use common\models\MatchInfo;
+use common\models\Order;
 use yii\helpers\Json;
 
 class FootBallService extends BaseService
@@ -81,7 +82,10 @@ class FootBallService extends BaseService
     {
         $arr[0]="全场波胆";
         $arr[1]="上半场波胆";
-        $arr[2]="下半场波胆";
+        $arr[2]="总进球数";
+        $info_type[0]="all";
+        $info_type[1]="up";
+        $info_type[2]="total_ball";
         MatchInfo::deleteAll(['ball_match_id'=>$data['ball_match_id']]);
         $i=0;
         foreach ($data as $k=>$v){
@@ -90,12 +94,18 @@ class FootBallService extends BaseService
                 $info->type_name=$arr[$i];
                 $info->content=Json::encode($v['list']);
                 $info->charge=$v['charge'];
+                $info->info_type=$info_type[$i];
                 $info->ball_match_id=$data['ball_match_id'];
                 $info->insert();
                 $i++;
             }
         }
         return Json::encode(['status'=>1,'msg'=>'保存成功']);
+    }
+
+    public function openResult($ball_match_id)
+    {
+        $order=Order::find()->where(['ball_match_id'=>$ball_match_id])->asArray()->all();
     }
 
 }

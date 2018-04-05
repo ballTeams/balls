@@ -51,7 +51,7 @@ class FootBallService extends BaseService
     {
         $transaction=\Yii::$app->db->beginTransaction();
         try {
-            $user_id=1;//@todo 暂时写死
+            $user_id=2;//@todo 暂时写死
             $user=User::findOne($user_id);
             if($user->fee<$data['buy_money']){
                 throw new \Exception('您账户余额不足');
@@ -65,6 +65,8 @@ class FootBallService extends BaseService
             $order->charge = $data['charge'];
             $order->user_id = $user_id;
             $order->match_info_id = $data['match_info_id'];
+            $info_type=MatchInfo::findOne($data['match_info_id'])->info_type;
+            $order->info_type=$info_type;
             $order->create_time = time();
             if (!$order->validate()) {
                 throw new \Exception(Json::encode($order->getErrors()));
