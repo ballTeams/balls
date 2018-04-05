@@ -116,8 +116,10 @@ class UserService extends BaseService
             if(isset($data['trade_password'])&&$data['trade_password']){
                 $model->trade_password=md5($data['trade_password']);
             }
-            if(isset($data['real_name'])&&$data['real_name']&&isset($data['mobile'])&&$data['mobile']){
+            if(isset($data['real_name'])&&$data['real_name']){
                 $model->real_name=$data['real_name'];
+            }
+            if(isset($data['mobile'])&&$data['mobile']){
                 $model->mobile=$data['mobile'];
             }
             $model->save();
