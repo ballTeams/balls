@@ -41,4 +41,10 @@ class ApplyController extends BaseController
         return ApplyService::service()->info();
     }
 
+    public function actionRecord()
+    {
+        $type=\Yii::$app->request->get('type');
+        return ApplyService::service()->record($type);
+    }
+
 }

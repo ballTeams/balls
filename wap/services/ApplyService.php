@@ -96,6 +96,25 @@ class ApplyService extends BaseService
         }
 
     }
+
+    public function record($type)
+    {
+        $user_id=1;
+        $data=Apply::find()
+            ->where(['user_id'=>$user_id])
+            ->andWhere(['type'=>$type])
+            ->asArray()
+            ->all();
+        foreach ($data as &$v){
+            $v['create_time']=date('Y-m-d H:i:s',$v['create_time']);
+            if($v['status']==0){
+                $v['status_text']="申请中";
+            }else{
+                $v['status_text']="交易成功";
+            }
+        }
+        return Json::encode(['status'=>0,'msg'=>'success','data'=>$data]);
+    }
 }
 
 
