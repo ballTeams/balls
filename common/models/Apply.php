@@ -33,7 +33,6 @@ class Apply extends \yii\db\ActiveRecord
         return [
             [['apply_amount', 'user_id', 'create_time', 'status'], 'required'],
             [['apply_amount', 'user_id', 'create_time'], 'integer'],
-            [['type'], 'string', 'max' => 3],
         ];
     }
 
