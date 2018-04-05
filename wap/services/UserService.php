@@ -91,7 +91,6 @@ class UserService extends BaseService
             } else {
                 $account = new UserAccount();
             }
-
             $account->account = Json::encode($data['account']);
             $account->type = $data['type'];
             $account->user_id = $user_id;
@@ -104,6 +103,37 @@ class UserService extends BaseService
         }
         return Json::encode(['status'=>1,'msg'=>'success']);
 
+    }
+
+    public function edit($data)
+    {
+        try{
+            $user_id=1;
+            $model=User::findOne($user_id);
+            if(isset($data['password'])&&$data['password']){
+                $model->password=md5($data['password']);
+            }
+            if(isset($data['trade_password'])&&$data['trade_password']){
+                $model->trade_password=md5($data['trade_password']);
+            }
+            if(isset($data['real_name'])&&$data['real_name']&&isset($data['mobile'])&&$data['mobile']){
+                $model->real_name=$data['real_name'];
+                $model->mobile=$data['mobile'];
+            }
+            $model->save();
+        }catch (\Exception $e){
+            return Json::encode(['status'=>0,'msg'=>$e->getMessage()]);
+        }
+        return Json::encode(['status'=>1,'msg'=>'success']);
+
+
+    }
+
+    public function info()
+    {
+        $user_id=1;
+        $data=User::find()->where(['user_id'=>$user_id])->asArray()->one();
+        return Json::encode(['status'=>1,'msg'=>'success','data'=>$data]);
     }
 }
 

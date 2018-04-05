@@ -37,4 +37,13 @@ class UserController extends BaseController
 
     }
 
+    public function actionEdit(){
+        if(\Yii::$app->request->isPost){
+            $data=\Yii::$app->request->post();
+            return UserService::service()->edit($data);
+        }else{
+            return UserService::service()->info();
+        }
+    }
+
 }
