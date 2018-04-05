@@ -113,7 +113,8 @@ class ApplyService extends BaseService
                 $v['status_text']="交易成功";
             }
         }
-        return Json::encode(['status'=>0,'msg'=>'success','data'=>$data]);
+        $item['list']=$data;
+        return Json::encode(['status'=>0,'msg'=>'success','data'=>$item]);
     }
 }
 
