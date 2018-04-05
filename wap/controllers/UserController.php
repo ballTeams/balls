@@ -26,4 +26,15 @@ class UserController extends BaseController
 
     }
 
+    public function actionAccountList()
+    {
+        if(\Yii::$app->request->isPost){
+            $data=\Yii::$app->request->post();
+            return UserService::service()->addAccount($data);
+        }else{
+            return UserService::service()->accountList();
+        }
+
+    }
+
 }

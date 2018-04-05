@@ -77,11 +77,22 @@ class ApplyService extends BaseService
         if($data){
             $data['create_time']=date('Y-m-d H:i:s',$data['create_time']);
             $item['apply_info']=$data;
-            $bank=UserAccount::find()->select('account')->where(['user_account_id'=>$data['user_account_id']])->asArray()->one();
-            $item['bank_info']=$bank;
+            $bank=UserAccount::find()->select('account')->where(['user_account_id'=>$data['user_account_id']])->asArray()->scalar();
+            $item['bank_info']=$bank?Json::decode($bank):[];
             return Json::encode(['status'=>1,'msg'=>'success','data'=>$item]);
         }else{
-            return Json::encode(['status'=>0,'msg'=>'无提现申请']);
+            $item= UserAccount::find()->select('user_account_id,type')->asArray()->all();
+            if($item){
+                foreach ($item as &$v){
+                    if($v['type']==1){
+                        $v['account_name']= '银行卡收款';
+                    }
+                    if($v['type']==2){
+                        $v['account_name']= '支付宝收款';
+                    }
+                }
+            }
+            return Json::encode(['status'=>0,'msg'=>'无提现申请','data'=>$item]);
         }
 
     }

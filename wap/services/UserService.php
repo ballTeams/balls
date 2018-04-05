@@ -13,6 +13,7 @@ use common\models\BallMatch;
 use common\models\Message;
 use common\models\Order;
 use common\models\User;
+use common\models\UserAccount;
 use yii\helpers\Json;
 
 class UserService extends BaseService
@@ -63,6 +64,41 @@ class UserService extends BaseService
                 throw new \Exception(Json::encode($user->getErrors()));
             }
             $user->insert();
+        }catch (\Exception $e){
+            return Json::encode(['status'=>0,'msg'=>$e->getMessage()]);
+        }
+        return Json::encode(['status'=>1,'msg'=>'success']);
+
+    }
+
+    public function accountList()
+    {
+        $data= UserAccount::find()->asArray()->all();
+        if($data){
+            foreach ($data as &$v){
+                $v['account']=Json::decode($v['account']);
+            }
+        }
+        return Json::encode(['status'=>1,'msg'=>'success','data'=>$data]);
+    }
+
+    public function addAccount($data)
+    {
+        try {
+            $user_id = 1;
+            if (isset($data['user_account_id']) && $data['user_account_id']) {
+                $account = UserAccount::findOne($data['user_account_id']);
+            } else {
+                $account = new UserAccount();
+            }
+
+            $account->account = Json::encode($data['account']);
+            $account->type = $data['type'];
+            $account->user_id = $user_id;
+            if (!$account->validate()) {
+                throw new \Exception(Json::encode($account->getErrors()));
+            }
+            $account->save();
         }catch (\Exception $e){
             return Json::encode(['status'=>0,'msg'=>$e->getMessage()]);
         }
