@@ -16,7 +16,8 @@ class UserController extends BaseController
     }
 
     public function actionAdd(){
-
+        $data=\Yii::$app->request->post();
+        return UserService::service()->add($data);
     }
 
 }
