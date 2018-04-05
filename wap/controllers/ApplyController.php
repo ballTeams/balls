@@ -27,6 +27,15 @@ class ApplyController extends BaseController
         }
     }
 
+    public function actionWithdraw()
+    {
+        if(\Yii::$app->request->isPost){
+            $data=\Yii::$app->request->post();
+            return ApplyService::service()->add($data);
+        }else{
+            return ApplyService::service()->info();
+        }
+    }
     public function actionInfo(){
         return ApplyService::service()->info();
     }

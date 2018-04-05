@@ -34,7 +34,7 @@ class ApplyService extends BaseService
             $model->user_id = $user_id;
             $model->create_time = time();
             $model->status = 0;
-            $model->type = 1;
+            $model->type = isset($data['type'])?$data['type']:1;
             $model->is_cancel = 0;
             if(!$model->validate()){
                 throw new \Exception(Json::encode($model->getErrors()));
@@ -50,7 +50,7 @@ class ApplyService extends BaseService
     public function info()
     {
         $user_id=1;
-        $data=Apply::find()->where(['user_id'=>$user_id])->asArray()->one();
+        $data=Apply::find()->where(['user_id'=>$user_id])->andWhere(['type'=>1])->asArray()->one();
         if($data){
             $data['create_time']=date('Y-m-d H:i:s',$data['create_time']);
             $item['apply_info']=$data;
