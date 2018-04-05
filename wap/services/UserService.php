@@ -26,8 +26,14 @@ class UserService extends BaseService
 
     public function getSon($data,$pid,$son=[])
     {
+        $user_id=1;
         foreach ($data as $k => $v){
                 if($v['pid']==$pid) {
+                    if($pid==$user_id){
+                        $v['percent']='60%';
+                    }else{
+                        $v['percent']='20%';
+                    }
                     $son[] = $v;
                     return $this->getSon($data, $v['user_id'], $son);
                 }

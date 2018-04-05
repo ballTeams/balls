@@ -14,7 +14,7 @@ class UserController extends BaseController
     {
         return UserService::service()->index();
     }
-    
+
     public function actionAdd(){
 
     }
