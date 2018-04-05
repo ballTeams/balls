@@ -19,8 +19,20 @@ class UserService extends BaseService
 
     public function index(){
         $user_id=1;
-        $data=User::find()->where(['pid'=>$user_id])->asArray()->all();
-        return Json::encode(['status'=>1,'msg'=>'success','data'=>$data]);
+        $data=User::find()->asArray()->all();
+        $item=$this->getSon($data,$user_id);
+        return Json::encode(['status'=>1,'msg'=>'success','data'=>$item]);
+    }
+
+    public function getSon($data,$pid,$son=[])
+    {
+        foreach ($data as $k => $v){
+                if($v['pid']==$pid) {
+                    $son[] = $v;
+                    return $this->getSon($data, $v['user_id'], $son);
+                }
+        }
+        return $son;
     }
 }
 

@@ -23,7 +23,7 @@ class ApplyController extends BaseController
             $data=\Yii::$app->request->post();
             return ApplyService::service()->add($data);
         }else{
-            return Json::encode(['status'=>1,'msg'=>'success']);
+            return ApplyService::service()->info();
         }
     }
 
