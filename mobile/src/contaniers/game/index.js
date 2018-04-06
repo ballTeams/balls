@@ -15,13 +15,14 @@ class App extends Component {
     }
     render() {
         const { actions, location, game, router } = this.props;
-        console.log(this.props);
+        const { query: { status = 0 } } = location;
+        console.log(game, 123);
         switch(location.pathname) {
             case '/game/result': 
                 return (
                     <Title title={`赛事结果`}>
                         <TopBar>
-                            <GameResult actions={actions} />
+                            <GameResult actions={actions} info={game.result} status={status} router={router} />
                         </TopBar>
                     </Title>
                 );

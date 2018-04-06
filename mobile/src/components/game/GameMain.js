@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { } from 'antd-mobile';
 import { Link } from 'react-router';
 import Item from '../_common/Item/Item';
-import request from 'superagent';
 import api from 'api/game';
 import ajax from 'utils/ajax';
 class Form extends Component {

@@ -49,7 +49,6 @@ class Form extends Component {
         })
     }
     handleModalClick = (item) => {
-        console.log(this.state.money - this.state.charge)
         this.setState({
             point: item,
             showMoney: item * ( this.state.money - this.state.charge ) / 100
@@ -57,7 +56,6 @@ class Form extends Component {
     }
     handleOk = () => {
         const { name, ball_match_id, money, charge, match_info_id, point } = this.state;
-        console.log(this.state);
         ajax({
             url: api.GAME_DETAIL_SAVE_POST,
             data: {

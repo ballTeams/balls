@@ -10,10 +10,10 @@ class App extends Component {
         super(props);
     }
     render() {
-        const { actions } = this.props;
+        const { actions, router } = this.props;
         return (
             <Title title={`登录`}>
-                <Login actions={actions} api={api} />
+                <Login actions={actions} api={api} router={router} />
             </Title>
            
         );

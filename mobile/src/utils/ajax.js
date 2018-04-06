@@ -11,6 +11,7 @@ const ajax = (obj, actions) => {
 	if (method == 'POST') {
 		console.log(data);
 		  request.post(url)
+		  	.withCredentials()
 		    .send({ ...data })
 		    .then((res) => {
 				success && success(JSON.parse(res.text));
@@ -20,6 +21,7 @@ const ajax = (obj, actions) => {
 		    });
 	} else if (method == 'GET'){
 		request.get(url)
+			.withCredentials()
 			.query({ ...data })
 			.then((res) => {
 		    	success && success(JSON.parse(res.text));
