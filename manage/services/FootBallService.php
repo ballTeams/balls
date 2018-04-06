@@ -9,14 +9,19 @@
 namespace manage\services;
 
 
+use common\models\Apply;
+use common\models\ApplyRecord;
 use common\models\BallMatch;
 use common\models\MatchInfo;
 use common\models\MatchResult;
 use common\models\Order;
+use common\models\User;
+use yii\db\Expression;
 use yii\helpers\Json;
 
 class FootBallService extends BaseService
 {
+    public $order;
 
     public function index(){
         $data=BallMatch::find()->asArray()->all();
@@ -104,12 +109,104 @@ class FootBallService extends BaseService
         return Json::encode(['status'=>1,'msg'=>'保存成功']);
     }
 
-    public function openResult($ball_match_id)
+    public function openResult($match_result_id)
     {
-        $result=MatchResult::find()->where(['ball_match_id'=>$ball_match_id])->asArray()->one();
-        $order=Order::find()->where(['ball_match_id'=>$ball_match_id])->asArray()->all();
-        foreach ($order as $k=>$v){
+        try {
+            $result = MatchResult::find()->where(['match_result_id' => $match_result_id])->asArray()->one();
+            $order = Order::find()->where(['ball_match_id' => $result['ball_match_id']])->asArray()->all();
+            foreach ($order as $k => $v) {
+                //status 0 等待公布  1亏  2盈
+                if ($v['info_type'] == 'all') {
+                    if ($v['buy_result'] == $result['all']) {
+                        Order::updateAll(['status' => 1], ['order_id' => $v['order_id']]);
+                    } else {
+                        Order::updateAll(['status' => 2], ['order_id' => $v['order_id']]);
+                        $this->order = $v;
+                        $this->parentApply("all");
+                    }
 
+                } elseif ($v['info_type'] == 'up') {
+                    if ($v['buy_result'] == $result['up']) {
+                        Order::updateAll(['status' => 1], ['order_id' => $v['order_id']]);
+                    } else {
+                        Order::updateAll(['status' => 2], ['order_id' => $v['order_id']]);
+                    }
+
+                } elseif ($v['info_type'] == 'total_ball') {
+                    if ($v['buy_result'] == $result['total_ball']) {
+                        Order::updateAll(['status' => 1], ['order_id' => $v['order_id']]);
+                    } else {
+                        Order::updateAll(['status' => 2], ['order_id' => $v['order_id']]);
+                    }
+                }
+            }
+        }catch (\Exception $e){
+            echo $e->getMessage();
+        }
+        echo '结算成功';
+    }
+
+    private function parentApply($info_type)
+    {
+        $transaction=\Yii::$app->db->beginTransaction();
+        try {
+            $order = $this->order;
+            $order['get_money']=$order['get_money']/100;
+            $order['charge']=$order['charge']/100;
+            $change_money = $order['buy_money'] * ($order['charge'] - $order['get_money']);
+            $result = MatchResult::find()->select('all,up,total_ball')->where(['ball_match_id' => $order['ball_match_id']])->asArray()->one();
+            $record = new ApplyRecord();
+            $record->user_id = $order['user_id'];
+            $record->change_money = $change_money;
+            $record->remark = "赛事:{$info_type} ，购买比分:{$order['buy_result']}，结果比分:{$result[$info_type]}。
+        收益计算：{$order['buy_money']}*({$order['charge']}-{$order['get_money']})";
+            $record->create_time = time();
+            if (!$record->validate()) {
+                throw  new \Exception(Json::encode($record->getErrors()));
+            }
+            $record->insert();
+            User::updateAll(['fee'=>new Expression("fee+{$change_money}")],['user_id'=>$order['user_id']]);
+
+
+            //上级
+            $pid=User::findOne($order['user_id'])->pid;
+            if($pid){
+                $user=User::find()->where(['user_id'=>$pid])->asArray()->one();
+                $change_money = $order['buy_money'] * $order['get_money']*0.6;
+                $record = new ApplyRecord();
+                $record->user_id = $user['user_id'];
+                $record->change_money = $change_money;
+                $record->remark = "直推下级盈利,结算：{$order['buy_money']}*{$order['get_money']}*0.6";
+                $record->create_time = time();
+                if (!$record->validate()) {
+                    throw  new \Exception(Json::encode($record->getErrors()));
+                }
+                $record->insert();
+                User::updateAll(['fee'=>new Expression("fee+{$change_money}")],['user_id'=>$user['user_id']]);
+
+
+                //上上级
+                $pid=User::findOne($user['user_id'])->pid;
+                if($pid){
+                    $user=User::find()->where(['user_id'=>$pid])->asArray()->one();
+                    $change_money = $order['buy_money'] * $order['get_money']*0.2;
+                    $record = new ApplyRecord();
+                    $record->user_id = $user['user_id'];
+                    $record->change_money = $change_money;
+                    $record->remark = "直推下级盈利,结算：{$order['buy_money']}*{$order['get_money']}*0.2";
+                    $record->create_time = time();
+                    if (!$record->validate()) {
+                        throw  new \Exception(Json::encode($record->getErrors()));
+                    }
+                    $record->insert();
+                    User::updateAll(['fee'=>new Expression("fee+{$change_money}")],['user_id'=>$user['user_id']]);
+                }
+
+        }
+            $transaction->commit();
+        }catch (\Exception $e){
+            $transaction->rollBack();
+            throw new \Exception($e->getMessage());
         }
     }
 

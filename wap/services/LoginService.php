@@ -36,7 +36,6 @@ class LoginService extends BaseService
             setcookie('user', Json::encode($user), 0, '/');
         }catch (\Exception $e){
             return Json::encode(['status'=>0,'msg'=>$e->getMessage()]);
-
         }
         return Json::encode(['status'=>1,'msg'=>'登录成功']);
     }

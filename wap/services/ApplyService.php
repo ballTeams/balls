@@ -112,6 +112,13 @@ class ApplyService extends BaseService
             }else{
                 $v['status_text']="交易成功";
             }
+            if($v['type']==1){
+                $v['type_text']="充值";
+            }elseif ($v['type']==2) {
+                $v['type_text'] = "提现";
+            }else{
+                $v['type_text'] = "转账";
+            }
         }
         $item['total_money']=(int)Apply::find()
             ->select('sum(apply_amount)')
@@ -120,6 +127,8 @@ class ApplyService extends BaseService
             ->asArray()
             ->scalar();
         $item['list']=$data;
+        echo '<pre/>';
+        print_r($item);die;
         return Json::encode(['status'=>0,'msg'=>'success','data'=>$item]);
     }
 }

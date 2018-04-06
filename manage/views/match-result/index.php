@@ -36,6 +36,7 @@
                         <div class="_btn-list" data-id="<?php echo $v['match_result_id']?>">
                             <span data-url="/match-result/del" data-id="<?php echo $v['match_result_id']?>" class="js-main-del">删除</span>
                             <a href="add?match_result_id=<?php echo $v['match_result_id']?>">编辑</a>
+                            <a href="open-result?match_result_id=<?php echo $v['match_result_id']?>">公布赛事结果，结算亏盈</a>
                         </div>
                     </td>
                 </tr>
