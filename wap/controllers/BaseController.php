@@ -42,7 +42,8 @@ class BaseController extends Controller
        {
            parent::beforeAction($action);
            if(!Yii::$app->session->get('user_id')){
-               echo  Json::encode(['status'=>'-1','msg'=>'登录失效']);
+
+               echo  Json::encode(['status'=>'-1','msg'=>'登录失效','user_id'=>Yii::$app->session->get('user_id')]);
                exit();
            }
            BaseService::$user_id= yii::$app->session->get('user_id');
