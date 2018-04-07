@@ -7,10 +7,9 @@ class Out extends Component {
 
     constructor (props){
         super(props);
-        console.log(props, 'props')
         this.state = {
             type: 1,
-            bankOne: '',
+            bankOne: '', 
             bankTwo: '',
             bankThree: '',
             bankFrou: '',
@@ -21,6 +20,19 @@ class Out extends Component {
 
     componentWillMount () {
         this.loadData();
+    }
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.type != this.props.type) {
+            console.log(nextProps.type);
+            this.setState({
+                bankOne: nextProps.type['1'] ? nextProps.type['1'].account.bankOne : '', 
+                bankTwo: nextProps.type['1'] ? nextProps.type['1'].account.bankTwo : '', 
+                bankThree: nextProps.type['1'] ? nextProps.type['1'].account.bankThree : '', 
+                bankFrou: nextProps.type['1'] ? nextProps.type['1'].account.bankFrou : '', 
+                zfbOne: nextProps.type['2'] ? nextProps.type['2'].account.zfbOne : '', 
+                zfbTwo: nextProps.type['2'] ? nextProps.type['2'].account.zfbTwo : '', 
+            });
+        }
     }
     loadData = () => {
         ajax({
@@ -75,9 +87,14 @@ class Out extends Component {
         });
     }
     handleChange = (e) => {
-        const { type } = this.props;
         this.setState({
-            type: e
+            type: e,
+            bankOne: this.props.type['1'] ? this.props.type['1'].account.bankOne : '', 
+            bankTwo: this.props.type['1'] ? this.props.type['1'].account.bankTwo : '', 
+            bankThree: this.props.type['1'] ? this.props.type['1'].account.bankThree : '', 
+            bankFrou: this.props.type['1'] ? this.props.type['1'].account.bankFrou : '', 
+            zfbOne: this.props.type['2'] ? this.props.type['2'].account.zfbOne : '', 
+            zfbTwo: this.props.type['2'] ? this.props.type['2'].account.zfbTwo : '', 
         })
     }
     render () {

@@ -25,12 +25,12 @@ const ajax = (obj) => {
                     });
 		    	} else {
 
-		    		error && error(res.text);
+		    		error && error(JSON.parse(res.text));
 		    	}
 				
 		    })
 		    .catch((res) => {
-		    	error && error(res.text);
+		    	error && error('网络不稳定，请稍后重试...');
 		    });
 	} else if (method == 'GET'){
 		request.get(url)
@@ -46,11 +46,11 @@ const ajax = (obj) => {
                     });
 		    	} else {
 
-		    		error && error(res.text);
+		    		error && error(JSON.parse(res.text));
 		    	}
 		    })
 			.catch((res) => {
-		    	error && error(res.text);
+		    	error && error('网络不稳定，请稍后重试...');
 		    });
 	}
 	

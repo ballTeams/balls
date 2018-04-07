@@ -8,47 +8,30 @@ class Out extends Component {
     constructor (props){
         super(props);
         this.state = {
-            apply_amount: '',
-            showModal: false,
-            apply_info: {},
-            bank_info: {}
+            type: '',
+            trade_password: '',
+            apply_amount: ''
         };
     }
 
     componentWillMount () {
 
     }
-    handleSure = () => {
-        if(this.state.apply_amount < 100){
-            Toast.info('请输入充值点数100起', 1);
-            return false;
-        }
+    handleChange = (e) => {
+        this.setState({
+            type: e[0]
+        })
+    }
+    handleOk = () => {
         ajax({
             url: api.FINANCE_OUT_POST,
             data: {
-                apply_amount: this.state.apply_amount 
+                ...this.state
             },
             method: 'POST',
             success: (res) => {
-                ajax({
-                    url: api.FINANCE_OUT_GET,
-                    data: {},
-                    method: 'GET',
-                    success: (res) => {
-                        Toast.info(res.msg, 1, () => {
-                            this.setState({
-                                showModal: true,
-                                apply_amount: '',
-                                //打款账户 银行卡号 收款人
-                                bank_info: res.data.bank_info,
-                                apply_info: res.data.apply_info
-                            })
-                        });
-                        
-                    }, 
-                    error: (res) => {
-                        Toast.info(res.msg, 1);
-                    }
+                Toast.info(res.msg, 1, () => {
+                    
                 });
                 
             }, 
@@ -56,9 +39,6 @@ class Out extends Component {
                 Toast.info(res.msg, 1);
             }
         });
-    }
-    handleOk = () => {
-
     }
     render () {
         const district = [
@@ -79,9 +59,22 @@ class Out extends Component {
                         style={{ width: '100%' }} 
                         className="g-lh-34 g-m-b-10 g-pd-lr-10"
                         placeholder="请输入提现金额"
+                        type="text"
+                        value={this.state.apply_amount}
+                        onChange={(e) => {
+                            this.setState({
+                                apply_amount: e.target.value
+                            })
+                        }}
                     />
-                    <Picker data={district} cols={1}>
-                        <List.Item style={{ lineHeight: 34, height: 34 }} arrow="horizontal">请选择收款方式</List.Item>
+                    <Picker 
+                        data={district} 
+                        cols={1} 
+                        onChange={this.handleChange}
+                        extra="请选择"
+                        value={this.state.type}
+                    >
+                        <List.Item style={{ lineHeight: 34, height: 34 }} arrow="horizontal">收款方式</List.Item>
                     </Picker>     
                     <div className="g-tr g-pd-lr-10 g-pd-t-10">
                         <Link className="g-c-blue" to="/finance/type">管理收款方式</Link>
@@ -90,8 +83,15 @@ class Out extends Component {
                         style={{ width: '100%' }} 
                         className="g-lh-34 g-m-b-10 g-pd-lr-10"
                         placeholder="交易密码"
+                        type="password"
+                        value={this.state.trade_password}
+                        onChange={(e) => {
+                            this.setState({
+                                trade_password: e.target.value
+                            })
+                        }}
                     />  
-                    <div className="g-lh-34 g-bg-blue g-tc">立即提现</div>    
+                    <div onClick={this.handleOk} className="g-lh-34 g-bg-blue g-tc">立即提现</div>    
                 </div>
                 
             </div>

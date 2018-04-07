@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { Toast } from 'antd-mobile';
 import * as AppActions from '../../actions/user';
 import api from '../../api/user';
 import TopBar from '../../components/_common/TopBar/TopBar';
@@ -74,7 +75,14 @@ class App extends Component {
             },
             method: 'POST',
             success: (res) => {
-                this.props.actions.userMain(res.data);
+                Toast.info(res.msg, 1, () => {
+                    this.setState({
+                        showTplOne: false,
+                        showTplTwo: false,
+                        showTplThree: false
+                    })
+                });
+                // this.props.actions.userMain(res.data);
             }, 
             error: (res) => {
                 Toast.info(res.msg, 1);
@@ -99,14 +107,20 @@ class App extends Component {
                                 <span onClick={() => {
                                     this.setState({
                                         showTplOne: !this.state.showTplOne,
-                                        showTplTwo: false
+                                        showTplTwo: false,
+                                        trade_password: '',
+                                        new_trade_password: '',
+                                        re_trade_password: '',
                                     })
                                 }} className="g-c-orange g-pd-lr-20">修改</span>
                                 <span hidden onClick={() => {
                                     this.setState({
                                         showTplTwo: !this.state.showTplTwo,
-                                        showTplOne: false
-                                    })
+                                        showTplOne: false,
+                                        trade_password: '',
+                                        new_trade_password: '',
+                                        re_trade_password: '',
+                                    });
                                 }} className="g-c-orange">找回交易密码</span>
                             </div>
                             {showTplOne && 
@@ -185,6 +199,9 @@ class App extends Component {
                                 <span onClick={() => {
                                     this.setState({
                                         showTplThree: !this.state.showTplThree,
+                                        password: '',
+                                        new_password: '',
+                                        re_password: ''
                                     })
                                 }} className="g-c-orange g-pd-lr-20">修改</span>
                             </div>

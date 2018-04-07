@@ -88,6 +88,10 @@ class TopBar extends Component {
                         title: '交易记录',
                         url: '/finance'
                     },
+                    {
+                        title: '收款方式',
+                        url: '/finance/type'
+                    },
                 ],
                 url: '/'
             },
@@ -109,7 +113,7 @@ class TopBar extends Component {
             {
                 title: '在线客服',
                 child:[],
-                url: '/service'
+                url: '/services'
             },
             {
                 title: '登出',

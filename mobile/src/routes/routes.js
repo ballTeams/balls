@@ -14,7 +14,7 @@ import Commission from '../contaniers/commis'; // 佣金
 import Notice from '../contaniers/notice'; // 公告
 import Finance from '../contaniers/finance'; // 财务
 import Web from '../contaniers/web'; // 相关网站
-// import Service from '../contaniers/service'; // 在线客服
+import Services from '../contaniers/service'; // 在线客服
 import User from '../contaniers/user'; // 个人资料
 // 功能函数引入
 
@@ -128,15 +128,15 @@ const routes = [
         },
         onEnter: redirectToLogin
     },
-    // {
-    //     path: '/service',
-    //     getComponents(nextState, callback) {
-    //         require.ensure([], function(require) {
-    //             callback(null, Service);
-    //         });
-    //     },
-    //     onEnter: redirectToLogin
-    // },
+    {
+        path: '/services',
+        getComponents(nextState, callback) {
+            require.ensure([], function(require) {
+                callback(null, Services);
+            });
+        },
+        onEnter: redirectToLogin
+    },
     {
         path: '/user',
         getComponents(nextState, callback) {

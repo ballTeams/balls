@@ -1,10 +1,10 @@
 
-export const COMMIS_MAIN_GET = 'COMMIS_MAIN_GET';
+export const COMMISSION_MAIN_GET = 'COMMISSION_MAIN_GET';
 
 
-export let commisMain = (data) => {
+export let commissionMain = (data) => {
 	return {
-		type: COMMIS_MAIN_GET,
+		type: COMMISSION_MAIN_GET,
 		data
 	}
 }

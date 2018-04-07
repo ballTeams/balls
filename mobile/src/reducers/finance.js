@@ -18,7 +18,6 @@ const finance = (state = initState, action) => {
         		type: {
         			...action.data
                 }
-        		
         	}
         case 'FINANCE_MAIN_GET':
             return {

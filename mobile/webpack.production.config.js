@@ -119,7 +119,7 @@ module.exports = {
         }),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production'),
-            '_global.proxy': JSON.stringify('http://localhost:80')
+            '_global.proxy': JSON.stringify('http://192.168.199.228:8080')
         })
     ]
 };
