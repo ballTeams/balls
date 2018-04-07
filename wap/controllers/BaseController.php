@@ -15,15 +15,6 @@ use yii\web\Controller;
  */
 class BaseController extends Controller
 {
-    public function init()
-    {
-        header("Access-Control-Allow-Origin: *");
-        header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-        header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
-        parent::init();
-      
-    }
-
     /*   public function behaviors()
        {
            $behaviors = parent::behaviors();
@@ -40,6 +31,9 @@ class BaseController extends Controller
 
        public function beforeAction($action)
        {
+           header("Access-Control-Allow-Origin: *");
+           header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+           header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
            if(!Yii::$app->session->get('user_id')){
 
                echo  Json::encode(['status'=>'-1','msg'=>'登录失效','user_id'=>Yii::$app->session->get('user_id')]);
