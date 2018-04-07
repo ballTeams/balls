@@ -20,7 +20,7 @@ class UserService extends BaseService
 {
 
     public function index(){
-        $user_id=1;
+        $user_id=self::$user_id;
         $data=User::find()->asArray()->all();
         $item=$this->getSon($data,$user_id);
         return Json::encode(['status'=>1,'msg'=>'success','data'=>$item]);
@@ -28,7 +28,7 @@ class UserService extends BaseService
 
     public function getSon($data,$pid,$son=[])
     {
-        $user_id=1;
+        $user_id=self::$user_id;
         foreach ($data as $k => $v){
                 if($v['pid']==$pid) {
                     if($pid==$user_id){
@@ -45,7 +45,7 @@ class UserService extends BaseService
 
     public function add($data)
     {
-        $user_id=1;
+        $user_id=self::$user_id;
         try {
             $buy_money=(int)Order::find()
                 ->select('sum(buy_money)')
@@ -111,7 +111,7 @@ class UserService extends BaseService
     public function edit($data)
     {
         try{
-            $user_id=1;
+            $user_id=self::$user_id;
             $model=User::findOne($user_id);
             if(isset($data['password'])&&$data['password']){
                 $model->password=md5($data['password']);
@@ -136,7 +136,7 @@ class UserService extends BaseService
 
     public function info()
     {
-        $user_id=1;
+        $user_id=self::$user_id;
         $data=User::find()->where(['user_id'=>$user_id])->asArray()->one();
         return Json::encode(['status'=>1,'msg'=>'success','data'=>$data]);
     }

@@ -22,7 +22,7 @@ class ApplyService extends BaseService
 {
 
     public function index(){
-        $user_id=1;
+        $user_id=self::$user_id;
         $data=User::find()->where(['pid'=>$user_id])->asArray()->all();
         return Json::encode(['status'=>1,'msg'=>'success','data'=>$data]);
     }
@@ -57,7 +57,7 @@ class ApplyService extends BaseService
 
     public function info()
     {
-        $user_id=1;
+        $user_id=self::$user_id;
         $data=Apply::find()->where(['user_id'=>$user_id])->andWhere(['type'=>1])->asArray()->one();
         if($data){
             $data['create_time']=date('Y-m-d H:i:s',$data['create_time']);
@@ -73,7 +73,7 @@ class ApplyService extends BaseService
 
     public function userInfo()
     {
-        $user_id=1;
+        $user_id=self::$user_id;
         $data=Apply::find()->where(['user_id'=>$user_id])->andWhere(['type'=>2])->asArray()->one();
         if($data){
             $data['create_time']=date('Y-m-d H:i:s',$data['create_time']);
@@ -100,7 +100,7 @@ class ApplyService extends BaseService
 
     public function record($type)
     {
-        $user_id=1;
+        $user_id=self::$user_id;
         $data=Apply::find()
             ->where(['user_id'=>$user_id])
             ->andWhere(['type'=>$type])
@@ -133,7 +133,7 @@ class ApplyService extends BaseService
 
     public function getList()
     {
-        $user_id=2;
+        $user_id=self::$user_id;
         $data=ApplyRecord::find()->where(['user_id'=>$user_id,'type'=>2])->asArray()->all();
         foreach ($data as &$v){
             if($v['action_user_id']){

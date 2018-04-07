@@ -82,7 +82,7 @@ class FootBallService extends BaseService
 
     public function record()
     {
-        $user_id=1;
+        $user_id=self::$user_id;
         $data=Order::find()
             ->select('buy_result,order_id,status,ball_match_id,buy_money')
             ->where(['user_id'=>$user_id])->asArray()->all();
