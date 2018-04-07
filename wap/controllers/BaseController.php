@@ -31,7 +31,7 @@ class BaseController extends Controller
 
        public function beforeAction($action)
        {
-           $host='HTTP_HOST：'.$_SERVER['HTTP_HOST'];
+           $host=$_SERVER['HTTP_HOST'];
            header("Access-Control-Allow-Origin: {$host}");
            header("Access-Control-Allow-Credentials: true");
            header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
