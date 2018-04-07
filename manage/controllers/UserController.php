@@ -34,4 +34,6 @@ class UserController extends BaseController
         $data=User::find()->where(['user_id'=>$user_id])->asArray()->one();
         return $this->render('add',['user'=>$user,'data'=>$data]);
     }
+
+
 }

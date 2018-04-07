@@ -11,6 +11,14 @@ use yii\web\Controller;
  */
 class LoginController extends Controller
 {
+    public function init()
+    {
+        header("Access-Control-Allow-Origin: http://192.168.1.100:8080 ");
+        header("Access-Control-Allow-Credentials: true");
+        header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+        header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
+        parent::init();
+    }
     /**
      * @name 登录
      * @return string

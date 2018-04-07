@@ -32,7 +32,6 @@
                                 <a href="#">已通过</a>
                             <?php }else{?>
                                 <span data-url="/apply/agree" data-id="<?php echo $v['apply_id']?>" class="js-main-del">同意申请</span>
-
                             <?php }?>
 
                         </div>
