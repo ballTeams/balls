@@ -32,8 +32,8 @@ class LoginService extends BaseService
             if (md5($data['password']) != $user['password']) {
                 throw new \Exception('密码错误');
             }
-            $user_id=\Yii::$app->session->set('user_id', $user['user_id']);
-            setcookie('user', Json::encode($user), 0, '/');
+            \Yii::$app->session->set('user_id', $user['user_id']);
+            $user_id=\Yii::$app->session->get('user_id', $user['user_id']);
         }catch (\Exception $e){
             return Json::encode(['status'=>0,'msg'=>$e->getMessage()]);
         }
