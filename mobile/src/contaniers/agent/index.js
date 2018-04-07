@@ -13,7 +13,7 @@ class App extends Component {
         super(props);
     }
     render() {
-        const { actions } = this.props;
+        const { actions, agent } = this.props;
         switch(location.pathname) {
             case '/agent/add': 
                 return (
@@ -27,7 +27,7 @@ class App extends Component {
                 return (
                     <Title title={`代理列表`}>
                         <TopBar>
-                            <AgentMain />
+                            <AgentMain actions={actions} agent={agent}/>
                         </TopBar>
                     </Title>
                 );

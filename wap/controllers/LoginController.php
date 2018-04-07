@@ -16,7 +16,7 @@ class LoginController extends BaseController
      */
     public function actionIndex()
     {
-        $data=\Yii::$app->request->post();
+        $data=\Yii::$app->request->get();
         return LoginService::service()->index($data);
     }
 

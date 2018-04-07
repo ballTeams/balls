@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Tabs } from 'antd-mobile';
 import { Link } from 'react-router';
-import ResultList from './ResultList';
+import Item from '../_common/Item/Item';
+import api from 'api/game';
+import ajax from 'utils/ajax';
 class Form extends Component {
 
     constructor (props){
@@ -10,13 +12,19 @@ class Form extends Component {
     }
 
     componentWillMount () {
-        this.loadData(1);
+        this.loadData(this.props.status);
     }
-    loadData = () => {
+    componentWillReceiveProps(nextProps){
+        if (nextProps.status != this.props.status){
+            this.loadData(nextProps.status);
+        }
+    }
+    loadData = (status) => {
+        console.log(status);
         const { actions } = this.props;
         ajax({
             url: api.GAME_RESULT_GET,
-            data: {status: 1},
+            data: { status: status },
             method: 'GET',
             success: (res) => {
                 actions.gameResult(res.data, status);
@@ -26,30 +34,50 @@ class Form extends Component {
             }
         });
     }
+    handleClick = () => {
+
+    }
     render () {
         const tabs = [
             {title: '今天'},
             {title: '昨天'},
             {title: '前天'}
         ];
+        const { info, status } = this.props;
+
         return (
             <div className="g-tc">
-                <Tabs tabs={tabs}
-                  initialPage={1}
-                  onChange={(tab, index) => { console.log('onChange', index, tab); }}
-                  onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
+                <Tabs 
+                    tabs={tabs}
+                    initialPage={Number(status)}
+                    onChange={(tab, index) => { 
+                        this.props.router.replace(`/game/result?status=${index}`);
+                    }}
                 >
                     {
                         tabs.map((item, index) => {
                             return (
                                 <div key={index}>
-                                    <ResultList
-                                        
-                                    />
+                                    {
+                                        index==status && info[status].map((item, index) => {
+                                            console.log(item, 1);
+                                            const { content, match_time, title, ball_match_id } = item;
+                                            return (
+                                                <Item 
+                                                    key={`${status}_${index}`}
+                                                    content={content}
+                                                    time={match_time}
+                                                    title={title}
+                                                    onClick={() => this.handleClick(ball_match_id)}
+                                                />
+                                            );
+                                        })
+                                    }
                                 </div>
                             );
                         })
                     }
+                    
                 </Tabs>
             </div>
         );

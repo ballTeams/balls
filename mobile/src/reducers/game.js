@@ -3,9 +3,9 @@
 const initState = {
    list: [],
    result: {
-        1: [],
-        2: [],
-        3: []
+        '0': [],
+        '1': [],
+        '2': []
    },
    detail: {
 

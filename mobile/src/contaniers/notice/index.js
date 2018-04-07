@@ -6,14 +6,29 @@ import api from '../../api/notice';
 import { Accordion } from 'antd-mobile';
 import TopBar from '../../components/_common/TopBar/TopBar';
 import Title from '../../components/_common/Title/Title';
-
+import ajax from 'utils/ajax';
 class App extends Component {
     constructor(props) {
         super(props);
     }
-    render() {
+    componentWillMount(){
         const { actions } = this.props;
-        const arr = [1, 2, 3, 4]
+        ajax({
+            url: api.NOTICE_MAIN_GET,
+            data: {},
+            method: 'GET',
+            success: (res) => {
+                actions.noticeMain(res.data);
+            }, 
+            error: (res) => {
+
+            }
+        });
+    }
+    render() {
+        const { actions, notice } = this.props;
+        const { list } = notice;
+        console.log(notice);
         return (
             <Title title={`公告`}>
                 <TopBar>
@@ -21,12 +36,11 @@ class App extends Component {
                         <div>
                         <Accordion accordion className="my-accordion">
                             {
-                                arr.map((item, index) => {
+                                list.map((item, index) => {
+                                    const { title, content } = item;
                                     return (
-                                        <Accordion.Panel header="赛事公告" key={index}>
-                                            <div className="g-pd-10">
-                                                text text text text text text text text text text text text text text text
-                                            </div>
+                                        <Accordion.Panel header={title} key={index}>
+                                            <div className="g-pd-10">{content}</div>
                                         </Accordion.Panel>
                                     );
                                     

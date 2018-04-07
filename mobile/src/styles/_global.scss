@@ -124,3 +124,14 @@ img {
 .am-search-cancel {
     font-size: inherit;
 }
+.gm-table{
+    width: 100%;
+    border-collapse: collapse;
+    td {
+        padding: 10px;
+    }
+    td, tr {
+        border: 1px solid #fff;
+        color: #fff;
+    }
+}

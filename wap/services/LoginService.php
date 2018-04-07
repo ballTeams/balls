@@ -37,7 +37,8 @@ class LoginService extends BaseService
         }catch (\Exception $e){
             return Json::encode(['status'=>0,'msg'=>$e->getMessage()]);
         }
-        return Json::encode(['status'=>1,'msg'=>'登录成功']);
+        $user = User::find()->select('user_id as id,name,fee as user_has_money')->where(['name' => $data['name']])->asArray()->one();
+        return Json::encode(['status'=>1,'msg'=>'登录成功','data'=>$user]);
     }
 }
 

@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
-import { Accordion, NavBar, Drawer, Icon, NoticeBar } from 'antd-mobile';
+import { Link, browserHistory } from 'react-router';
+import { Accordion, NavBar, Drawer, Icon, NoticeBar, Toast } from 'antd-mobile';
 import XZBG from '../../../styles/xzbg1.png';
+import api from 'api/login';
+import ajax from 'utils/ajax';
+import { getCookie } from 'utils/utils';
 class TopBar extends Component {
 
     constructor (props){
@@ -112,11 +115,25 @@ class TopBar extends Component {
                 title: '登出',
                 child:[],
                 onClick: () => {
-
+                    ajax({
+                        url: api.LOGOUT_MAIN_GET,
+                        data: {},
+                        method: 'GET',
+                        success: (res) => {
+                            Toast.info(res.msg, 1, () => {
+                                browserHistory.push('/login');
+                            }); 
+                            
+                        }, 
+                        error: (res) => {
+                            Toast.info('网络不稳定，请稍后再试...', 1);
+                        }
+                    });
                 }
             }
 
         ];
+        console.log(getCookie('balls'), 'balls');
         const sidebar = (
             <div style={{ minHeight: '100vh', background: '#fff' }}>
                     {
@@ -139,7 +156,11 @@ class TopBar extends Component {
                                 );
                             }else{
                                 return (
-                                    <div key={index} className="g-lh-44 g-tc g-bb g-fs-18"><Link to={item.url}>{item.title}</Link></div> 
+                                    <div key={index} className="g-lh-44 g-tc g-bb g-fs-18">
+                                        {
+                                            item.onClick ? <div onClick={item.onClick}>{item.title}</div> : <Link to={item.url}>{item.title}</Link>
+                                        }
+                                    </div> 
                                 );
                             }
                         })
@@ -155,14 +176,16 @@ class TopBar extends Component {
                         onLeftClick={this.onOpenChange}
                     >Basic</NavBar>
                 </div>
+                
                 <Drawer
                     className="my-drawer"
-                    style={{ height: '100vh', marginTop: 45, background: '#fff' }}
+                    style={{ height: '100vh' }}
                     contentStyle={{ color: '#A6A6A6' }}
                     sidebar={sidebar}
                     open={this.state.open}
                     onOpenChange={this.onOpenChange}
                 >
+                    <div style={{ height: 45 }} />
                     <NoticeBar marqueeProps={{ loop: true, style: { padding: '0 7.5px' } }}>
                         Notice: 2212312
                     </NoticeBar>

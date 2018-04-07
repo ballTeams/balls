@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import { } from 'antd-mobile';
+import { Toast } from 'antd-mobile';
 import LOGO from '../../styles/LOGO.png';
 import BG from '../../styles/wapindex.jpg';
 import './Login.scss';
+import api from 'api/login';
+import ajax from 'utils/ajax';
+import { setCookie, getCookie } from 'utils/utils';
 class Form extends Component {
 
     constructor (props){
@@ -17,7 +20,30 @@ class Form extends Component {
     componentWillMount () {
 
     }
-
+    handleLogin = () => {
+        const { name, password } = this.state;
+        ajax({
+            url: api.LOGIN_MAIN_POST,
+            data: {
+                name, 
+                password
+            },
+            method: 'POST',
+            success: (res) => {
+                console.log(getCookie('user'));
+                Toast.info(res.msg, 1, () => {
+                    if (res.status){
+                        setCookie('balls', true);
+                        this.props.router.push('/home');
+                    }
+                });
+                
+            }, 
+            error: (res) => {
+                Toast.info(res.msg, 1);
+            }
+        });
+    }
     render () {
         let style = {
             height: '100vh',
@@ -52,7 +78,7 @@ class Form extends Component {
                     </div>
                 </div>
                 <div className="g-pd-tb-20">
-                    <div className="_btn-blue">登陆</div>
+                    <div onClick={this.handleLogin} className="_btn-blue">登陆</div>
                 </div>
             </div>
         );
