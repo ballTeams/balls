@@ -22,17 +22,14 @@ module.exports = {
             'classnames',
             'immutable',
             'pure-render-decorator',
-            'rc-form',
             'react',
             'react-dom',
-            'react-fastclick',
             'react-redux',
             'react-router',
             'react-router-redux',
             'redux',
             'redux-thunk',
-            'superagent',
-            'wya-sass'
+            'superagent'
         ]
     },
     output: {
@@ -46,7 +43,9 @@ module.exports = {
             components: path.resolve(__dirname, 'src/components'),
             styles: path.resolve(__dirname, 'src/styles'),
             images: path.resolve(__dirname, 'src/images'),
-            utils: path.resolve(__dirname, 'src/utils')
+            utils: path.resolve(__dirname, 'src/utils'),
+            api: path.resolve(__dirname, 'src/api'),
+            actions: path.resolve(__dirname, 'src/actions'),
         }
     },
     module: {
