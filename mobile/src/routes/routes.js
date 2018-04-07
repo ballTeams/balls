@@ -1,5 +1,6 @@
 // import { IndexRoute, Route } from 'react-router';
-// import { redirectToIndex } from './auth';
+import { redirectToLogin } from './auth';
+import { getCookie } from 'utils/utils';
 // 页面模块引入
 import Demo from '../contaniers/demo'; // 
 import Login from '../contaniers/login'; // 登录
@@ -17,7 +18,6 @@ import Web from '../contaniers/web'; // 相关网站
 import User from '../contaniers/user'; // 个人资料
 // 功能函数引入
 
-
 // 动态路由配置
 const routes = [
     {
@@ -27,6 +27,7 @@ const routes = [
                 callback(null, Demo);
             });
         },
+        onEnter: redirectToLogin
     },
     {
         path: '/login',
@@ -34,7 +35,8 @@ const routes = [
             require.ensure([], function(require) {
                 callback(null, Login);
             });
-        }
+        },
+        onEnter: () => {}
     },
     {
         path: '/home',
@@ -42,7 +44,8 @@ const routes = [
             require.ensure([], function(require) {
                 callback(null, Home);
             });
-        }
+        },
+        onEnter: redirectToLogin
     },
     {
         path: '/game(/:page)(?:page)',
@@ -50,7 +53,8 @@ const routes = [
             require.ensure([], function(require) {
                 callback(null, Game);
             });
-        }
+        },
+        onEnter: redirectToLogin
     },
     {
         path: '/rule',
@@ -58,7 +62,8 @@ const routes = [
             require.ensure([], function(require) {
                 callback(null, Rule);
             });
-        }
+        },
+        onEnter: redirectToLogin
     },
     {
         path: '/deal',
@@ -66,7 +71,8 @@ const routes = [
             require.ensure([], function(require) {
                 callback(null, Deal);
             });
-        }
+        },
+        onEnter: redirectToLogin
     },
     {
         path: '/correct',
@@ -74,7 +80,8 @@ const routes = [
             require.ensure([], function(require) {
                 callback(null, Correct);
             });
-        }
+        },
+        onEnter: redirectToLogin
     },
     {
         path: '/agent(/:page)',
@@ -82,7 +89,8 @@ const routes = [
             require.ensure([], function(require) {
                 callback(null, Agent);
             });
-        }
+        },
+        onEnter: redirectToLogin
     },
     {
         path: '/commission',
@@ -90,7 +98,8 @@ const routes = [
             require.ensure([], function(require) {
                 callback(null, Commission);
             });
-        }
+        },
+        onEnter: redirectToLogin
     },
     {
         path: '/notice',
@@ -98,7 +107,8 @@ const routes = [
             require.ensure([], function(require) {
                 callback(null, Notice);
             });
-        }
+        },
+        onEnter: redirectToLogin
     },
     {
         path: '/finance(/:page)',
@@ -106,7 +116,8 @@ const routes = [
             require.ensure([], function(require) {
                 callback(null, Finance);
             });
-        }
+        },
+        onEnter: redirectToLogin
     },
     {
         path: '/web',
@@ -114,7 +125,8 @@ const routes = [
             require.ensure([], function(require) {
                 callback(null, Web);
             });
-        }
+        },
+        onEnter: redirectToLogin
     },
     // {
     //     path: '/service',
@@ -122,7 +134,8 @@ const routes = [
     //         require.ensure([], function(require) {
     //             callback(null, Service);
     //         });
-    //     }
+    //     },
+    //     onEnter: redirectToLogin
     // },
     {
         path: '/user',
@@ -130,6 +143,26 @@ const routes = [
             require.ensure([], function(require) {
                 callback(null, User);
             });
+        },
+        onEnter: redirectToLogin
+    },
+    {
+        path: '/*',
+        getComponents(nextState, callback) {
+            require.ensure([], function(require) {
+                callback(null, User);
+            });
+        },
+        onEnter: (nextState, replace, callback) => {
+            const balls = JSON.parse(getCookie('balls'));
+            if (!balls) {
+                replace({ pathname: '/login' });
+                callback();
+            } else {
+                const pathname = nextState.location.pathname;
+                replace({ pathname: '/home' });
+                callback();
+            }
         }
     }
 ];

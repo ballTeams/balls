@@ -72,7 +72,7 @@ class App extends Component {
             data: {
                 ...data
             },
-            method: 'GET',
+            method: 'POST',
             success: (res) => {
                 this.props.actions.userMain(res.data);
             }, 

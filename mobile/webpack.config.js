@@ -76,7 +76,7 @@ module.exports = {
         })
     ],
     devServer: {
-        host: '192.168.1.100',
+        host: '192.168.199.228',
         historyApiFallback: true,
         open: true,
         inline: true,
@@ -84,7 +84,7 @@ module.exports = {
         port: 8080,
         proxy: {
             "/api": {
-                target: "192.168.1.100",
+                target: "http://192.168.199.228",
                 pathRewrite: {"^/api" : "http://wap.balls.com"}
             }
         }

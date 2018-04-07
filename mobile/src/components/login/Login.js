@@ -24,16 +24,12 @@ class Form extends Component {
         const { name, password } = this.state;
         ajax({
             url: api.LOGIN_MAIN_POST,
-            data: {
-                name, 
-                password
-            },
+            data: {name: name, password: password},
             method: 'POST',
             success: (res) => {
-                console.log(getCookie('user'));
                 Toast.info(res.msg, 1, () => {
                     if (res.status){
-                        setCookie('balls', true);
+                        setCookie('balls', JSON.stringify(res.data));
                         this.props.router.push('/home');
                     }
                 });

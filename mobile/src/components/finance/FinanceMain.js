@@ -71,13 +71,13 @@ class DemoList extends Component {
                                             <tbody>
                                                 {
                                                     index==type && main[type].map((val, i) => {
-                                                        const { } = val;
+                                                        const { apply_amount, creat_time, status_text, type_text } = val;
                                                         return (
                                                             <tr key={`${index}_${i}`}>
-                                                                <td>1</td>
-                                                                <td>2</td>
-                                                                <td>3</td>
-                                                                <td>4</td>
+                                                                <td>{creat_time}</td>
+                                                                <td>{type_text}</td>
+                                                                <td>{apply_amount}</td>
+                                                                <td>{status_text}</td>
                                                             </tr>
                                                         );
                                                     })

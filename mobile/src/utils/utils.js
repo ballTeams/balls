@@ -23,6 +23,40 @@ export function getCookie(key) {
     return (!m ? null : JSON.parse(decodeURIComponent(m[1])));
 }
 /**
+ * 设置缓存
+ * @param key 保存的键值
+ * @param val 保存的内容
+ */
+export const setItem = (key, val, type) => {
+    val = JSON.stringify(val);
+    if (isAvailable) {
+        let fn = type == 'session' ? sessionStorage : localStorage;
+        fn.setItem(key, val);
+    }
+};
+/**
+ * 获取缓存
+ * @param  {[String]} key 获取的键值
+ * @return {Object}
+ */
+export const getItem = (key, type) => {
+    if (isAvailable) {
+        let fn = type == 'session' ? sessionStorage : localStorage;
+        return fn.getItem(key) && JSON.parse(fn.getItem(key));
+    }
+};
+/**
+ * 删除缓存
+ * @param  {[String]} key 删除的键值
+ */
+export const delItem = (key, type) => {
+    if (isAvailable) {
+        let fn = type == 'session' ? sessionStorage : localStorage;
+        fn.removeItem(key);
+    }
+};
+
+/**
  * 获取设备类型
  */
 export function getDevice() {

@@ -4,6 +4,7 @@ import { Link, browserHistory } from 'react-router';
 import './HomeMain.scss';
 import api from 'api/login';
 import ajax from 'utils/ajax';
+import { getCookie, delCookie } from 'utils/utils';
 class Form extends Component {
 
     constructor (props){
@@ -59,6 +60,7 @@ class Form extends Component {
                         method: 'GET',
                         success: (res) => {
                             Toast.info(res.msg, 1, () => {
+                                delCookie('balls');
                                 browserHistory.push('/login');
                             }); 
                             

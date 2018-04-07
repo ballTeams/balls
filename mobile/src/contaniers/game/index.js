@@ -16,7 +16,6 @@ class App extends Component {
     render() {
         const { actions, location, game, router } = this.props;
         const { query: { status = 0 } } = location;
-        console.log(game, 123);
         switch(location.pathname) {
             case '/game/result': 
                 return (

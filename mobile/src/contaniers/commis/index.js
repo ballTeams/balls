@@ -5,13 +5,25 @@ import * as AppActions from '../../actions/commis';
 import api from '../../api/commis';
 import TopBar from '../../components/_common/TopBar/TopBar';
 import Title from '../../components/_common/Title/Title';
-
+import ajax from 'utils/ajax';
 class App extends Component {
     constructor(props) {
         super(props);
     }
+    componentWillMount(){
+        ajax({
+            url: api.COMMIS_MAIN_GET,
+            data: {},
+            method: 'GET',
+            success: (res) => {
+            }, 
+            error: (res) => {
+                Toast.info(res.msg, 1);
+            }
+        });
+    }
     render() {
-        const { actions } = this.props;
+        const { actions, commis } = this.props;
         return (
             <Title title={`佣金`}>
                 <TopBar>

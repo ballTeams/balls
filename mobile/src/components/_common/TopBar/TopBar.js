@@ -4,7 +4,7 @@ import { Accordion, NavBar, Drawer, Icon, NoticeBar, Toast } from 'antd-mobile';
 import XZBG from '../../../styles/xzbg1.png';
 import api from 'api/login';
 import ajax from 'utils/ajax';
-import { getCookie } from 'utils/utils';
+import { getCookie, delCookie } from 'utils/utils';
 class TopBar extends Component {
 
     constructor (props){
@@ -16,7 +16,7 @@ class TopBar extends Component {
     }
 
     componentWillMount () {
-
+        
     }
     onOpenChange(){
         this.setState({ open: !this.state.open });
@@ -121,6 +121,7 @@ class TopBar extends Component {
                         method: 'GET',
                         success: (res) => {
                             Toast.info(res.msg, 1, () => {
+                                delCookie('balls');
                                 browserHistory.push('/login');
                             }); 
                             
@@ -133,7 +134,13 @@ class TopBar extends Component {
             }
 
         ];
-        console.log(getCookie('balls'), 'balls');
+        const balls = JSON.parse(getCookie('balls'));
+        // if(!balls){
+        //     Toast.info('登录失效', 1, () => {
+        //         browserHistory.push('/login');
+        //     });
+        //     return false;
+        // }
         const sidebar = (
             <div style={{ minHeight: '100vh', background: '#fff' }}>
                     {
@@ -174,7 +181,8 @@ class TopBar extends Component {
                     <NavBar 
                         icon={<Icon type="ellipsis" />} 
                         onLeftClick={this.onOpenChange}
-                    >Basic</NavBar>
+                        rightContent={<div className="g-fs-12 g-tr"><p>{balls.name}</p>余额：{balls.user_has_money}</div>}
+                    />
                 </div>
                 
                 <Drawer
