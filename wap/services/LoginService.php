@@ -32,13 +32,13 @@ class LoginService extends BaseService
             if (md5($data['password']) != $user['password']) {
                 throw new \Exception('密码错误');
             }
-            \Yii::$app->session->set('user_id', $user['user_id']);
+            $user_id=\Yii::$app->session->set('user_id', $user['user_id']);
             setcookie('user', Json::encode($user), 0, '/');
         }catch (\Exception $e){
             return Json::encode(['status'=>0,'msg'=>$e->getMessage()]);
         }
         $user = User::find()->select('user_id as id,name,fee as user_has_money')->where(['name' => $data['name']])->asArray()->one();
-        return Json::encode(['status'=>1,'msg'=>'登录成功','data'=>$user]);
+        return Json::encode(['status'=>1,'msg'=>'登录成功','data'=>$user,'user_id'=>$user_id]);
     }
 }
 
