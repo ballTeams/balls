@@ -95,7 +95,7 @@ AppAsset::register($this);
     <span class="_toggle js-toggle-sidebar"><span class="iconfont icon-qiehuan"></span></span>
     <div class="_top">
         <div class="__avatar">
-            <img src="/images/1.jpeg">
+            <img src="/images/1zh.jpg">
         </div>
         <div class="__user js-edit-admin">
             <span><?php echo Yii::$app->session->get('username') ?></span>
