@@ -90,7 +90,7 @@ class ApplyService extends BaseService
     public function info()
     {
         $user_id=self::$user_id;
-        $data=Apply::find()->where(['user_id'=>$user_id])->andWhere(['type'=>1])->asArray()->one();
+        $data=Apply::find()->where(['user_id'=>$user_id])->andWhere(['type'=>1])->andWhere(['status'=>0])->asArray()->one();
         if($data){
             $data['create_time']=date('Y-m-d H:i:s',$data['create_time']);
             $item['apply_info']=$data;
@@ -106,7 +106,7 @@ class ApplyService extends BaseService
     public function userInfo()
     {
         $user_id=self::$user_id;
-        $data=Apply::find()->where(['user_id'=>$user_id])->andWhere(['type'=>2])->asArray()->one();
+        $data=Apply::find()->where(['user_id'=>$user_id])->andWhere(['type'=>2])->andWhere(['status'=>0])->asArray()->one();
         if($data){
             $data['create_time']=date('Y-m-d H:i:s',$data['create_time']);
             $item['apply_info']=$data;
@@ -132,7 +132,7 @@ class ApplyService extends BaseService
 
     public function transferInfo(){
         $user_id=self::$user_id;
-        $data=Apply::find()->where(['user_id'=>$user_id])->andWhere(['type'=>3])->asArray()->one();
+        $data=Apply::find()->where(['user_id'=>$user_id])->andWhere(['type'=>3])->andWhere(['status'=>0])->asArray()->one();
         if($data){
             $data['create_time']=date('Y-m-d H:i:s',$data['create_time']);
             $data['transfer_user_name']=User::findOne($data['transfer_user_id'])->name;
