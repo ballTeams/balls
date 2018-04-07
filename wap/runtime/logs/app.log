@@ -18733,3 +18733,259 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1523103647.3677
     'REQUEST_TIME' => 1523103647
 ]
+2018-04-07 20:29:12 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-07 20:29:11 [192.168.10.1][-][-][info][application] $_GET = [
+    'name' => 'max'
+    'password' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-wap' => 'bl9qdgt9hrg0o7us7pv5mcn307'
+    'user' => '{\"user_id\":\"1\",\"name\":\"max\",\"password\":\"c4ca4238a0b923820dcc509a6f75849b\",\"fee\":\"5195896\",\"pid\":\"2\",\"mobile\":\"13867449730\",\"real_name\":\"\",\"trade_password\":null}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/wap/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/wap/web'
+    'QUERY_STRING' => 'name=max&password=1'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/login/index?name=max&password=1'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/wap/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '62388'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'wap.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wap.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_COOKIE' => 'advanced-wap=bl9qdgt9hrg0o7us7pv5mcn307; user=%7B%22user_id%22%3A%221%22%2C%22name%22%3A%22max%22%2C%22password%22%3A%22c4ca4238a0b923820dcc509a6f75849b%22%2C%22fee%22%3A%225195896%22%2C%22pid%22%3A%222%22%2C%22mobile%22%3A%2213867449730%22%2C%22real_name%22%3A%22%22%2C%22trade_password%22%3Anull%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523104151.7274
+    'REQUEST_TIME' => 1523104151
+]
+2018-04-07 20:29:12 [192.168.10.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32075 bytes' 
+
+in /vagrant/ws/balls/vendor/yiisoft/yii2-debug/LogTarget.php:95
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', '/vagrant/ws/bal...', 95, Array)
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2-debug/LogTarget.php(95): unserialize('<<<<<<< HEAD\na:...')
+#2 /vagrant/ws/balls/vendor/yiisoft/yii2-debug/LogTarget.php(70): yii\debug\LogTarget->updateIndexFile('/vagrant/ws/bal...', Array)
+#3 /vagrant/ws/balls/vendor/yiisoft/yii2-debug/LogTarget.php(125): yii\debug\LogTarget->export()
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/log/Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#5 /vagrant/ws/balls/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2018-04-07 20:29:11 [192.168.10.1][-][-][info][application] $_GET = [
+    'name' => 'max'
+    'password' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-wap' => 'bl9qdgt9hrg0o7us7pv5mcn307'
+    'user' => '{\"user_id\":\"1\",\"name\":\"max\",\"password\":\"c4ca4238a0b923820dcc509a6f75849b\",\"fee\":\"5195896\",\"pid\":\"2\",\"mobile\":\"13867449730\",\"real_name\":\"\",\"trade_password\":null}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/wap/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/wap/web'
+    'QUERY_STRING' => 'name=max&password=1'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/login/index?name=max&password=1'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/wap/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '62388'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'wap.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wap.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_COOKIE' => 'advanced-wap=bl9qdgt9hrg0o7us7pv5mcn307; user=%7B%22user_id%22%3A%221%22%2C%22name%22%3A%22max%22%2C%22password%22%3A%22c4ca4238a0b923820dcc509a6f75849b%22%2C%22fee%22%3A%225195896%22%2C%22pid%22%3A%222%22%2C%22mobile%22%3A%2213867449730%22%2C%22real_name%22%3A%22%22%2C%22trade_password%22%3Anull%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523104151.7274
+    'REQUEST_TIME' => 1523104151
+]
+2018-04-07 20:29:18 [192.168.10.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.1
+2018-04-07 20:29:18 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-wap' => 'bl9qdgt9hrg0o7us7pv5mcn307'
+    'user' => '{\"user_id\":\"1\",\"name\":\"max\",\"password\":\"c4ca4238a0b923820dcc509a6f75849b\",\"fee\":\"5195896\",\"pid\":\"2\",\"mobile\":\"13867449730\",\"real_name\":\"\",\"trade_password\":null}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/wap/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/wap/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/user/account-list'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/wap/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '62388'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'wap.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wap.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-wap=bl9qdgt9hrg0o7us7pv5mcn307; user=%7B%22user_id%22%3A%221%22%2C%22name%22%3A%22max%22%2C%22password%22%3A%22c4ca4238a0b923820dcc509a6f75849b%22%2C%22fee%22%3A%225195896%22%2C%22pid%22%3A%222%22%2C%22mobile%22%3A%2213867449730%22%2C%22real_name%22%3A%22%22%2C%22trade_password%22%3Anull%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523104158.1296
+    'REQUEST_TIME' => 1523104158
+]
+2018-04-07 20:29:18 [192.168.10.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32075 bytes' 
+
+in /vagrant/ws/balls/vendor/yiisoft/yii2-debug/LogTarget.php:95
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', '/vagrant/ws/bal...', 95, Array)
+#1 /vagrant/ws/balls/vendor/yiisoft/yii2-debug/LogTarget.php(95): unserialize('<<<<<<< HEAD\na:...')
+#2 /vagrant/ws/balls/vendor/yiisoft/yii2-debug/LogTarget.php(70): yii\debug\LogTarget->updateIndexFile('/vagrant/ws/bal...', Array)
+#3 /vagrant/ws/balls/vendor/yiisoft/yii2-debug/LogTarget.php(125): yii\debug\LogTarget->export()
+#4 /vagrant/ws/balls/vendor/yiisoft/yii2/log/Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#5 /vagrant/ws/balls/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2018-04-07 20:29:18 [192.168.10.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-wap' => 'bl9qdgt9hrg0o7us7pv5mcn307'
+    'user' => '{\"user_id\":\"1\",\"name\":\"max\",\"password\":\"c4ca4238a0b923820dcc509a6f75849b\",\"fee\":\"5195896\",\"pid\":\"2\",\"mobile\":\"13867449730\",\"real_name\":\"\",\"trade_password\":null}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'XHPROF_ROOT_PATH' => '/vagrant/xhprof'
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/vagrant/ws/balls/wap/web/index.php'
+    'PATH_TRANSLATED' => '/vagrant/ws/balls/wap/web'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/user/account-list'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant/ws/balls/wap/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.2'
+    'REMOTE_ADDR' => '192.168.10.1'
+    'REMOTE_PORT' => '62388'
+    'SERVER_ADDR' => '192.168.10.33'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'wap.balls.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'wap.balls.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-wap=bl9qdgt9hrg0o7us7pv5mcn307; user=%7B%22user_id%22%3A%221%22%2C%22name%22%3A%22max%22%2C%22password%22%3A%22c4ca4238a0b923820dcc509a6f75849b%22%2C%22fee%22%3A%225195896%22%2C%22pid%22%3A%222%22%2C%22mobile%22%3A%2213867449730%22%2C%22real_name%22%3A%22%22%2C%22trade_password%22%3Anull%7D'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_X_LANTERN_VERSION' => '4.4.2'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523104158.1296
+    'REQUEST_TIME' => 1523104158
+]
