@@ -31,7 +31,9 @@ class BaseController extends Controller
 
        public function beforeAction($action)
        {
-           header("Access-Control-Allow-Origin: *");
+           $host='HTTP_HOST：'.$_SERVER['HTTP_HOST'];
+           header("Access-Control-Allow-Origin: {$host}");
+           header("Access-Control-Allow-Credentials: true");
            header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
            header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
            if(!Yii::$app->session->get('user_id')){
