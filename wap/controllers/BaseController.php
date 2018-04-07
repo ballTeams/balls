@@ -1,11 +1,13 @@
 <?php
 namespace wap\controllers;
 
+use wap\services\BaseService;
 use Yii;
 use yii\filters\auth\CompositeAuth;
 use yii\filters\auth\HttpBasicAuth;
 use yii\filters\auth\HttpBearerAuth;
 use yii\filters\auth\QueryParamAuth;
+use yii\helpers\Json;
 use yii\web\Controller;
 
 /**
@@ -35,15 +37,16 @@ class BaseController extends Controller
                ],
            ];
            return $behaviors;
-       }
+       }*/
 
        public function beforeAction($action)
        {
            parent::beforeAction($action);
-           $this->post = yii::$app->request->post();
-           $this->get = yii::$app->request->get();
-           $this->user = yii::$app->user->identity;
-           $this->userId = Yii::$app->user->id;
+           if(!Yii::$app->session->get('user_id')){
+               echo  Json::encode(['status'=>'-1','msg'=>'登录失效']);
+               exit();
+           }
+           BaseService::$user_id= yii::$app->session->get('user_id');
            return $action;
-       }*/
+       }
 }

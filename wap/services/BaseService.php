@@ -13,6 +13,7 @@ class BaseService
 {
     private static $_instance;
 
+    public static $user_id;
     /**
      * @name service统一访问接口
      * @return static

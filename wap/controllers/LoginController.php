@@ -3,12 +3,13 @@ namespace wap\controllers;
 use wap\services\FootBallService;
 use wap\services\LoginService;
 use yii\helpers\Json;
+use yii\web\Controller;
 
 
 /**
  * Site controller
  */
-class LoginController extends BaseController
+class LoginController extends Controller
 {
     /**
      * @name 登录
@@ -16,7 +17,7 @@ class LoginController extends BaseController
      */
     public function actionIndex()
     {
-        $data=\Yii::$app->request->get();
+        $data=\Yii::$app->request->post();
         return LoginService::service()->index($data);
     }
 
