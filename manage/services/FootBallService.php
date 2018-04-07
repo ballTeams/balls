@@ -141,7 +141,7 @@ class FootBallService extends BaseService
                 }
             }
         }catch (\Exception $e){
-            echo $e->getMessage();
+            echo $e->getMessage();die;
         }
         echo '结算成功';
     }
@@ -151,6 +151,14 @@ class FootBallService extends BaseService
         $transaction=\Yii::$app->db->beginTransaction();
         try {
             $order = $this->order;
+            $match_info='['.BallMatch::findOne($order['ball_match_id'])->title.']'.BallMatch::findOne($order['ball_match_id'])->content;
+            if($info_type=='all'){
+                $info_text='全场波胆';
+            }elseif ($info_type=='up'){
+                $info_text='上半场波胆';
+            }else{
+                $info_text='总进球数';
+            }
             $order['get_money']=$order['get_money']/100;
             $order['charge']=$order['charge']/100;
             $change_money = $order['buy_money'] * ($order['charge'] - $order['get_money']);
@@ -160,7 +168,7 @@ class FootBallService extends BaseService
             $record->action_user_id = $order['user_id'];
             $record->change_money = $change_money;
             $record->type = 1;
-            $record->remark = "赛事:{$info_type} ，购买比分:{$order['buy_result']}，结果比分:{$result[$info_type]}。
+            $record->remark = "赛事:{$match_info},{$info_text} ，购买比分:{$order['buy_result']}，结果比分:{$result[$info_type]}。
         收益计算：{$order['buy_money']}*({$order['charge']}-{$order['get_money']})";
             $record->create_time = time();
             if (!$record->validate()) {
