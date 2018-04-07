@@ -30,7 +30,7 @@ class ApplyService extends BaseService
     public function add($data)
     {
         try {
-            $user_id = 1;
+            $user_id = self::$user_id;
             $model = new Apply();
             $model->apply_amount = $data['apply_amount'];
             $model->user_id = $user_id;
@@ -44,6 +44,38 @@ class ApplyService extends BaseService
                 }
                 $model->user_account_id= $data['user_account_id'];
             }
+            if(!$model->validate()){
+                throw new \Exception(Json::encode($model->getErrors()));
+            }
+            $model->insert();
+        }catch (\Exception $e){
+            return Json::encode(['status'=>0,'msg'=>$e->getMessage()]);
+        }
+        return Json::encode(['status'=>1,'msg'=>'success']);
+
+    }
+
+    public function transfer($data)
+    {
+        try {
+            $trade_password=User::findOne(self::$user_id)->trade_password;
+            if(md5($data['trade_password'])!=$trade_password){
+                throw new \Exception('交易密码正确');
+            }
+            $user=User::find()->where(['name'=>$data['name']])->asArray()->one();
+            if(!$user){
+                throw new \Exception('用户不存在');
+            }
+            $transfer_user_id=$user['user_id'];
+            $user_id = self::$user_id;
+            $model = new Apply();
+            $model->apply_amount = $data['apply_amount'];
+            $model->user_id = $user_id;
+            $model->transfer_user_id = $transfer_user_id;
+            $model->create_time = time();
+            $model->status = 0;
+            $model->type = 3;
+            $model->is_cancel = 0;
             if(!$model->validate()){
                 throw new \Exception(Json::encode($model->getErrors()));
             }
@@ -96,6 +128,18 @@ class ApplyService extends BaseService
             return Json::encode(['status'=>0,'msg'=>'无提现申请','data'=>$item]);
         }
 
+    }
+
+    public function transferInfo(){
+        $user_id=self::$user_id;
+        $data=Apply::find()->where(['user_id'=>$user_id])->andWhere(['type'=>3])->asArray()->one();
+        if($data){
+            $data['create_time']=date('Y-m-d H:i:s',$data['create_time']);
+            $data['transfer_user_name']=User::findOne($data['transfer_user_id'])->name;
+            return Json::encode(['status'=>1,'msg'=>'success','data'=>$data]);
+        }else{
+            return Json::encode(['status'=>0,'msg'=>'无转账申请']);
+        }
     }
 
     public function record($type)

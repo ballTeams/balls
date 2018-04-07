@@ -37,6 +37,17 @@ class ApplyController extends BaseController
             return ApplyService::service()->userInfo();
         }
     }
+
+    public function actionTransfer()
+    {
+        if(\Yii::$app->request->isPost){
+            $data=\Yii::$app->request->post();
+            $data['type']=3;
+            return ApplyService::service()->transfer($data);
+        }else{
+            return ApplyService::service()->transferInfo();
+        }
+    }
     public function actionInfo(){
         return ApplyService::service()->info();
     }
