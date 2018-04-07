@@ -187,6 +187,20 @@ AppAsset::register($this);
                     </li>
                 </ul>
             </li>
+            <li <?php if (in_array(\Yii::$app->controller->id, ['ball3_1'])) { ?> class="active" <?php } ?>>
+                <a href="#">
+                    <span class="iconfont icon-neirong"></span>充值提现申请
+                </a>
+                <ul class="__nav-list"
+                    <?php if (in_array(\Yii::$app->controller->id, ['apply'])) { ?> style="display: block;" <?php } ?>
+                >
+                    <li <?php if (\Yii::$app->controller->id == 'apply'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['apply/index']) ?>">
+                            <span></span>充值提现申请
+                        </a>
+                    </li>
+                </ul>
+            </li>
             <li <?php if (in_array(\Yii::$app->controller->id, ['ball4_1'])) { ?> class="active" <?php } ?>>
                 <a href="#">
                     <span class="iconfont icon-neirong"></span>交易记录
