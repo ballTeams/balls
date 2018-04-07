@@ -157,7 +157,9 @@ class FootBallService extends BaseService
             $result = MatchResult::find()->select('all,up,total_ball')->where(['ball_match_id' => $order['ball_match_id']])->asArray()->one();
             $record = new ApplyRecord();
             $record->user_id = $order['user_id'];
+            $record->action_user_id = $order['user_id'];
             $record->change_money = $change_money;
+            $record->type = 1;
             $record->remark = "赛事:{$info_type} ，购买比分:{$order['buy_result']}，结果比分:{$result[$info_type]}。
         收益计算：{$order['buy_money']}*({$order['charge']}-{$order['get_money']})";
             $record->create_time = time();
@@ -176,6 +178,8 @@ class FootBallService extends BaseService
                 $record = new ApplyRecord();
                 $record->user_id = $user['user_id'];
                 $record->change_money = $change_money;
+                $record->type = 2;
+                $record->action_user_id = $order['user_id'];
                 $record->remark = "直推下级盈利,结算：{$order['buy_money']}*{$order['get_money']}*0.6";
                 $record->create_time = time();
                 if (!$record->validate()) {
@@ -193,7 +197,9 @@ class FootBallService extends BaseService
                     $record = new ApplyRecord();
                     $record->user_id = $user['user_id'];
                     $record->change_money = $change_money;
-                    $record->remark = "直推下级盈利,结算：{$order['buy_money']}*{$order['get_money']}*0.2";
+                    $record->type = 2;
+                    $record->action_user_id = $order['user_id'];
+                    $record->remark = "间接推下级盈利,结算：{$order['buy_money']}*{$order['get_money']}*0.2";
                     $record->create_time = time();
                     if (!$record->validate()) {
                         throw  new \Exception(Json::encode($record->getErrors()));

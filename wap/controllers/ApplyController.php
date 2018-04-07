@@ -47,4 +47,9 @@ class ApplyController extends BaseController
         return ApplyService::service()->record($type);
     }
 
+    public function actionList()
+    {
+        return ApplyService::service()->getList();
+    }
+
 }

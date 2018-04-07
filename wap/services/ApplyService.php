@@ -10,6 +10,7 @@ namespace wap\services;
 
 
 use common\models\Apply;
+use common\models\ApplyRecord;
 use common\models\BallMatch;
 use common\models\BankInfo;
 use common\models\Message;
@@ -127,8 +128,29 @@ class ApplyService extends BaseService
             ->asArray()
             ->scalar();
         $item['list']=$data;
+        return Json::encode(['status'=>0,'msg'=>'success','data'=>$item]);
+    }
+
+    public function getList()
+    {
+        $user_id=2;
+        $data=ApplyRecord::find()->where(['user_id'=>$user_id,'type'=>2])->asArray()->all();
+        foreach ($data as &$v){
+            if($v['action_user_id']){
+                $v['action_name']=User::findOne($v['action_user_id'])->name;
+            }else{
+                $v['action_name']='';
+            }
+            $v['remark']="团队成员：".$v['action_name'].','.$v['remark'];
+            $v['create_time']=date('Y-m-d H:i:s',$v['create_time']);
+        }
+        $item['list']=$data;
+        $item['total']=(int)ApplyRecord::find()
+            ->select('sum(change_money)')
+            ->where(['user_id'=>$user_id,'type'=>2])
+            ->scalar();
         echo '<pre/>';
-        print_r($item);die;
+        print_r($item);
         return Json::encode(['status'=>0,'msg'=>'success','data'=>$item]);
     }
 }
