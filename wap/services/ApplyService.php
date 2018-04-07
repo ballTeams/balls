@@ -193,8 +193,6 @@ class ApplyService extends BaseService
             ->select('sum(change_money)')
             ->where(['user_id'=>$user_id,'type'=>2])
             ->scalar();
-        echo '<pre/>';
-        print_r($item);
         return Json::encode(['status'=>0,'msg'=>'success','data'=>$item]);
     }
 }
