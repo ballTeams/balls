@@ -27,7 +27,10 @@ class UserService extends BaseService
             $data=User::find()->asArray()->all();
         }
         $item=$this->getSon($data,$user_id);
-        return Json::encode(['status'=>1,'msg'=>'success','data'=>$item]);
+        $arr['list']=$item;
+        $arr['total_num']=count($item);
+        $arr['share_num']=User::find()->where(['pid'=>$user_id])->count();
+        return Json::encode(['status'=>1,'msg'=>'success','data'=>$arr]);
     }
 
     public function getSon($data,$pid,$son=[])
