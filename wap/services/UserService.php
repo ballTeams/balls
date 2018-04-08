@@ -118,9 +118,15 @@ class UserService extends BaseService
             $user_id=self::$user_id;
             $model=User::findOne($user_id);
             if(isset($data['password'])&&$data['password']){
+                if(md5($data['old_password'])!=$model->password){
+                    throw new \Exception('原登录密码不正确');
+                }
                 $model->password=md5($data['password']);
             }
             if(isset($data['trade_password'])&&$data['trade_password']){
+                if(md5($data['old_trade_password'])!=$model->trade_password){
+                    throw new \Exception('原交易密码不正确');
+                }
                 $model->trade_password=md5($data['trade_password']);
             }
             if(isset($data['real_name'])&&$data['real_name']){
