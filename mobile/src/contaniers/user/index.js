@@ -49,9 +49,9 @@ class App extends Component {
                 return false;
             }
             data = {
-                password,
-                new_password, 
-                re_password
+                password: new_password,
+                old_password: password, 
+                re_password: re_password
             }
         } else if (type == 1){ // 交易
             if (!trade_password || !new_trade_password || !re_trade_password) {
@@ -63,8 +63,8 @@ class App extends Component {
                 return false;
             }
             data = {
-                trade_password,
-                new_trade_password,
+                trade_password: new_trade_password,
+                old_trade_password: trade_password,
                 re_trade_password
             }
         }

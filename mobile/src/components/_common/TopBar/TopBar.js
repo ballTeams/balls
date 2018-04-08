@@ -12,11 +12,25 @@ class TopBar extends Component {
         this.onOpenChange = this.onOpenChange.bind(this);
         this.state = {
             open: false,
+            message: ''
         };
     }
 
     componentWillMount () {
-        
+        ajax({
+            url: api.COMMOM_NOTICE_GET,
+            data: {},
+            method: 'GET',
+            success: (res) => {
+                this.setState({
+                    message: res.data[0].content
+                });
+                
+            }, 
+            error: (res) => {
+                // Toast.info('网络不稳定，请稍后再试...', 1);
+            }
+        });
     }
     onOpenChange(){
         this.setState({ open: !this.state.open });
@@ -199,7 +213,7 @@ class TopBar extends Component {
                 >
                     <div style={{ height: 45 }} />
                     <NoticeBar marqueeProps={{ loop: true, style: { padding: '0 7.5px' } }}>
-                        Notice: 2212312
+                        {this.state.message}
                     </NoticeBar>
                     <div style={{
                         backgroundRepeat: 'repeat-y',
