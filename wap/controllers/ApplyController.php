@@ -14,7 +14,8 @@ class ApplyController extends BaseController
 {
     public function actionIndex()
     {
-        return ApplyService::service()->index();
+        $name=\Yii::$app->request->get('name');
+        return ApplyService::service()->index($name);
     }
 
     public function actionAdd()

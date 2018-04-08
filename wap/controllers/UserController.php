@@ -13,7 +13,8 @@ class UserController extends BaseController
 {
     public function actionIndex()
     {
-        return UserService::service()->index();
+        $name=\Yii::$app->request->get('name');
+        return UserService::service()->index($name);
     }
 
     public function actionAdd(){

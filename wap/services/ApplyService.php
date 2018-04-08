@@ -21,7 +21,7 @@ use yii\helpers\Json;
 class ApplyService extends BaseService
 {
 
-    public function index(){
+    public function index($name){
         $user_id=self::$user_id;
         $data=User::find()->where(['pid'=>$user_id])->asArray()->all();
         return Json::encode(['status'=>1,'msg'=>'success','data'=>$data]);

@@ -19,9 +19,13 @@ use yii\helpers\Json;
 class UserService extends BaseService
 {
 
-    public function index(){
+    public function index($name){
         $user_id=self::$user_id;
-        $data=User::find()->asArray()->all();
+        if($name){
+            $data=User::find()->where(['like','name',$name])->asArray()->all();
+        }else{
+            $data=User::find()->asArray()->all();
+        }
         $item=$this->getSon($data,$user_id);
         return Json::encode(['status'=>1,'msg'=>'success','data'=>$item]);
     }
