@@ -5,6 +5,7 @@ import XZBG from '../../../styles/xzbg1.png';
 import api from 'api/login';
 import ajax from 'utils/ajax';
 import { getCookie, delCookie } from 'utils/utils';
+import TopbarBg from 'styles/manin.jpg';
 class TopBar extends Component {
 
     constructor (props){
@@ -160,18 +161,18 @@ class TopBar extends Component {
         //     return false;
         // }
         const sidebar = (
-            <div style={{ minHeight: '100vh', background: '#fff' }}>
+            <div className="common-bar">
                     {
                         arr.map((item, index) => {
                             if(item.child.length > 0){
                                 return (
                                     <Accordion key={index} >
                                         <Accordion.Panel header={item.title}>
-                                            <div className="g-flex g-fd-c">
+                                            <div className="g-flex g-fd-c" style={{ background: '#000', color: '#fff' }}>
                                                 {
                                                     item.child.map((val, i) => {
                                                         return (
-                                                            <Link className="g-tc g-lh-44 g-bb" key={`${val}_${i}`} to={val.url}>{val.title}</Link>
+                                                            <Link className="g-pd-lr-15 g-lh-44" key={`${val}_${i}`} to={val.url}>{val.title}</Link>
                                                         );
                                                     })  
                                                 }
@@ -181,7 +182,7 @@ class TopBar extends Component {
                                 );
                             }else{
                                 return (
-                                    <div key={index} className="g-lh-44 g-tc g-bb g-fs-18">
+                                    <div key={index} className="g-lh-44 g-pd-lr-15 g-fs-18">
                                         {
                                             item.onClick ? <div onClick={item.onClick}>{item.title}</div> : <Link to={item.url}>{item.title}</Link>
                                         }
@@ -197,14 +198,16 @@ class TopBar extends Component {
             <div>
                 <div style={{ position: 'fixed', top: 0, width: '100%', height: 45, zIndex: 1000 }}>
                     <NavBar 
+                        style={{ backgroundImage: `url(${TopbarBg})`, backgroundSize: 'cover' }}
                         icon={<Icon type="ellipsis" />} 
                         onLeftClick={this.onOpenChange}
                         rightContent={<div className="g-fs-12 g-tr"><p>{balls.name}</p>余额：{balls.user_has_money}</div>}
                     />
+                    
                 </div>
                 
                 <Drawer
-                    className="my-drawer"
+                    className=""
                     style={{ height: '100vh' }}
                     contentStyle={{ color: '#A6A6A6' }}
                     sidebar={sidebar}

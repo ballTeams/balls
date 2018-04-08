@@ -32,7 +32,7 @@ class Form extends Component {
     render () {
         const { list } = this.props;
         return (
-            <div>
+            <div className="g-pd-10">
                 {
                     list.map((item, index) => {
                         const {
