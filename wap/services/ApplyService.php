@@ -39,7 +39,7 @@ class ApplyService extends BaseService
             $model->type = isset($data['type'])?$data['type']:1;
             $model->is_cancel = 0;
             if(isset($data['type'])&&$data['type']==2){
-                if(isset($data['user_account_id'])||!$data['user_account_id']){
+                if(!isset($data['user_account_id'])||!$data['user_account_id']){
                     throw new \Exception('收款方式未选择');
                 }
                 $model->user_account_id= $data['user_account_id'];
