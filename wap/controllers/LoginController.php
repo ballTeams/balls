@@ -34,7 +34,7 @@ class LoginController extends Controller
     {
         \Yii::$app->session->destroy();
         setcookie('user', '');
-        return Json::encode(['status'=>0,'msg'=>'退出成功']);
+        return Json::encode(['status'=>1,'msg'=>'退出成功']);
     }
 
 }

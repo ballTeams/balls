@@ -172,7 +172,7 @@ class ApplyService extends BaseService
             ->asArray()
             ->scalar();
         $item['list']=$data;
-        return Json::encode(['status'=>0,'msg'=>'success','data'=>$item]);
+        return Json::encode(['status'=>1,'msg'=>'success','data'=>$item]);
     }
 
     public function getList()
@@ -193,7 +193,7 @@ class ApplyService extends BaseService
             ->select('sum(change_money)')
             ->where(['user_id'=>$user_id,'type'=>2])
             ->scalar();
-        return Json::encode(['status'=>0,'msg'=>'success','data'=>$item]);
+        return Json::encode(['status'=>1,'msg'=>'success','data'=>$item]);
     }
 }
 
