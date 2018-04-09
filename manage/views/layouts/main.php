@@ -192,11 +192,16 @@ AppAsset::register($this);
                     <span class="iconfont icon-neirong"></span>充值提现申请
                 </a>
                 <ul class="__nav-list"
-                    <?php if (in_array(\Yii::$app->controller->id, ['apply'])) { ?> style="display: block;" <?php } ?>
+                    <?php if (in_array(\Yii::$app->controller->id, ['apply','setting'])) { ?> style="display: block;" <?php } ?>
                 >
                     <li <?php if (\Yii::$app->controller->id == 'apply'){ ?>class="active"<?php } ?>>
                         <a href="<?php echo \yii\helpers\Url::to(['apply/index']) ?>">
                             <span></span>充值提现申请
+                        </a>
+                    </li>
+                    <li <?php if (\Yii::$app->controller->id == 'setting'){ ?>class="active"<?php } ?>>
+                        <a href="<?php echo \yii\helpers\Url::to(['setting/index']) ?>">
+                            <span></span>账户设置
                         </a>
                     </li>
                 </ul>

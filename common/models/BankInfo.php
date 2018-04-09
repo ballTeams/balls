@@ -29,7 +29,7 @@ class BankInfo extends \yii\db\ActiveRecord
     {
         return [
             [['bank_name', 'bank_number', 'bank_person_name'], 'required'],
-            [['bank_name'], 'string', 'max' => 11],
+            [['bank_name'], 'string', 'max' => 100],
             [['bank_number', 'bank_person_name'], 'string', 'max' => 20],
         ];
     }
